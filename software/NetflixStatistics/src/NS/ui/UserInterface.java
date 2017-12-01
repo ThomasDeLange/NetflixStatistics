@@ -1,4 +1,4 @@
-package clicker.ui;
+package NS.ui;
 
 import java.awt.*;
 import javax.swing.*;

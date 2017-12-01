@@ -1,4 +1,4 @@
-package clicker.ui;
+package NS.ui;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

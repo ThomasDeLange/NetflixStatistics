@@ -1,4 +1,4 @@
-package clicker.applicationlogic;
+package NS.applicationlogic;
 
 import java.sql.*;
 import java.util.ArrayList;
