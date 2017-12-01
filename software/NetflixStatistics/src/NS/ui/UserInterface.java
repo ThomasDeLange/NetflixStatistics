@@ -1,19 +1,26 @@
 package NS.ui;
 
-import java.awt.*;
+import NS.applicationlogic.Calculator;
+
 import javax.swing.*;
+import java.awt.*;
 
 public class UserInterface implements Runnable {
-    private JFrame frame;
-    ClickListener clickListener;
 
-    public UserInterface(){}
+    private Calculator calc;
+    private JFrame frame;
+
+
+    public UserInterface(Calculator calc){
+        this.calc = calc;
+    }
 
 
     @Override
     public void run() {
-        frame = new JFrame("Click Effect");
-        frame.setPreferredSize(new Dimension(200, 200));
+        frame = new JFrame("Title");
+        frame.setPreferredSize(new Dimension(200, 100));
+
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         createComponents(frame.getContentPane());
@@ -21,22 +28,19 @@ public class UserInterface implements Runnable {
         frame.pack();
         frame.setVisible(true);
     }
-
     private void createComponents(Container container) {
-        GridLayout layout = new GridLayout(2, 1);
-        container.setLayout(layout);
+        container.setLayout(new GridLayout(2, 1));
 
-        JLabel amount = new JLabel("0");
-        JButton clickButton = new JButton("Click!");
-        clickListener = new ClickListener(amount);
-        clickButton.addActionListener(clickListener);
+        JLabel label = new JLabel("" + calc.giveValue());
+        container.add(label);
 
-        container.add(amount);
-        container.add(clickButton);
+        JButton button = new JButton("Click!");
+        container.add(button);
 
-    }
+        ClickListener listener = new ClickListener(calc, label);
+        button.addActionListener(listener);
 
-    public JFrame getFrame() {
-        return frame;
     }
 }
+
+
