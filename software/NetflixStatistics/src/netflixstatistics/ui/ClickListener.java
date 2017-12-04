@@ -17,7 +17,8 @@ public class ClickListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String result = taskExecutor.runTask(e.getActionCommand());
+        String result = e.getActionCommand();
+        taskExecutor.runTask(result);
         object.setText(result);
     }
 }
