@@ -1,5 +1,7 @@
 package netflixstatistics.applicationlogic;
 
+import java.util.ArrayList;
+
 public class TaskExecutor {
     DatabaseController databaseController;
 
@@ -7,14 +9,16 @@ public class TaskExecutor {
         databaseController = new DatabaseController();
     }
 
-    public String runTask(String taskID){
-        String result = "";
+    public ArrayList<String> runTask(String taskID){
+        ArrayList<String> stringResults = new ArrayList<>();
+
         switch (taskID){
             case "getboektitel":
-                databaseController.getStrings("SELECT * FROM TITLE", "titel");
+                stringResults =  databaseController.getStrings("SELECT * FROM TITLE", "titel");
             //other tasks
         }
-        return result;
+
+        return stringResults;
     }
 
 

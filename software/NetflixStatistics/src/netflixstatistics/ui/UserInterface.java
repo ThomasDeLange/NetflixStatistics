@@ -32,7 +32,7 @@ public class UserInterface implements Runnable {
 
 
         JLabel amount = new JLabel("0");
-        JButton clickButton = new JButton("Click!");
+        JButton clickButton = new JButton("getboektitel");
         taskExecutor = new TaskExecutor();
         clickListener = new ClickListener(amount, taskExecutor);
 
