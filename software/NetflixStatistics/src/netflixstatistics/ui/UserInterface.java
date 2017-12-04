@@ -1,4 +1,6 @@
-package clicker.ui;
+package netflixstatistics.ui;
+
+import netflixstatistics.applicationlogic.TaskExecutor;
 
 import java.awt.*;
 import javax.swing.*;
@@ -6,6 +8,7 @@ import javax.swing.*;
 public class UserInterface implements Runnable {
     private JFrame frame;
     ClickListener clickListener;
+    TaskExecutor taskExecutor;
 
     public UserInterface(){}
 
@@ -30,7 +33,9 @@ public class UserInterface implements Runnable {
 
         JLabel amount = new JLabel("0");
         JButton clickButton = new JButton("Click!");
-        clickListener = new ClickListener(amount);
+        taskExecutor = new TaskExecutor();
+        clickListener = new ClickListener(amount, taskExecutor);
+
         clickButton.addActionListener(clickListener);
 
         container.add(amount);

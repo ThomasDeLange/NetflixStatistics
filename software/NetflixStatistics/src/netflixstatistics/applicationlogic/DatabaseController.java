@@ -1,4 +1,4 @@
-package clicker.applicationlogic;
+package netflixstatistics.applicationlogic;
 
 import java.sql.*;
 import java.util.ArrayList;

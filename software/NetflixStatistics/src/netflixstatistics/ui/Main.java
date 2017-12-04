@@ -1,4 +1,4 @@
-package clicker.ui;
+package netflixstatistics.ui;
 
 
 import javax.swing.SwingUtilities;
