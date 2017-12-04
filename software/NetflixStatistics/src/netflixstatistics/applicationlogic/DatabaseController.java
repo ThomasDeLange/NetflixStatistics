@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class DatabaseController {
-    private String connectionUrl = "jdbc:sqlserver://thomasserver.database.windows.net:1433;database=NetflixStatistics;user=Thomas@thomasserver;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+    private String connectionUrl = "jdbc:sqlserver://thomasserver.database.windows.net:1433;database=NetflixStatistics;user=Thomas@thomasserver;password={admin123!};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
     private Connection con = null;
     private Statement stmt = null;
     private ResultSet rs = null;
