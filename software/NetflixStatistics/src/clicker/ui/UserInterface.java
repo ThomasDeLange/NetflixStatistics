@@ -12,8 +12,9 @@ public class UserInterface implements Runnable {
 
     @Override
     public void run() {
-        frame = new JFrame("Click Effect");
-        frame.setPreferredSize(new Dimension(200, 200));
+        frame = new JFrame("NetflixStatistics");
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         createComponents(frame.getContentPane());
@@ -25,6 +26,7 @@ public class UserInterface implements Runnable {
     private void createComponents(Container container) {
         GridLayout layout = new GridLayout(2, 1);
         container.setLayout(layout);
+
 
         JLabel amount = new JLabel("0");
         JButton clickButton = new JButton("Click!");
