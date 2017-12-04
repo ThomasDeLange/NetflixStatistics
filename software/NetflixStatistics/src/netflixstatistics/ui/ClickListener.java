@@ -5,6 +5,7 @@ import netflixstatistics.applicationlogic.TaskExecutor;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class ClickListener implements ActionListener {
     private JLabel object;
@@ -17,8 +18,14 @@ public class ClickListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String result = e.getActionCommand();
-        taskExecutor.runTask(result);
-        object.setText(result);
+        String r = e.getActionCommand();
+        ArrayList<String> result = taskExecutor.runTask(r);
+        for (String s : result) {
+            System.out.println(s);
+
+        }
+
+
+        object.setText("efef");
     }
 }

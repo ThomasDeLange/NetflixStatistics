@@ -14,7 +14,7 @@ public class TaskExecutor {
 
         switch (taskID){
             case "getboektitel":
-                stringResults =  databaseController.getStrings("SELECT * FROM TITLE", "titel");
+                stringResults =  databaseController.getStrings("SELECT * FROM BOEK", "titel");
             //other tasks
         }
 
