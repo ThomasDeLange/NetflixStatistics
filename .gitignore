@@ -9,3 +9,4 @@ software/NetflixStatistics/manifest.mf
 software/NetflixStatistics/out
 software/NetflixStatistics/NetflixStatistics.iml
 software\NetflixStatistics\.idea\libraries
+software/NetflixStatistics/.idea/libraries/mssql_jdbc_6_2_2_jre8.xml
