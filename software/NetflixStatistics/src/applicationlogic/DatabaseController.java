@@ -5,7 +5,14 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+/*
+Databasecontroller
+1. Maakt een connectie met de database zolang de applicatie draait
+2. Ontvangt van TaskExecutor een sql querry
+3. Voert de sql querry uit op de database
+4. Stuurt de gegevens van de querry terug naar TaskExecutor
 
+ */
 public class DatabaseController {
     private String connectionUrl = "jdbc:sqlserver://thomasserver.database.windows.net:1433;database=NetflixStatistics;user=Thomas@thomasserver;password={admin123!};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
     private Connection con = null;
