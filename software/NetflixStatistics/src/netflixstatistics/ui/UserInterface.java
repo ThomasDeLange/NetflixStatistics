@@ -1,16 +1,22 @@
 package netflixstatistics.ui;
 
+import netflixstatistics.applicationlogic.DatabaseController;
 import netflixstatistics.applicationlogic.TaskExecutor;
 
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import javax.swing.*;
 
 public class UserInterface implements Runnable {
     private JFrame frame;
     ClickListener clickListener;
     TaskExecutor taskExecutor;
+    DatabaseController databaseController;
 
-    public UserInterface(){}
+    public UserInterface(){
+        databaseController = new DatabaseController();
+    }
 
 
     @Override
@@ -18,7 +24,19 @@ public class UserInterface implements Runnable {
         frame = new JFrame("NetflixStatistics");
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                if (JOptionPane.showConfirmDialog(frame,
+                        "Are you sure to close this window?", "Really Closing?",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION){
+                    databaseController.close();
+                    System.exit(0);
+                }
+            }
+        });
 
         createComponents(frame.getContentPane());
 
@@ -33,7 +51,7 @@ public class UserInterface implements Runnable {
 
         JLabel amount = new JLabel("0");
         JButton clickButton = new JButton("getboektitel");
-        taskExecutor = new TaskExecutor();
+        taskExecutor = new TaskExecutor(databaseController);
         clickListener = new ClickListener(amount, taskExecutor);
 
         clickButton.addActionListener(clickListener);
