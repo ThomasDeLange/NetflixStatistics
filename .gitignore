@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+software\NetflixStatistics\.idea\libraries
+software/NetflixStatistics/.idea/libraries/mssql_jdbc_6_2_2_jre8.xml
+software/NetflixStatistics/.idea/workspace.xml
+*.xml
+software/NetflixStatistics/.idea/libraries/mssql_jdbc_6_2_2_jre8.xml
 software/NetflixStatistics/build
 software/NetflixStatistics/out
 software/NetflixStatistics/.idea
@@ -8,12 +14,6 @@ software/NetflixStatistics/build_log.txt
 software/NetflixStatistics/manifest.mf
 software/NetflixStatistics/out
 software/NetflixStatistics/NetflixStatistics.iml
-<<<<<<< HEAD
-software\NetflixStatistics\.idea\libraries
-software/NetflixStatistics/.idea/libraries/mssql_jdbc_6_2_2_jre8.xml
-software/NetflixStatistics/.idea/workspace.xml
-*.xml
-software/NetflixStatistics/.idea/libraries/mssql_jdbc_6_2_2_jre8.xml
 =======
 software\NetflixStatistics\.idea\libraries
 software/.DS_Store
