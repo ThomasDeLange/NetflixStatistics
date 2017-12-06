@@ -18,7 +18,6 @@ public class UserInterface implements Runnable {
         databaseController = new DatabaseController();
     }
 
-
     @Override
     public void run() {
         frame = new JFrame("NetflixStatistics");
