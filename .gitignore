@@ -10,3 +10,5 @@ software/NetflixStatistics/out
 software/NetflixStatistics/NetflixStatistics.iml
 software\NetflixStatistics\.idea\libraries
 software/.DS_Store
+*.xml
+*.xml
