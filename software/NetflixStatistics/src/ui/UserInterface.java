@@ -52,16 +52,19 @@ public class UserInterface implements Runnable {
         JLabel amount = new JLabel("0");
         JButton accountAbonneeNR = new JButton("GetAccountNR");
         JButton accountNaam = new JButton("GetAccountName");
+        JButton accountWoonplaats = new JButton("GetAccountWoonplaats");
 
         taskExecutor = new TaskExecutor(databaseController);
         clickListener = new ClickListener(amount, taskExecutor);
 
         accountAbonneeNR.addActionListener(clickListener);
         accountNaam.addActionListener(clickListener);
+        accountWoonplaats.addActionListener(clickListener);
 
         container.add(amount);
         container.add(accountAbonneeNR);
         container.add(accountNaam);
+        container.add(accountWoonplaats);
 
     }
 

@@ -27,6 +27,10 @@ public class TaskExecutor {
             case "GetAccountName":
                 stringResults =  databaseController.getStrings("SELECT * FROM Account", "Naam");
                 break;
+
+            case "GetAccountWoonplaats":
+                stringResults =  databaseController.getStrings("SELECT * FROM Account", "Woonplaats");
+                break;
             //other tasks
         }
         return stringResults;
