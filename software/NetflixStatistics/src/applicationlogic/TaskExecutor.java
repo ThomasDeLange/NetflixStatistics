@@ -20,8 +20,12 @@ public class TaskExecutor {
     public ArrayList<String> runTask(String taskID){
         ArrayList<String> stringResults = new ArrayList<>();
         switch (taskID){
-            case "getboektitel":
-                stringResults =  databaseController.getStrings("SELECT * FROM BOEK", "titel");
+            case "GetAccountNR":
+                stringResults =  databaseController.getStrings("SELECT * FROM Account", "AbonneeNR");
+                break;
+
+            case "GetAccountName":
+                stringResults =  databaseController.getStrings("SELECT * FROM Account", "Naam");
                 break;
             //other tasks
         }
