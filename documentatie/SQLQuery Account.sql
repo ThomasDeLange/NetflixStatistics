@@ -1,8 +1,8 @@
 ﻿CREATE TABLE Account (
- AbonneeNR		nvarchar(9),
+ AbonneeNR		int,
  Naam			nvarchar(45),  Straat			nvarchar(45),
  Postcode		nvarchar(7),
- Huisnummer		nvarchar(3),
+ Huisnummer		int,
  Woonplaats		nvarchar(30),
 
  CONSTRAINT AccountPK 
@@ -13,7 +13,7 @@
 */
 
 CREATE TABLE Profiel (
- AbonneeNR		nvarchar(9),
+ AbonneeNR		int,
  ProfielNaam	nvarchar(8),  Geboortedatum	DateTime2,
 
 
@@ -32,41 +32,25 @@ CREATE TABLE Profiel (
 */
 
 CREATE TABLE Bekeken (
- AbonneeNR		nvarchar(9),
- ProfielNaam	nvarchar(8),  Gezien			nvarchar(6),
- Percentage		nvarchar(3),
+ AbonneeNR		int,
+ ProfielNaam	nvarchar(8),  Gezien			int,
+ Percentage		int,
 
  CONSTRAINT BekekenPK 
 		PRIMARY KEY (AbonneeNR, ProfielNaam, Gezien),
-		);
-
-CREATE TABLE Profiel_Bekeken (
- ProfielAbonneeNR		nvarchar(9),
- ProfielProfielNaam		nvarchar(8),  BekekenAbonneeNR		nvarchar(9),
- BekekenProfielNaam		nvarchar(8),
- BekekenGezien			nvarchar(6),
-
-
- CONSTRAINT Profiel_bekekenPK
-		PRIMARY KEY (BekekenAbonneeNR, BekekenProfielNaam, BekekenGezien),
 		 	
- CONSTRAINT Profiel_bekeken_ProfielFK
+ CONSTRAINT bekeken_ProfielFK
  	FOREIGN KEY (ProfielAbonneeNR, ProfielProfielNaam)
-	REFERENCES Profiel(AbonneeNR, ProfielNaam),
+	REFERENCES Profiel(AbonneeNR, ProfielNaam)
+	ON DELETE CASCADE,
 
-CONSTRAINT Profiel_Bekeken_BekekenFK
+CONSTRAINT Bekeken_BekekenFK
 	FOREIGN KEY (BekekenAbonneeNR, BekekenProfielNaam, BekekenGezien)
 	REFERENCES Bekeken(AbonneeNR, ProfielNaam, Gezien)
 	
 		);
 
-SELECT *
-FROM Account
-SELECT *
-FROM Bekeken
-SELECT *
-FROM Profiel
-SELECT *
-FROM Profiel_Bekeken
+
+
 
 

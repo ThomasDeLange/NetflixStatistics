@@ -1,4 +1,4 @@
-SerieNaam;Seizoen;Leeftijd;Taal;Genre;LijktOp
-Sherlock;S01E01;12;Engels;Detective;Fargo
-Breaking Bad;S01E01;16;Engels-Amerikaans;Spanning;Fargo
-Fargo;S01E01;16;Engels-Amerikaans;Spanning;Breaking Bad
+ContentID;SerieNaam;Seizoen;LijktOp
+1;Sherlock;S01E01;Fargo
+2;Breaking Bad;S01E01;Fargo
+3;Fargo;S01E01;Breaking Bad
