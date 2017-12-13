@@ -1,5 +1,5 @@
 package applicationlogic;
-
+import Repositories.AccountRepository;
 import Objects.Account;
 import ui.UserInterface;
 
@@ -17,7 +17,7 @@ TaskExecutor
 public class TaskExecutor {
 
     UserInterface userInterface;
-
+    AccountRepository account = new AccountRepository(new SqlConnection());
     public TaskExecutor(UserInterface userInterface){
         this.userInterface = userInterface;
     }
@@ -26,9 +26,8 @@ public class TaskExecutor {
         ArrayList<String> stringResults = new ArrayList<>();
         switch (taskID){
             case "GetAccountNummers":
-                ArrayList<Account> accounts =  userInterface.getAccountRepository().readAll();
-                for(Account a: accounts)
-                {
+                ArrayList<Account> accounts =  account.readAll();
+                for(Account a: accounts) {
                     System.out.println(a.getAbonneenummer());
                 }
                 break;
