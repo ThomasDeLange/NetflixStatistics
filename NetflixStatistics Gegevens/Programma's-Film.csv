@@ -1,12 +1,12 @@
-ContentID;ID;Titel;Leeftijd;Taal;Tijdsduur;Genre
-4;1010;The Abominable Bride;12;Engels;1:29;Detective
-5;8001;The Life of Brian;12;Engels;1:34;Humor
-6;8002;Pulp Fiction;16;Engels-Amerikaans;2:34;Misdaad
-7;8004;Pruimebloesem;18;Nederlands;1:20;Erotiek
-8;8008;Reservoir Dogs;16;Engels-Amerikaans;1:39;Misdaad
-9;8010;The Good, the Bad and the Ugly;12;Engels-Amerikaans;2:41;Western
-10;8011;Andy Warhol's Dracula;16;Engels-Amerikaans;1:43;Humor
-11;8012;Ober;6;Nederlands;1:37;Humor
-12;8014;Der Untergang;6;Duits;2:58;Oorlog
-13;8016;De helaasheid der dingen;12;Vlaams;1:48;Humor
-14;8017;A Clockwork Orange;16;Engels;2:16;SF
+ContentID;ID;Titel;Tijdsduur
+4;1010;The Abominable Bride;1:29
+5;8001;The Life of Brian;1:34
+6;8002;Pulp Fiction;2:34
+7;8004;Pruimebloesem;1:20
+8;8008;Reservoir Dogs;1:39
+9;8010;The Good, the Bad and the Ugly;2:41
+10;8011;Andy Warhol's Dracula;1:43
+11;8012;Ober;1:37
+12;8014;Der Untergang;2:58
+13;8016;De helaasheid der dingen;1:48
+14;8017;A Clockwork Orange;2:16

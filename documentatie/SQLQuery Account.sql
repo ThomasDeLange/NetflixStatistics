@@ -35,18 +35,19 @@ CREATE TABLE Bekeken (
  AbonneeNR		int,
  ProfielNaam	nvarchar(8),  Gezien			int,
  Percentage		int,
+ ContentID		int,
 
  CONSTRAINT BekekenPK 
 		PRIMARY KEY (AbonneeNR, ProfielNaam, Gezien),
 		 	
  CONSTRAINT bekeken_ProfielFK
- 	FOREIGN KEY (ProfielAbonneeNR, ProfielProfielNaam)
+ 	FOREIGN KEY (AbonneeNr, ProfielNaam)
 	REFERENCES Profiel(AbonneeNR, ProfielNaam)
 	ON DELETE CASCADE,
 
-CONSTRAINT Bekeken_BekekenFK
-	FOREIGN KEY (BekekenAbonneeNR, BekekenProfielNaam, BekekenGezien)
-	REFERENCES Bekeken(AbonneeNR, ProfielNaam, Gezien)
+CONSTRAINT Bekeken_ContentFK
+	FOREIGN KEY (ContentID)
+	REFERENCES Content(ContentID)
 	
 		);
 
