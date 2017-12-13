@@ -1,6 +1,0 @@
-
-BUILD FAILED
-C:\Users\jan-paul\Documents\IdeaProjects\TMCProjects\avansbreda-programmeren-2\week11-week11_39.ClickEffect\nbproject\build-impl.xml:603: The following error occurred while executing this line:
-C:\Users\jan-paul\Documents\IdeaProjects\TMCProjects\avansbreda-programmeren-2\week11-week11_39.ClickEffect\nbproject\build-impl.xml:245: Error running javac.exe compiler
-
-Total time: 0 seconds
