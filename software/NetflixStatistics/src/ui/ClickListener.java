@@ -34,7 +34,7 @@ public class ClickListener implements ActionListener {
         String resultString = "";
         for (String s : result) {
             System.out.println(s);
-            resultString += s + "\n";
+            resultString += s + "\n ";
 
         }
         object.setText("Resultaten zijn: \n" + resultString);
