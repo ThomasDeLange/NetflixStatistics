@@ -1,6 +1,7 @@
 package ui;
 
-import applicationlogic.DatabaseController;
+import Repositories.AccountRepository;
+import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
 
 import javax.swing.*;
@@ -12,12 +13,22 @@ public class UserInterface implements Runnable {
     private JFrame frame;
     ClickListener clickListener;
     TaskExecutor taskExecutor;
-    DatabaseController databaseController;
+    SqlConnection sqlConnection;
+    AccountRepository accountRepository = new AccountRepository(sqlConnection);
 
-    public UserInterface(){
-        databaseController = new DatabaseController();
+    public AccountRepository getAccountRepository() {
+        return accountRepository;
     }
 
+    public SqlConnection getSqlConnection() {
+        return sqlConnection;
+    }
+
+    public UserInterface(){
+        sqlConnection = new SqlConnection();
+        sqlConnection.connectDatabase("jdbc:sqlserver://thomasserver.database.windows.net:1433;database=NetflixStatistics;user=Thomas@thomasserver;password={admin123!};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+        accountRepository = new AccountRepository(sqlConnection);
+    }
 
     @Override
     public void run() {
@@ -32,7 +43,7 @@ public class UserInterface implements Runnable {
                         "Are you sure to close this window?", "Really Closing?",
                         JOptionPane.YES_NO_OPTION,
                         JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION){
-                    databaseController.close();
+                    sqlConnection.disconnectDatabase();
                     System.exit(0);
                 }
             }
@@ -50,11 +61,11 @@ public class UserInterface implements Runnable {
 
 
         JLabel amount = new JLabel("0");
-        JButton accountAbonneeNR = new JButton("GetAccountNR");
+        JButton accountAbonneeNR = new JButton("GetAccountNummers");
         JButton accountNaam = new JButton("GetAccountName");
-        JButton accountWoonplaats = new JButton("GetAccountWoonplaats");
+        JButton accountWoonplaats = new JButton("AddUser");
 
-        taskExecutor = new TaskExecutor(databaseController);
+        taskExecutor = new TaskExecutor(this);
         clickListener = new ClickListener(amount, taskExecutor);
 
         accountAbonneeNR.addActionListener(clickListener);
@@ -65,7 +76,6 @@ public class UserInterface implements Runnable {
         container.add(accountAbonneeNR);
         container.add(accountNaam);
         container.add(accountWoonplaats);
-
     }
 
     public JFrame getFrame() {

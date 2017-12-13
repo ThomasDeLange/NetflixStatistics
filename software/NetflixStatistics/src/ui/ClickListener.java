@@ -30,13 +30,10 @@ public class ClickListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String r = e.getActionCommand();
-        ArrayList<String> result = taskExecutor.runTask(r);
-        String resultString = "";
-        for (String s : result) {
-            System.out.println(s);
-            resultString += s + "\n ";
 
-        }
-        object.setText("Resultaten zijn: \n" + resultString);
+        taskExecutor.runTask(r);
+
+        object.setText(e.getActionCommand());
+
     }
 }

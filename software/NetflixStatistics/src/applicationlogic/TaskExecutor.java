@@ -1,5 +1,9 @@
 package applicationlogic;
 
+import Objects.Account;
+import ui.UserInterface;
+
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 /*
 TaskExecutor
@@ -11,28 +15,34 @@ TaskExecutor
 
  */
 public class TaskExecutor {
-    DatabaseController databaseController;
 
-    public TaskExecutor(DatabaseController databaseController){
-        this.databaseController = databaseController;
+    UserInterface userInterface;
+
+    public TaskExecutor(UserInterface userInterface){
+        this.userInterface = userInterface;
     }
 
-    public ArrayList<String> runTask(String taskID){
+    public void runTask(String taskID){
         ArrayList<String> stringResults = new ArrayList<>();
         switch (taskID){
-            case "GetAccountNR":
-                stringResults =  databaseController.getStrings("SELECT * FROM Account", "AbonneeNR");
+            case "GetAccountNummers":
+
+                ArrayList<Account> accounts =  userInterface.getAccountRepository().readAll();
+                for(Account a: accounts)
+                {
+                    System.out.println(a.getAbonneenummer());
+                }
                 break;
 
             case "GetAccountName":
-                stringResults =  databaseController.getStrings("SELECT * FROM Account", "Naam");
                 break;
 
             case "GetAccountWoonplaats":
-                stringResults =  databaseController.getStrings("SELECT * FROM Account", "Woonplaats");
+                break;
+
+            case "AddUser":
                 break;
             //other tasks
         }
-        return stringResults;
     }
 }
