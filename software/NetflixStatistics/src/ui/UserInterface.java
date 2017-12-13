@@ -46,96 +46,34 @@ frame.setMinimumSize(new Dimension(600, 500));
     private void createComponents(Container container) {
         BorderLayout layout = new BorderLayout();
         container.setLayout(layout);
-        Font font = new Font("serif", Font.BOLD, 24);
+        Font font = new Font("arial", Font.BOLD, 24);
 
         JTabbedPane tabs = new JTabbedPane();
 
-        JPanel panel2 = new JPanel();
         JPanel panel3 = new JPanel();
 
+        SeriesTab seriesTab = new SeriesTab(font);
+        FilmsTab filmsTab = new FilmsTab(font);
 
-        tabs.add(seriesTab(font), "Series");
-        tabs.add(filmsTab(font), "Films");
+        tabs.add(seriesTab.getSeriesTab(), "Series");
+        tabs.add(filmsTab.getFilmsTab(), "Films");
         tabs.add(panel3, "Accounts");
 
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new BorderLayout());
+        JLabel title = new JLabel("Netflix Statistix");
+        JLabel names = new JLabel("text, text, text, text, text, text, text, text, ");
+        bottomPanel.add(title, BorderLayout.WEST);
+        bottomPanel.add(names, BorderLayout.EAST);
 
-//        taskExecutor = new TaskExecutor(SqlConnection);
-
+        container.add(bottomPanel, BorderLayout.SOUTH);
         container.add(tabs, BorderLayout.CENTER);
     }
 
-    private JPanel seriesTab(Font font) {
-        JPanel seriesPanel = new JPanel();
-        seriesPanel.setLayout(new BorderLayout());
 
-        JPanel subpanel1 = new JPanel();
-        subpanel1.setLayout(new FlowLayout());
-
-        JLabel label1 = new JLabel("Selecteer serie");
-        label1.setFont(font);
-        JComboBox dropdown = new JComboBox();
-
-        subpanel1.add(label1);
-        subpanel1.add(dropdown);
-        seriesPanel.add(subpanel1, BorderLayout.NORTH);
-
-        JPanel subpanel2 = new JPanel();
-        subpanel2.setBorder(BorderFactory.createTitledBorder("Gemiddeld percentage bekeken per aflevering"));
-        subpanel2.setLayout(new GridLayout(1,1));
-
-
-        JTable table = new JTable();
-        subpanel2.add(table);
-        seriesPanel.add(subpanel2, BorderLayout.CENTER);
-
-        JPanel subpanel3 = new JPanel();
-        subpanel3.setLayout(new GridLayout(1, 2));
-        JLabel label3 = new JLabel("Netflix Statistix");
-        JLabel label4= new JLabel("text, text, text, text, text, text, text, text, ");
-        subpanel3.add(label3);
-        subpanel3.add(label4);
-
-        seriesPanel.add(subpanel3, BorderLayout.SOUTH);
-
-        return seriesPanel;
-    }
-
-    private JPanel filmsTab(Font font) {
-        JPanel filmsPanel = new JPanel();
-        filmsPanel.setLayout(new BorderLayout());
-
-        JPanel subpanel1 = new JPanel();
-        subpanel1.setLayout(new FlowLayout());
-
-        JLabel label1 = new JLabel("Selecteer film");
-        label1.setFont(font);
-        JComboBox dropdown = new JComboBox();
-
-        subpanel1.add(label1);
-        subpanel1.add(dropdown);
-        filmsPanel.add(subpanel1, BorderLayout.NORTH);
-
-        JPanel subpanel2 = new JPanel();
-        subpanel2.setBorder(BorderFactory.createTitledBorder("Gemiddeld percentage bekeken per account"));
-        subpanel2.setLayout(new GridLayout(1,1));
-
-
-        JTable table = new JTable();
-        subpanel2.add(table);
-        filmsPanel.add(subpanel2, BorderLayout.CENTER);
-
-        JPanel subpanel3 = new JPanel();
-        subpanel3.setLayout(new BorderLayout());
-        JLabel label3 = new JLabel("Netflix Statistix");
-        JLabel label4= new JLabel("text, text, text, text, text, text, text, text, ");
-        subpanel3.add(label3, BorderLayout.WEST);
-        subpanel3.add(label4, BorderLayout.EAST);
-
-        filmsPanel.add(subpanel3, BorderLayout.SOUTH);
-
-        return filmsPanel;
-    }
-
+//    private JPanel accountsTab(Font font) {
+//
+//    }
 
 
     public JFrame getFrame() {
