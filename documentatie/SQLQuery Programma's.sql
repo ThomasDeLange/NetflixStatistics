@@ -1,6 +1,7 @@
 ﻿CREATE TABLE Film (
  ID				nvarchar(6),
- Titel			nvarchar(45),  Leeftijd		int,
+ Titel			nvarchar(45),
+ Leeftijd		int,
  Taal			nvarchar(30),
  Tijdsduur		TIME,
  Genre			nvarchar(30),
@@ -14,7 +15,8 @@
 
 CREATE TABLE Serie (
  SerieNaam		nvarchar(45),
- Seizoen		nvarchar(8),  Leeftijd		int,
+ Seizoen		nvarchar(8),
+ Leeftijd		int,
  Taal			nvarchar(30),
  Genre			nvarchar(30),
  LijktOp		nvarchar(45),
@@ -27,7 +29,8 @@ CREATE TABLE Serie (
 */
 CREATE TABLE Aflevering (
  ID				nvarchar(6),
- Seizoen		nvarchar(8),  Titel			nvarchar(45),
+ Seizoen		nvarchar(8),
+ Titel			nvarchar(45),
  Tijdsduur		TIME,
  SerieNaam		nvarchar(45)
 
