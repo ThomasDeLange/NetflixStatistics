@@ -1,6 +1,5 @@
 package ui;
 
-import Repositories.AccountRepository;
 import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
 
@@ -13,22 +12,12 @@ public class UserInterface implements Runnable {
     private JFrame frame;
     ClickListener clickListener;
     TaskExecutor taskExecutor;
-    SqlConnection sqlConnection;
-    AccountRepository accountRepository = new AccountRepository(sqlConnection);
+    SqlConnection SqlConnection;
 
-    public AccountRepository getAccountRepository() {
-        return accountRepository;
+    public UserInterface() {
+        SqlConnection = new SqlConnection();
     }
 
-    public SqlConnection getSqlConnection() {
-        return sqlConnection;
-    }
-
-    public UserInterface(){
-        sqlConnection = new SqlConnection();
-        sqlConnection.connectDatabase("jdbc:sqlserver://thomasserver.database.windows.net:1433;database=NetflixStatistics;user=Thomas@thomasserver;password={admin123!};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
-        accountRepository = new AccountRepository(sqlConnection);
-    }
 
     @Override
     public void run() {
@@ -42,8 +31,7 @@ public class UserInterface implements Runnable {
                 if (JOptionPane.showConfirmDialog(frame,
                         "Are you sure to close this window?", "Really Closing?",
                         JOptionPane.YES_NO_OPTION,
-                        JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION){
-                    sqlConnection.disconnectDatabase();
+                        JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION) {
                     System.exit(0);
                 }
             }
@@ -56,26 +44,96 @@ public class UserInterface implements Runnable {
     }
 
     private void createComponents(Container container) {
-        GridLayout layout = new GridLayout(2, 1);
+        GridLayout layout = new GridLayout(1, 1);
         container.setLayout(layout);
+        Font font = new Font("serif", Font.BOLD, 24);
+
+        JTabbedPane tabs = new JTabbedPane();
+
+        JPanel panel2 = new JPanel();
+        JPanel panel3 = new JPanel();
 
 
-        JLabel amount = new JLabel("0");
-        JButton accountAbonneeNR = new JButton("GetAccountNummers");
-        JButton accountNaam = new JButton("GetAccountName");
-        JButton accountWoonplaats = new JButton("AddUser");
+        tabs.add(seriesTab(font), "Series");
+        tabs.add(panel2, "Films");
+        tabs.add(panel3, "Accounts");
 
-        taskExecutor = new TaskExecutor(this);
-        clickListener = new ClickListener(amount, taskExecutor);
 
-        accountAbonneeNR.addActionListener(clickListener);
-        accountNaam.addActionListener(clickListener);
-        accountWoonplaats.addActionListener(clickListener);
+//        taskExecutor = new TaskExecutor(SqlConnection);
 
-        container.add(amount);
-        container.add(accountAbonneeNR);
-        container.add(accountNaam);
-        container.add(accountWoonplaats);
+        container.add(tabs);
+    }
+
+    private JPanel seriesTab(Font font) {
+        JPanel seriesPanel = new JPanel();
+        seriesPanel.setLayout(new BorderLayout());
+
+        JPanel subpanel1 = new JPanel();
+        subpanel1.setLayout(new FlowLayout());
+
+        JLabel label1 = new JLabel("Selecteer serie");
+        label1.setFont(font);
+        JComboBox dropdown = new JComboBox();
+
+        subpanel1.add(label1);
+        subpanel1.add(dropdown);
+        seriesPanel.add(subpanel1, BorderLayout.NORTH);
+
+        JPanel subpanel2 = new JPanel();
+        subpanel2.setBorder(BorderFactory.createTitledBorder("Gemiddeld percentage bekeken per aflevering"));
+        subpanel2.setLayout(new GridLayout(1,1));
+
+
+        JTable table = new JTable();
+        subpanel2.add(table);
+        seriesPanel.add(subpanel2, BorderLayout.CENTER);
+
+        JPanel subpanel3 = new JPanel();
+        subpanel3.setLayout(new GridLayout(1, 2));
+        JLabel label3 = new JLabel("Netflix Statistix");
+        JLabel label4= new JLabel("text, text, text, text, text, text, text, text, ");
+        subpanel3.add(label3);
+        subpanel3.add(label4);
+
+        seriesPanel.add(subpanel3, BorderLayout.SOUTH);
+
+        return seriesPanel;
+    }
+
+    private JPanel filmsTab(Font font) {
+        JPanel filmsPanel = new JPanel();
+        filmsPanel.setLayout(new BorderLayout());
+
+        JPanel subpanel1 = new JPanel();
+        subpanel1.setLayout(new FlowLayout());
+
+        JLabel label1 = new JLabel("Selecteer film");
+        label1.setFont(font);
+        JComboBox dropdown = new JComboBox();
+
+        subpanel1.add(label1);
+        subpanel1.add(dropdown);
+        filmsPanel.add(subpanel1, BorderLayout.NORTH);
+
+        JPanel subpanel2 = new JPanel();
+        subpanel2.setBorder(BorderFactory.createTitledBorder("Gemiddeld percentage bekeken per account"));
+        subpanel2.setLayout(new GridLayout(1,1));
+
+
+        JTable table = new JTable();
+        subpanel2.add(table);
+        filmsPanel.add(subpanel2, BorderLayout.CENTER);
+
+        JPanel subpanel3 = new JPanel();
+        subpanel3.setLayout(new GridLayout(1, 2));
+        JLabel label3 = new JLabel("Netflix Statistix");
+        JLabel label4= new JLabel("text, text, text, text, text, text, text, text, ");
+        subpanel3.add(label3);
+        subpanel3.add(label4);
+
+        filmsPanel.add(subpanel3, BorderLayout.SOUTH);
+
+        return filmsPanel;
     }
 
     public JFrame getFrame() {
