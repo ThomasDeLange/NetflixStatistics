@@ -44,7 +44,7 @@ public class UserInterface implements Runnable {
     }
 
     private void createComponents(Container container) {
-        GridLayout layout = new GridLayout(1, 1);
+        BorderLayout layout = new BorderLayout();
         container.setLayout(layout);
         Font font = new Font("serif", Font.BOLD, 24);
 
@@ -55,13 +55,13 @@ public class UserInterface implements Runnable {
 
 
         tabs.add(seriesTab(font), "Series");
-        tabs.add(panel2, "Films");
+        tabs.add(filmsTab(font), "Films");
         tabs.add(panel3, "Accounts");
 
 
 //        taskExecutor = new TaskExecutor(SqlConnection);
 
-        container.add(tabs);
+        container.add(tabs, BorderLayout.CENTER);
     }
 
     private JPanel seriesTab(Font font) {
@@ -125,16 +125,18 @@ public class UserInterface implements Runnable {
         filmsPanel.add(subpanel2, BorderLayout.CENTER);
 
         JPanel subpanel3 = new JPanel();
-        subpanel3.setLayout(new GridLayout(1, 2));
+        subpanel3.setLayout(new BorderLayout());
         JLabel label3 = new JLabel("Netflix Statistix");
         JLabel label4= new JLabel("text, text, text, text, text, text, text, text, ");
-        subpanel3.add(label3);
-        subpanel3.add(label4);
+        subpanel3.add(label3, BorderLayout.WEST);
+        subpanel3.add(label4, BorderLayout.EAST);
 
         filmsPanel.add(subpanel3, BorderLayout.SOUTH);
 
         return filmsPanel;
     }
+
+
 
     public JFrame getFrame() {
         return frame;
