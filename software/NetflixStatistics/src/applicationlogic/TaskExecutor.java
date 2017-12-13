@@ -26,7 +26,6 @@ public class TaskExecutor {
         ArrayList<String> stringResults = new ArrayList<>();
         switch (taskID){
             case "GetAccountNummers":
-
                 ArrayList<Account> accounts =  userInterface.getAccountRepository().readAll();
                 for(Account a: accounts)
                 {
