@@ -2,6 +2,7 @@ package ui;
 
 import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
+import javafx.concurrent.Task;
 
 import javax.swing.*;
 import java.awt.*;
@@ -71,7 +72,11 @@ frame.setMinimumSize(new Dimension(600, 500));
 
         JButton button = new JButton("getFilmTitels");
         JLabel label = new JLabel();
-        button.addActionListener(new ClickListener(label, new TaskExecutor(new UserInterface())));
+
+        UserInterface userInterface = new UserInterface();
+        TaskExecutor taskExecutor = new TaskExecutor(userInterface);
+
+        button.addActionListener(new ClickListener(label, taskExecutor));
     }
 
 

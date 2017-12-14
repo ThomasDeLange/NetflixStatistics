@@ -1,5 +1,6 @@
 package ui;
 
+import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
 
 import javax.swing.*;
@@ -41,6 +42,7 @@ public class FilmsTab {
         JLabel label = new JLabel("laallalalalalal");
         ClickListener clickListener = new ClickListener(label, new TaskExecutor(new UserInterface()));
 
+        button.addActionListener(clickListener);
         subpanel2.add(label);
         subpanel2.add(button);
 

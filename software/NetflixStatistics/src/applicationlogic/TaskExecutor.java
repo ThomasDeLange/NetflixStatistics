@@ -26,7 +26,7 @@ public class TaskExecutor {
         ArrayList<String> stringResults = new ArrayList<>();
         switch (taskID){
             case "GetAccountNummers":
-                ArrayList<Account> accounts =  account.readAll();
+                ArrayList<Account> accounts = account.readAll();
                 for(Account a: accounts) {
                     System.out.println(a.getAbonneenummer());
                 }
