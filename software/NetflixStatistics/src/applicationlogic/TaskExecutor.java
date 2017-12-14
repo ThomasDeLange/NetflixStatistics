@@ -1,6 +1,7 @@
 package applicationlogic;
 
 import Objects.Account;
+import Repositories.AccountRepository;
 import ui.UserInterface;
 
 import java.sql.PreparedStatement;
@@ -26,11 +27,10 @@ public class TaskExecutor {
         ArrayList<String> stringResults = new ArrayList<>();
         switch (taskID){
             case "GetAccountNummers":
-                ArrayList<Account> accounts =  userInterface.getAccountRepository().readAll();
-                for(Account a: accounts)
-                {
-                    System.out.println(a.getAbonneenummer());
-                }
+//                ArrayList<Account> accounts =
+//                for(Account a: accounts) {
+//                    System.out.println(a.getAbonneenummer());
+//                }
                 break;
 
             case "GetAccountName":

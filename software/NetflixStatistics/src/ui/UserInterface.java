@@ -7,7 +7,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+/*
+UI
 
+Maakt het frame voor alle tabs
+Regelt het afsluiten van het programma
+ */
 public class UserInterface implements Runnable {
     private JFrame frame;
     ClickListener clickListener;
@@ -16,6 +21,7 @@ public class UserInterface implements Runnable {
 
     public UserInterface() {
         SqlConnection = new SqlConnection();
+        SqlConnection.connectDatabase("jdbc:sqlserver://thomasserver.database.windows.net:1433;database=NetflixStatistics;user=Thomas@thomasserver;password={admin123!};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;")
     }
 
 
@@ -23,7 +29,7 @@ public class UserInterface implements Runnable {
     public void run() {
         frame = new JFrame("NetflixStatistics");
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-frame.setMinimumSize(new Dimension(600, 500));
+        frame.setMinimumSize(new Dimension(600, 500));
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frame.addWindowListener(new WindowAdapter() {
             @Override
