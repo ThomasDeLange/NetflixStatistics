@@ -1,5 +1,7 @@
 package ui;
 
+import applicationlogic.TaskExecutor;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -30,13 +32,27 @@ public class SeriesTab {
 
         JPanel tablePanel = new JPanel();
         tablePanel.setBorder(BorderFactory.createTitledBorder("Gemiddeld percentage bekeken per aflevering"));
-        tablePanel.setLayout(new GridLayout(1, 1));
+        tablePanel.setLayout(new GridLayout(1, 3));
 
         JTable table = new JTable();
 
         tablePanel.add(table);
 
         seriesPanel.add(tablePanel, BorderLayout.CENTER);
+
+        //Test knoppen hoi plz dont remove github
+
+        JButton button = new JButton("GetAccountNummers");
+        JLabel label = new JLabel("Plz werk");
+
+        UserInterface userInterface = new UserInterface();
+        TaskExecutor taskExecutor = new TaskExecutor(userInterface);
+        ClickListener clickListener = new ClickListener(label, taskExecutor);
+
+        button.addActionListener(clickListener);
+
+        tablePanel.add(label);
+        tablePanel.add(button);
 
         return seriesPanel;
     }

@@ -28,12 +28,12 @@ public class ClickListener implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        String r = e.getActionCommand();
+    public void actionPerformed(ActionEvent event) {
+        String task = event.getActionCommand();
 
-        taskExecutor.runTask(r);
+        taskExecutor.runTask(task);
 
-        object.setText(e.getActionCommand());
+        object.setText(event.getActionCommand());
 
     }
 }

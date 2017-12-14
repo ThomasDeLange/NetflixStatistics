@@ -24,13 +24,17 @@ public class TaskExecutor {
     }
 
     public void runTask(String taskID){
+        SqlConnection sqlConnection = new SqlConnection();
+
+
         ArrayList<String> stringResults = new ArrayList<>();
         switch (taskID){
             case "GetAccountNummers":
-//                ArrayList<Account> accounts =
-//                for(Account a: accounts) {
-//                    System.out.println(a.getAbonneenummer());
-//                }
+                AccountRepository accountRepository = new AccountRepository(sqlConnection);
+                ArrayList<Account> accounts = accountRepository.readAll();
+                for(Account a: accounts) {
+                    System.out.println(a.getAbonneenummer());
+                }
                 break;
 
             case "GetAccountName":

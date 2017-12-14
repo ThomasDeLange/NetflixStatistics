@@ -12,6 +12,7 @@ UI
 
 Maakt het frame voor alle tabs
 Regelt het afsluiten van het programma
+Zet de connectie op van de database
  */
 public class UserInterface implements Runnable {
     private JFrame frame;
@@ -21,7 +22,7 @@ public class UserInterface implements Runnable {
 
     public UserInterface() {
         SqlConnection = new SqlConnection();
-        SqlConnection.connectDatabase("jdbc:sqlserver://thomasserver.database.windows.net:1433;database=NetflixStatistics;user=Thomas@thomasserver;password={admin123!};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;")
+        SqlConnection.connectDatabase("jdbc:sqlserver://thomasserver.database.windows.net:1433;database=NetflixStatistics;user=Thomas@thomasserver;password={admin123!};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
     }
 
 
