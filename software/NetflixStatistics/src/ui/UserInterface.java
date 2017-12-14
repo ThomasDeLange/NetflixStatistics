@@ -68,6 +68,10 @@ frame.setMinimumSize(new Dimension(600, 500));
 
         container.add(bottomPanel, BorderLayout.SOUTH);
         container.add(tabs, BorderLayout.CENTER);
+
+        JButton button = new JButton("getFilmTitels");
+        JLabel label = new JLabel();
+        button.addActionListener(new ClickListener(label, new TaskExecutor(new UserInterface())));
     }
 
 

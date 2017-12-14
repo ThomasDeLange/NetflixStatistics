@@ -1,5 +1,7 @@
 package ui;
 
+import applicationlogic.TaskExecutor;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,6 +13,7 @@ public class FilmsTab {
     }
 
     public JPanel getFilmsTab() {
+
         JPanel filmsPanel = new JPanel();
         filmsPanel.setLayout(new BorderLayout());
 
@@ -27,12 +30,20 @@ public class FilmsTab {
 
         JPanel subpanel2 = new JPanel();
         subpanel2.setBorder(BorderFactory.createTitledBorder("Gemiddeld percentage bekeken per account"));
-        subpanel2.setLayout(new GridLayout(1, 1));
+        subpanel2.setLayout(new GridLayout(3, 1));
 
 
         JTable table = new JTable();
         subpanel2.add(table);
         filmsPanel.add(subpanel2, BorderLayout.CENTER);
+
+        JButton button = new JButton("GetAccountNummers");
+        JLabel label = new JLabel("laallalalalalal");
+        ClickListener clickListener = new ClickListener(label, new TaskExecutor(new UserInterface()));
+
+        subpanel2.add(label);
+        subpanel2.add(button);
+
 
 
         return filmsPanel;
