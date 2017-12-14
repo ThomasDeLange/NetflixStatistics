@@ -14,25 +14,28 @@ public class FilmsTab {
         JPanel filmsPanel = new JPanel();
         filmsPanel.setLayout(new BorderLayout());
 
-        JPanel subpanel1 = new JPanel();
-        subpanel1.setLayout(new FlowLayout());
+        JPanel topPanel = new JPanel();
+        topPanel.setLayout(new FlowLayout());
 
         JLabel label1 = new JLabel("Selecteer film");
         label1.setFont(font);
+
         JComboBox dropdown = new JComboBox();
 
-        subpanel1.add(label1);
-        subpanel1.add(dropdown);
-        filmsPanel.add(subpanel1, BorderLayout.NORTH);
+        topPanel.add(label1);
+        topPanel.add(dropdown);
 
-        JPanel subpanel2 = new JPanel();
-        subpanel2.setBorder(BorderFactory.createTitledBorder("Gemiddeld percentage bekeken per account"));
-        subpanel2.setLayout(new GridLayout(1, 1));
+        filmsPanel.add(topPanel, BorderLayout.NORTH);
 
+        JPanel tablePanel = new JPanel();
+        tablePanel.setBorder(BorderFactory.createTitledBorder("Gemiddeld percentage bekeken per account"));
+        tablePanel.setLayout(new GridLayout(1, 1));
 
         JTable table = new JTable();
-        subpanel2.add(table);
-        filmsPanel.add(subpanel2, BorderLayout.CENTER);
+
+        tablePanel.add(table);
+
+        filmsPanel.add(tablePanel, BorderLayout.CENTER);
 
 
         return filmsPanel;

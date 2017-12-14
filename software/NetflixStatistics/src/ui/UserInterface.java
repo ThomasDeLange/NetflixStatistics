@@ -50,14 +50,13 @@ frame.setMinimumSize(new Dimension(600, 500));
 
         JTabbedPane tabs = new JTabbedPane();
 
-        JPanel panel3 = new JPanel();
-
         SeriesTab seriesTab = new SeriesTab(font);
         FilmsTab filmsTab = new FilmsTab(font);
+        AccountsTab accountsTab = new AccountsTab(font);
 
         tabs.add(seriesTab.getSeriesTab(), "Series");
         tabs.add(filmsTab.getFilmsTab(), "Films");
-        tabs.add(panel3, "Accounts");
+        tabs.add(accountsTab.getAccountsTab(), "Accounts");
 
         JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(new BorderLayout());
@@ -70,10 +69,6 @@ frame.setMinimumSize(new Dimension(600, 500));
         container.add(tabs, BorderLayout.CENTER);
     }
 
-
-//    private JPanel accountsTab(Font font) {
-//
-//    }
 
 
     public JFrame getFrame() {
