@@ -7,8 +7,9 @@ SQL connection
 Zet de connectie op
 Disconnect met de database
 
-Voert de sql uit die die krijgt van de taskexecutor
- */
+Voert sql uit met en zonder restultaat
+
+*/
 public class SqlConnection {
 
     private Connection connection = null;
@@ -39,21 +40,21 @@ public class SqlConnection {
             connection=null;
         }
     }
-
+    //Voert sql die gegeven opvraagd
     public ResultSet executeSql(String sqlQuery) {
-        ResultSet rs = null;
+        ResultSet resultSet = null;
         try
         {
             Statement statement = this.connection.createStatement();
-            rs= statement.executeQuery(sqlQuery);
+            resultSet = statement.executeQuery(sqlQuery);
         }
         catch(Exception e)
         {
             System.out.println(e);
         }
-        return rs;
+        return resultSet;
     }
-
+    //voert sql uit die toevoegd of detete
     public boolean executeSqlNoResult(String sqlQuery) {
         try
         {

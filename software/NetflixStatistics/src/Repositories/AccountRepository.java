@@ -16,13 +16,14 @@ public class AccountRepository {
     public ArrayList<Account> readAll() {
         ArrayList<Account> lijst = new ArrayList<>();
         try {
-            ResultSet rs = sqlConnection.executeSql("SELECT * FROM ACCOUNT");
-            while(rs.next()) {
-                lijst.add(new Account(rs.getInt("Abonneenr"), rs.getString("Naam"), rs.getString("Straat"), rs.getString("Postcode"), rs.getString("Huisnummer"), rs.getString("woonPlaats")));
+            ResultSet resultSet = sqlConnection.executeSql("SELECT * FROM ACCOUNT");
+            while(resultSet.next()) {
+                lijst.add(new Account(resultSet.getInt("Abonneenr"), resultSet.getString("Naam"), resultSet.getString("Straat"), resultSet.getString("Postcode"), resultSet.getString("Huisnummer"), resultSet.getString("woonPlaats")));
             }
         }
         catch(Exception e) {
             System.out.println(e);
+            System.out.println("hier gaat iets mis");
         }
         return lijst;
     }
@@ -32,9 +33,9 @@ public class AccountRepository {
         try
         {
             String sqlQuery = "SELECT * FROM STUDENTS WHERE Id=" + id;
-            ResultSet rs = sqlConnection.executeSql(sqlQuery);
-            rs.next();
-            account = new Account(rs.getInt("Abonneenummer"), rs.getString("Naam"), rs.getString("Straat"), rs.getString("Postcode"), rs.getString("Huisnummer"), rs.getString("Plaats"));
+            ResultSet resultSet = sqlConnection.executeSql(sqlQuery);
+            resultSet.next();
+            account = new Account(resultSet.getInt("Abonneenummer"), resultSet.getString("Naam"), resultSet.getString("Straat"), resultSet.getString("Postcode"), resultSet.getString("Huisnummer"), resultSet.getString("Plaats"));
         }
         catch(Exception e) {
             System.out.println(e);

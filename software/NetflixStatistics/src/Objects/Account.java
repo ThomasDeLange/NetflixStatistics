@@ -67,7 +67,7 @@ public class Account {
 
     @Override
     public String toString() {
-        return "";
+        return abonneenummer + naam + straat + postcode + huisnummer + plaats;
     }
 
 
