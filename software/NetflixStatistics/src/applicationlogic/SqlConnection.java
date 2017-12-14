@@ -1,7 +1,14 @@
 package applicationlogic;
 
 import java.sql.*;
+/*
+SQL connection
 
+Zet de connectie op
+Disconnect met de database
+
+Voert de sql uit die die krijgt van de taskexecutor
+ */
 public class SqlConnection {
 
     private Connection connection = null;
