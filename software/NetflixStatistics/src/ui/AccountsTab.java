@@ -32,8 +32,6 @@ public class AccountsTab {
         tablePanel.setBorder(BorderFactory.createTitledBorder("Profielen"));
         tablePanel.setLayout(new GridLayout(1, 1));
 
-        TableColumn column1 = new TableColumn();
-        column1.
         JTable table = new JTable();
 
         tablePanel.add(table);
