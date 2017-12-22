@@ -2,8 +2,10 @@ package ui;
 
 import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
+import javafx.concurrent.Task;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -18,11 +20,10 @@ public class UserInterface implements Runnable {
     private JFrame frame;
     ClickListener clickListener;
     TaskExecutor taskExecutor;
-    SqlConnection SqlConnection;
+    SqlConnection sqlConnection;
 
-    public UserInterface() {
-        SqlConnection = new SqlConnection();
-        SqlConnection.connectDatabase("jdbc:sqlserver://thomasserver.database.windows.net:1433;database=NetflixStatistics;user=Thomas@thomasserver;password={admin123!};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
+    public UserInterface(SqlConnection sqlConnection) {
+        this.sqlConnection = sqlConnection;
     }
 
 
@@ -50,30 +51,112 @@ public class UserInterface implements Runnable {
         frame.setVisible(true);
     }
 
-    private void createComponents(Container container) {
-        BorderLayout layout = new BorderLayout();
-        container.setLayout(layout);
+    private void createComponents(Container hoofdContainer) {
+
+        //Taskexecutor
+        TaskExecutor taskExecutor = new TaskExecutor(sqlConnection);
+
+        //Font
         Font font = new Font("arial", Font.BOLD, 24);
 
-        JTabbedPane tabs = new JTabbedPane();
+        //Hoofd Layout
+        BorderLayout hoofdLayout = new BorderLayout();
+        hoofdContainer.setLayout(hoofdLayout);
 
-        SeriesTab seriesTab = new SeriesTab(font);
-        FilmsTab filmsTab = new FilmsTab(font);
-        AccountsTab accountsTab = new AccountsTab(font);
+        /*
+        Navigatie layout - west
+        */
 
-        tabs.add(seriesTab.getSeriesTab(), "Series");
-        tabs.add(filmsTab.getFilmsTab(), "Films");
-        tabs.add(accountsTab.getAccountsTab(), "Accounts");
+        //Buttons
+        JButton button1 = new JButton("GetAccountNummers");
+        JButton button2 = new JButton("Button2");
+        JButton button3 = new JButton("Button3");
+        JButton button4 = new JButton("Button4");
+        JButton button5 = new JButton("Button5");
 
-        JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new BorderLayout());
-        JLabel title = new JLabel("Netflix Statistix");
-        JLabel names = new JLabel("text, text, text, text, text, text, text, text, ");
-        bottomPanel.add(title, BorderLayout.WEST);
-        bottomPanel.add(names, BorderLayout.EAST);
 
-        container.add(bottomPanel, BorderLayout.SOUTH);
-        container.add(tabs, BorderLayout.CENTER);
+
+        //Setup
+        JPanel navPanel = new JPanel();
+        hoofdContainer.add(navPanel, BorderLayout.WEST);
+
+        navPanel.setLayout(new BoxLayout(navPanel, BoxLayout.Y_AXIS));
+
+        //Add buttons
+        navPanel.add(button1);
+        navPanel.add(button2);
+        navPanel.add(button3);
+        navPanel.add(button4);
+        navPanel.add(button5);
+
+        /*
+        Text layout - south
+        */
+
+        //Labels
+        JLabel projectNaam = new JLabel("Netflix Statistics");
+        JLabel namen = new JLabel("Thomas, Tim, Jan-Paul");
+        JLabel space = new JLabel("                        ");
+
+        //Setup
+        JPanel infoTextPanel = new JPanel();
+        hoofdContainer.add(infoTextPanel, BorderLayout.SOUTH);
+
+        infoTextPanel.setLayout(new BoxLayout(infoTextPanel, BoxLayout.X_AXIS));
+
+        //Add text
+        infoTextPanel.add(projectNaam);
+        infoTextPanel.add(space);
+        infoTextPanel.add(namen);
+
+
+        /*
+        Data layout - centre
+        */
+
+        //Setup
+        JPanel dataPanel = new JPanel();
+        hoofdContainer.add(dataPanel, BorderLayout.CENTER);
+
+        dataPanel.setLayout(new GridLayout(3,1));
+
+
+
+        //button
+        JLabel testbutton = new JLabel("GetAccountNummers");
+        dataPanel.add(testbutton);
+        dataPanel.add(new JLabel("test"));
+        dataPanel.add(new JLabel("testtestets"));
+
+        //Clicklistener
+        ClickListener clickListener = new ClickListener(testbutton, taskExecutor);
+
+        //setup
+        button1.addActionListener(clickListener);
+
+//        BorderLayout layout = new BorderLayout();
+//        container.setLayout(layout);
+//        Font font = new Font("arial", Font.BOLD, 24);
+//
+//        JTabbedPane tabs = new JTabbedPane();
+//
+//        SeriesTab seriesTab = new SeriesTab(font);
+//        FilmsTab filmsTab = new FilmsTab(font);
+//        AccountsTab accountsTab = new AccountsTab(font);
+//
+//        tabs.add(seriesTab.getSeriesTab(), "Series");
+//        tabs.add(filmsTab.getFilmsTab(), "Films");
+//        tabs.add(accountsTab.getAccountsTab(), "Accounts");
+//
+//        JPanel bottomPanel = new JPanel();
+//        bottomPanel.setLayout(new BorderLayout());
+//        JLabel title = new JLabel("Netflix Statistix");
+//        JLabel names = new JLabel("text, text, text, text, text, text, text, text, ");
+//        bottomPanel.add(title, BorderLayout.WEST);
+//        bottomPanel.add(names, BorderLayout.EAST);
+//
+//        container.add(bottomPanel, BorderLayout.SOUTH);
+//        container.add(tabs, BorderLayout.CENTER);
     }
 
 

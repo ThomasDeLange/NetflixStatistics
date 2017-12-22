@@ -17,14 +17,15 @@ TaskExecutor
  */
 public class TaskExecutor {
 
-    UserInterface userInterface;
+    //UserInterface userInterface;
+    private SqlConnection sqlConnection;
 
-    public TaskExecutor(UserInterface userInterface){
-        this.userInterface = userInterface;
+    public TaskExecutor(SqlConnection sqlConnection){
+        //this.userInterface = userInterface;
+        this.sqlConnection = sqlConnection;
     }
 
     public void runTask(String taskID){
-        SqlConnection sqlConnection = new SqlConnection();
 
 
         ArrayList<String> stringResults = new ArrayList<>();

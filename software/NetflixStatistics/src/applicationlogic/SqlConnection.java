@@ -12,6 +12,8 @@ Voert sql uit met en zonder restultaat
 */
 public class SqlConnection {
 
+
+
     private Connection connection = null;
 
     public boolean connectDatabase(String connectionUrl) {

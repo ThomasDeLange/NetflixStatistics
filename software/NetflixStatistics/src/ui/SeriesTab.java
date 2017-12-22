@@ -1,5 +1,6 @@
 package ui;
 
+import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
 
 import javax.swing.*;
@@ -7,9 +8,11 @@ import java.awt.*;
 
 public class SeriesTab {
     private Font font;
+    private SqlConnection sqlConnection;
 
-    public SeriesTab(Font font) {
+    public SeriesTab(Font font, SqlConnection sqlConnection) {
         this.font = font;
+        this.sqlConnection = sqlConnection;
     }
 
 
@@ -45,8 +48,8 @@ public class SeriesTab {
         JButton button = new JButton("GetAccountNummers");
         JLabel label = new JLabel("Plz werk");
 
-        UserInterface userInterface = new UserInterface();
-        TaskExecutor taskExecutor = new TaskExecutor(userInterface);
+        UserInterface userInterface = new UserInterface(sqlConnection);
+        TaskExecutor taskExecutor = new TaskExecutor(sqlConnection);
         ClickListener clickListener = new ClickListener(label, taskExecutor);
 
         button.addActionListener(clickListener);

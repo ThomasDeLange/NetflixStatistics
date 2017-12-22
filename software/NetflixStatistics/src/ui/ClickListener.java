@@ -1,6 +1,7 @@
 package ui;
 
 
+import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
 
 import javax.swing.*;

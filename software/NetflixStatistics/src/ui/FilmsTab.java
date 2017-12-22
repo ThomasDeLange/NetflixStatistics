@@ -8,9 +8,11 @@ import java.awt.*;
 
 public class FilmsTab {
     private Font font;
+    private SqlConnection sqlConnection;
 
-    public FilmsTab(Font font) {
+    public FilmsTab(Font font, SqlConnection sqlConnection) {
         this.font = font;
+        this.sqlConnection = sqlConnection;
     }
 
     public JPanel getFilmsTab() {
@@ -44,7 +46,10 @@ public class FilmsTab {
 
         JButton button = new JButton("GetAccountNummers");
         JLabel label = new JLabel("laallalalalalal");
-        ClickListener clickListener = new ClickListener(label, new TaskExecutor(new UserInterface()));
+
+        UserInterface userInterface = new UserInterface(sqlConnection);
+        TaskExecutor taskExecutor = new TaskExecutor(sqlConnection);
+        ClickListener clickListener = new ClickListener(label, taskExecutor);
 
         button.addActionListener(clickListener);
         tablePanel.add(label);
