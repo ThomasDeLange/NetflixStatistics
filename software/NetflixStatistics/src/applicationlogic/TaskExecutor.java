@@ -28,19 +28,20 @@ public class TaskExecutor {
     public String runTask(String taskID){
 
         String resultString = new String();
-        switch (taskID){
-            case "GetAccountNummers":
+        AccountRepository accountRepository = new AccountRepository(sqlConnection);
 
-                AccountRepository accountRepository = new AccountRepository(sqlConnection);
+        switch (taskID){
+            case "Account info":
+
                 ArrayList<Account> accounts = accountRepository.readAll();
                 for(Account a: accounts) {
                     resultString +=a + "\n ";
                 }
                 break;
+            case "Account info per id":
 
-            case "GetAccountName":
+                String ResultString = accountRepository.read(1215426) + " ";
                 break;
-
             case "GetAccountWoonplaats":
                 break;
 

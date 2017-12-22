@@ -63,8 +63,8 @@ public class UserInterface implements Runnable {
         */
 
         //Buttons
-        JButton button1 = new JButton("GetAccountNummers");
-        JButton button2 = new JButton("Gemiddeld bekeken per aflevering");
+        JButton button1 = new JButton("Account info");
+        JButton button2 = new JButton("Account info per id");
         JButton button3 = new JButton("Button3");
         JButton button4 = new JButton("Button4");
         JButton button5 = new JButton("Button5");
@@ -136,6 +136,7 @@ public class UserInterface implements Runnable {
 
         //setup
         button1.addActionListener(clickListener);
+        button2.addActionListener(clickListener);
 
 
 

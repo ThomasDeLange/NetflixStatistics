@@ -34,14 +34,20 @@ public class AccountRepository {
         return lijst;
     }
 
-    public Account read(int id) {
+    public Account read(int abonneeNR) {
         Account account = null;
         try
         {
-            String sqlQuery = "SELECT * FROM STUDENTS WHERE Id=" + id;
+            String sqlQuery = "SELECT * FROM Account WHERE AbonneeNR=" + abonneeNR;
             ResultSet resultSet = sqlConnection.executeSql(sqlQuery);
             resultSet.next();
-            account = new Account(resultSet.getInt("Abonneenummer"), resultSet.getString("Naam"), resultSet.getString("Straat"), resultSet.getString("Postcode"), resultSet.getString("Huisnummer"), resultSet.getString("Plaats"));
+            account = new Account(resultSet.getInt(
+                    "AbonneeNR"),
+                    resultSet.getString("Naam"),
+                    resultSet.getString("Straat"),
+                    resultSet.getString("Postcode"),
+                    resultSet.getString("Huisnummer"),
+                    resultSet.getString("WoonPlaats"));
         }
         catch(Exception e) {
             System.out.println(e);
