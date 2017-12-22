@@ -1,6 +1,7 @@
 ﻿CREATE TABLE Account (
  AbonneeNR		int,
- Naam			nvarchar(45),  Straat			nvarchar(45),
+ Naam			nvarchar(45),
+ Straat			nvarchar(45),
  Postcode		nvarchar(7),
  Huisnummer		int,
  Woonplaats		nvarchar(30),
@@ -14,7 +15,8 @@
 
 CREATE TABLE Profiel (
  AbonneeNR		int,
- ProfielNaam	nvarchar(8),  Geboortedatum	DateTime2,
+ ProfielNaam	nvarchar(8),
+ Geboortedatum	DateTime2,
 
 
  CONSTRAINT ProfielPK 
@@ -30,10 +32,10 @@ CREATE TABLE Profiel (
 /*
 
 */
-
 CREATE TABLE Bekeken (
  AbonneeNR		int,
- ProfielNaam	nvarchar(8),  Gezien			int,
+ ProfielNaam	nvarchar(8),
+ Gezien			int,
  Percentage		int,
  ContentID		int,
 

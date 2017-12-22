@@ -1,4 +1,5 @@
-﻿CREATE TABLE Content(
+﻿/*
+CREATE TABLE Content(
 ContentID		int,
 Leeftijd		int,
 Taal			nvarchar(30),
@@ -10,12 +11,11 @@ Titel			nvarchar(45),
 		PRIMARY KEY (ContentID)
 )
 
-/* 
-
 */
 CREATE TABLE Film (
  Tijdsduur		TIME,
  ContentID		int,
+ ID				int,
 
 	CONSTRAINT FilmPK 
 		PRIMARY KEY (ContentID),
@@ -47,10 +47,10 @@ CREATE TABLE Serie (
 /*
 
 */
-
+drop table Aflevering
 CREATE TABLE Aflevering (
  ID				int,
- Seizoen		nvarchar(8),
+ Aflevering		int,
  Titel			nvarchar(45),
  Tijdsduur		TIME,
  ContentID      int,
