@@ -1,4 +1,8 @@
-ContentID;SerieNaam;Seizoen;LijktOp
-1;Sherlock;S01E01;Fargo
-2;Breaking Bad;S01E01;Fargo
-3;Fargo;S01E01;Breaking Bad
+ContentID;Seizoen;LijktOp
+1;1;Fargo
+2;2;Fargo
+3;3;Fargo
+4;1;Fargo
+5;2;Fargo
+6;1;Breaking Bad
+7;2;Breaking Bad

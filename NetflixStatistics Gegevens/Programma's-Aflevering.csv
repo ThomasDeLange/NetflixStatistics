@@ -1,50 +1,50 @@
-ID;SerieNaam;Seizoen;Titel;Tijdsduur
-1001;Sherlock;S01E01;A Study in Pink;1:28
-1002;Sherlock;S01E02;The Blind Banker;1:28
-1003;Sherlock;S01E03;The Great Game;1:28
-1004;Sherlock;S02E01;A Scandal in Belgravia;1:28
-1005;Sherlock;S02E02;The Hounds of Baskerville;1:28
-1006;Sherlock;S02E03;The Reichenbach Fall;1:28
-1007;Sherlock;S03E01;The Empty Hearse;1:28
-1008;Sherlock;S03E02;The Sign of Three;1:28
-1009;Sherlock;S03E03;His Last Vow;1:28
-2000;Breaking Bad;S01E01;Pilot;0:58
-2001;Breaking Bad;S01E02;Cat’s in the Bag…;0:48
-2002;Breaking Bad;S01E03;…And the Bag’s in the River;0:48
-2003;Breaking Bad;S01E04;Cancer Man;0:48
-2004;Breaking Bad;S01E05;Gray Matter;0:48
-2005;Breaking Bad;S01E06;Crazy Handful of Nothin’;0:48
-2006;Breaking Bad;S01E07;A No-Rough-Stuff-Type Deal;0:48
-2007;Breaking Bad;S02E01;Seven Thirty-Seven;0:48
-2008;Breaking Bad;S02E02;Grilled;0:48
-2009;Breaking Bad;S02E03;Bit by a Dead Bee;0:48
-2010;Breaking Bad;S02E04;Down;0:48
-2011;Breaking Bad;S02E05;Breakage;0:48
-2012;Breaking Bad;S02E06;Peekaboo;0:48
-2013;Breaking Bad;S02E07;Negro Y Azul;0:48
-2014;Breaking Bad;S02E08;Better Call Saul;0:48
-2015;Breaking Bad;S02E09;4 Days Out;0:48
-2016;Breaking Bad;S02E10;Over;0:48
-2017;Breaking Bad;S02E11;Mandala;0:48
-2018;Breaking Bad;S02E12;Phoenix;0:48
-2019;Breaking Bad;S02E13;ABQ;0:48
-3001;Fargo;S01E01;The Crocodile's Dilemma;1:08
-3002;Fargo;S01E02;The Rooster Prince;1:08
-3003;Fargo;S01E03;A Muddy Road;1:08
-3004;Fargo;S01E04;Eating the Blame;1:08
-3005;Fargo;S01E05;The Six Ungraspables;1:08
-3006;Fargo;S01E06;Buridan's Ass;1:08
-3007;Fargo;S01E07;Who Shaves the Barber?;1:08
-3008;Fargo;S01E08;The Heap;1:08
-3009;Fargo;S01E09;A Fox, a Rabbit, and a Cabbage;1:08
-3010;Fargo;S01E10;Morton's Fork;1:08
-3101;Fargo;S02E01;Waiting for Dutch;1:08
-3102;Fargo;S02E02;Before the Law;1:08
-3103;Fargo;S02E03;The Myth of Sisyphus;1:08
-3105;Fargo;S02E04;The Gift of the Magi;1:08
-3104;Fargo;S02E05;Fear and Trembling;1:08
-3106;Fargo;S02E06;Rhinoceros;1:08
-3107;Fargo;S02E07;Did you do this? No, you did it!;1:08
-3108;Fargo;S02E08;Loplop;1:08
-3109;Fargo;S02E09;The Castle;1:08
-3110;Fargo;S02E10;Palindrome;1:08
+ID;Aflevering;Titel;Tijdsduur;ContentID
+1001;1;A Study in Pink;1:28;1
+1002;2;The Blind Banker;1:28;1
+1003;3;The Great Game;1:28;1
+1004;1;A Scandal in Belgravia;1:28;2
+1005;2;The Hounds of Baskerville;1:28;2
+1006;3;The Reichenbach Fall;1:28;2
+1007;1;The Empty Hearse;1:28;3
+1008;2;The Sign of Three;1:28;3
+1009;3;His Last Vow;1:28;3
+2000;1;Pilot;0:58;4
+2001;2;Cat’s in the Bag…;0:48;4
+2002;3;…And the Bag’s in the River;0:48;4
+2003;4;Cancer Man;0:48;4
+2004;5;Gray Matter;0:48;4
+2005;6;Crazy Handful of Nothin’;0:48;4
+2006;7;A No-Rough-Stuff-Type Deal;0:48;4
+2007;1;Seven Thirty-Seven;0:48;5
+2008;2;Grilled;0:48;5
+2009;3;Bit by a Dead Bee;0:48;5
+2010;4;Down;0:48;5
+2011;5;Breakage;0:48;5
+2012;6;Peekaboo;0:48;5
+2013;7;Negro Y Azul;0:48;5
+2014;8;Better Call Saul;0:48;5
+2015;9;4 Days Out;0:48;5
+2016;10;Over;0:48;5
+2017;11;Mandala;0:48;5
+2018;12;Phoenix;0:48;5
+2019;13;ABQ;0:48;5
+3001;1;The Crocodile's Dilemma;1:08;6
+3002;2;The Rooster Prince;1:08;6
+3003;3;A Muddy Road;1:08;6
+3004;4;Eating the Blame;1:08;6
+3005;5;The Six Ungraspables;1:08;6
+3006;6;Buridan's Ass;1:08;6
+3007;7;Who Shaves the Barber?;1:08;6
+3008;8;The Heap;1:08;6
+3009;9;A Fox, a Rabbit, and a Cabbage;1:08;6
+3010;10;Morton's Fork;1:08;6
+3101;1;Waiting for Dutch;1:08;7
+3102;2;Before the Law;1:08;7
+3103;3;The Myth of Sisyphus;1:08;7
+3105;4;The Gift of the Magi;1:08;7
+3104;5;Fear and Trembling;1:08;7
+3106;6;Rhinoceros;1:08;7
+3107;7;Did you do this? No, you did it!;1:08;7
+3108;8;Loplop;1:08;7
+3109;9;The Castle;1:08;7
+3110;10;Palindrome;1:08;7
