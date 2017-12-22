@@ -25,16 +25,16 @@ public class TaskExecutor {
         this.sqlConnection = sqlConnection;
     }
 
-    public void runTask(String taskID){
+    public String runTask(String taskID){
 
-
-        ArrayList<String> stringResults = new ArrayList<>();
+        String resultString = new String();
         switch (taskID){
             case "GetAccountNummers":
+
                 AccountRepository accountRepository = new AccountRepository(sqlConnection);
                 ArrayList<Account> accounts = accountRepository.readAll();
                 for(Account a: accounts) {
-                    System.out.println(a.getAbonneenummer());
+                    resultString +=a + "\n ";
                 }
                 break;
 
@@ -48,5 +48,7 @@ public class TaskExecutor {
                 break;
             //other tasks
         }
+        return resultString;
     }
+
 }

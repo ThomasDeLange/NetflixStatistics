@@ -49,9 +49,9 @@ public class FilmsTab {
 
         UserInterface userInterface = new UserInterface(sqlConnection);
         TaskExecutor taskExecutor = new TaskExecutor(sqlConnection);
-        ClickListener clickListener = new ClickListener(label, taskExecutor);
+        //ClickListener clickListener = new ClickListener(label, taskExecutor);
 
-        button.addActionListener(clickListener);
+        //button.addActionListener(clickListener);
         tablePanel.add(label);
         tablePanel.add(button);
 

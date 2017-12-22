@@ -1,21 +1,16 @@
 package ui;
 
-import applicationlogic.SqlConnection;
-import applicationlogic.TaskExecutor;
-import javafx.concurrent.Task;
-
+import applicationlogic.*;
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 /*
 UI
 
 Maakt het frame voor alle tabs
 Regelt het afsluiten van het programma
 Zet de connectie op van de database
- */
+*/
 public class UserInterface implements Runnable {
     private JFrame frame;
     ClickListener clickListener;
@@ -69,7 +64,7 @@ public class UserInterface implements Runnable {
 
         //Buttons
         JButton button1 = new JButton("GetAccountNummers");
-        JButton button2 = new JButton("Button2");
+        JButton button2 = new JButton("Gemiddeld bekeken per aflevering");
         JButton button3 = new JButton("Button3");
         JButton button4 = new JButton("Button4");
         JButton button5 = new JButton("Button5");
@@ -81,6 +76,7 @@ public class UserInterface implements Runnable {
         hoofdContainer.add(navPanel, BorderLayout.WEST);
 
         navPanel.setLayout(new BoxLayout(navPanel, BoxLayout.Y_AXIS));
+
 
         //Add buttons
         navPanel.add(button1);
@@ -96,7 +92,7 @@ public class UserInterface implements Runnable {
         //Labels
         JLabel projectNaam = new JLabel("Netflix Statistics");
         JLabel namen = new JLabel("Thomas, Tim, Jan-Paul");
-        JLabel space = new JLabel("                        ");
+
 
         //Setup
         JPanel infoTextPanel = new JPanel();
@@ -106,8 +102,15 @@ public class UserInterface implements Runnable {
 
         //Add text
         infoTextPanel.add(projectNaam);
-        infoTextPanel.add(space);
         infoTextPanel.add(namen);
+
+        projectNaam.setForeground(Color.WHITE);
+        namen.setForeground(Color.WHITE);
+        namen.setHorizontalTextPosition(SwingConstants.RIGHT);
+
+
+        //color
+        infoTextPanel.setBackground(Color.getHSBColor(0F, 0.93f, 0.86f));
 
 
         /*
@@ -123,25 +126,39 @@ public class UserInterface implements Runnable {
 
 
         //button
-        JLabel testbutton = new JLabel("GetAccountNummers");
-        dataPanel.add(testbutton);
-        dataPanel.add(new JLabel("test"));
-        dataPanel.add(new JLabel("testtestets"));
+        JTextArea resultsTextArea = new JTextArea("Hier komt de informatie");
+        dataPanel.add(resultsTextArea);
+        dataPanel.add(new JButton("test"));
+        dataPanel.add(new JButton("testtestets"));
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(testbutton, taskExecutor);
+        ClickListener clickListener = new ClickListener(resultsTextArea, taskExecutor);
 
         //setup
         button1.addActionListener(clickListener);
 
+
+
+        /*
+        o Voor een door de gebruiker geselecteerde serie, geef per aflevering het gemiddeld bekeken
+            % van de tijdsduur. Bij elke aflevering worden het volgnummer én titel getoond.
+        o Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemid-
+            deld bekeken % van de tijdsduur.
+        o Welke films zijn er door een door de gebruiker geselecteerd account bekeken?
+        o Geef de film met de langste tijdsduur voor kijkers onder 16 jaar.
+        o Geef de accounts met slechts 1 profiel.
+        o Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in z’n geheel be-
+        keken?
+         */
+
 //        BorderLayout layout = new BorderLayout();
-//        container.setLayout(layout);
+//        hoofdContainer.setLayout(layout);
 //        Font font = new Font("arial", Font.BOLD, 24);
 //
 //        JTabbedPane tabs = new JTabbedPane();
 //
-//        SeriesTab seriesTab = new SeriesTab(font);
-//        FilmsTab filmsTab = new FilmsTab(font);
+//        SeriesTab seriesTab = new SeriesTab(font, sqlConnection);
+//        FilmsTab filmsTab = new FilmsTab(font, sqlConnection);
 //        AccountsTab accountsTab = new AccountsTab(font);
 //
 //        tabs.add(seriesTab.getSeriesTab(), "Series");
@@ -155,8 +172,8 @@ public class UserInterface implements Runnable {
 //        bottomPanel.add(title, BorderLayout.WEST);
 //        bottomPanel.add(names, BorderLayout.EAST);
 //
-//        container.add(bottomPanel, BorderLayout.SOUTH);
-//        container.add(tabs, BorderLayout.CENTER);
+//        hoofdContainer.add(bottomPanel, BorderLayout.SOUTH);
+//        hoofdContainer.add(tabs, BorderLayout.CENTER);
     }
 
 

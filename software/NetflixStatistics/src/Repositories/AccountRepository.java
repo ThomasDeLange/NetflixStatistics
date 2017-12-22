@@ -18,7 +18,13 @@ public class AccountRepository {
         try {
             ResultSet resultSet = sqlConnection.executeSql("SELECT * FROM ACCOUNT");
             while(resultSet.next()) {
-                lijst.add(new Account(resultSet.getInt("Abonneenr"), resultSet.getString("Naam"), resultSet.getString("Straat"), resultSet.getString("Postcode"), resultSet.getString("Huisnummer"), resultSet.getString("woonPlaats")));
+                lijst.add(new Account(
+                        resultSet.getInt("AbonneeNR"),
+                        resultSet.getString("Naam"),
+                        resultSet.getString("Straat"),
+                        resultSet.getString("Postcode"),
+                        resultSet.getString("Huisnummer"),
+                        resultSet.getString("woonPlaats")));
             }
         }
         catch(Exception e) {

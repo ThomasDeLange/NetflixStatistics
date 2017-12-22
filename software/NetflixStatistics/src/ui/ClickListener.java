@@ -3,6 +3,7 @@ package ui;
 
 import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
+import javafx.concurrent.Task;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -20,10 +21,10 @@ ClickListener
  */
 
 public class ClickListener implements ActionListener {
-    private JLabel object;
+    private JTextArea object;
     private TaskExecutor taskExecutor;
 
-    public ClickListener(JLabel object, TaskExecutor taskExecutor){
+    public ClickListener(JTextArea object, TaskExecutor taskExecutor){
         this.object = object;
         this.taskExecutor = taskExecutor;
     }
@@ -34,7 +35,7 @@ public class ClickListener implements ActionListener {
 
         taskExecutor.runTask(task);
 
-        object.setText(event.getActionCommand());
+        object.setText(taskExecutor.runTask(task));
 
     }
 }
