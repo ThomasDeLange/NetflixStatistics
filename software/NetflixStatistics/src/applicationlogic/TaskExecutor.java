@@ -2,6 +2,7 @@ package applicationlogic;
 
 import Objects.Account;
 import Repositories.AccountRepository;
+import Repositories.FilmRepository;
 import ui.UserInterface;
 
 import java.sql.PreparedStatement;
@@ -40,9 +41,11 @@ public class TaskExecutor {
                 break;
             case "Account info per id":
 
-                String ResultString = accountRepository.read(1215426) + " ";
+                resultString = accountRepository.read(1215426) + " ";
                 break;
-            case "GetAccountWoonplaats":
+            case "Langste film onder de 16":
+                FilmRepository filmRepository = new FilmRepository(sqlConnection);
+                resultString = filmRepository.longestFilmUnder16();
                 break;
 
             case "AddUser":
