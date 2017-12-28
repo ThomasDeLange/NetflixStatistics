@@ -1,9 +1,15 @@
 package ui;
 
 import applicationlogic.*;
+import sun.awt.AWTIcon32_java_icon16_png;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
 /*
 UI
 
@@ -46,6 +52,9 @@ public class UserInterface implements Runnable {
         frame.setVisible(true);
     }
 
+
+
+
     private void createComponents(Container hoofdContainer) {
 
         //Taskexecutor
@@ -54,7 +63,10 @@ public class UserInterface implements Runnable {
         //Font
         Font font = new Font("arial", Font.BOLD, 24);
 
-        //Hoofd Layout
+        /*
+        Hoofd Layout
+        */
+
         BorderLayout hoofdLayout = new BorderLayout();
         hoofdContainer.setLayout(hoofdLayout);
 
@@ -63,6 +75,11 @@ public class UserInterface implements Runnable {
         */
 
         //Buttons
+        ImageUI imageUI = new ImageUI();
+        imageUI.setVisible(true);
+        imageUI.pack();
+
+
         JButton button1 = new JButton("Account info");
         JButton button2 = new JButton("Account info per id");
         JButton button3 = new JButton("Langste film onder de 16");
@@ -79,6 +96,7 @@ public class UserInterface implements Runnable {
 
 
         //Add buttons
+        navPanel.add(imageUI);
         navPanel.add(button1);
         navPanel.add(button2);
         navPanel.add(button3);
@@ -139,19 +157,6 @@ public class UserInterface implements Runnable {
         button2.addActionListener(clickListener);
         button3.addActionListener(clickListener);
 
-
-
-        /*
-        o Voor een door de gebruiker geselecteerde serie, geef per aflevering het gemiddeld bekeken
-            % van de tijdsduur. Bij elke aflevering worden het volgnummer én titel getoond.
-        o Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemid-
-            deld bekeken % van de tijdsduur.
-        o Welke films zijn er door een door de gebruiker geselecteerd account bekeken?
-        o Geef de film met de langste tijdsduur voor kijkers onder 16 jaar.
-        o Geef de accounts met slechts 1 profiel.
-        o Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in z’n geheel be-
-        keken?
-         */
 
 //        BorderLayout layout = new BorderLayout();
 //        hoofdContainer.setLayout(layout);

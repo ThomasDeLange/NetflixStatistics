@@ -10,8 +10,7 @@ public class AccountRepository {
     private SqlConnection sqlConnection;
 
     public AccountRepository(SqlConnection sqlConnection) {
-        this.sqlConnection = sqlConnection;
-    }
+        this.sqlConnection = sqlConnection;    }
 
     public ArrayList<Account> readAll() {
         ArrayList<Account> lijst = new ArrayList<>();
