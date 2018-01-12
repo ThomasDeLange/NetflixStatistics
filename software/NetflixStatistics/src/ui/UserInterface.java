@@ -74,12 +74,9 @@ public class UserInterface implements Runnable {
         Navigatie layout - west
         */
 
+
+
         //Buttons
-        ImageUI imageUI = new ImageUI();
-        imageUI.setVisible(true);
-        imageUI.pack();
-
-
         JButton button1 = new JButton("Account info");
         JButton button2 = new JButton("Account info per id");
         JButton button3 = new JButton("Langste film onder de 16");
@@ -96,7 +93,6 @@ public class UserInterface implements Runnable {
 
 
         //Add buttons
-        navPanel.add(imageUI);
         navPanel.add(button1);
         navPanel.add(button2);
         navPanel.add(button3);
