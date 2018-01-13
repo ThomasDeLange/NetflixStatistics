@@ -77,9 +77,32 @@ public class UserInterface implements Runnable {
         JTabbedPane tabbedPane = new JTabbedPane();
 
         tabbedPane.add(new Opdracht1Tab(font, sqlConnection).createComponents(), "Opdracht 1");
-        tabbedPane.add(new Opdracht2Tab(font, sqlConnection).createComponents(), "Opdracht 2");
+//        tabbedPane.add(new Opdracht2Tab(font, sqlConnection).createComponents(), "Opdracht 2");
+//Labels
+        JLabel projectNaam = new JLabel("Netflix Statistics");
+        JLabel namen = new JLabel("Thomas, Tim, Jan-Paul");
 
-        hoofdContainer.add(tabbedPane);
+
+        //Setup
+
+        JPanel infoTextPanel = new JPanel();
+
+
+        infoTextPanel.setLayout(new BoxLayout(infoTextPanel, BoxLayout.X_AXIS));
+
+        //Add text
+        infoTextPanel.add(projectNaam);
+        infoTextPanel.add(namen);
+
+        projectNaam.setForeground(Color.WHITE);
+        namen.setForeground(Color.WHITE);
+        namen.setHorizontalTextPosition(SwingConstants.RIGHT);
+
+
+        //color
+        infoTextPanel.setBackground(Color.getHSBColor(0F, 0.93f, 0.86f));
+        hoofdContainer.add(infoTextPanel, BorderLayout.SOUTH);
+        hoofdContainer.add(tabbedPane, BorderLayout.CENTER);
 
 
 

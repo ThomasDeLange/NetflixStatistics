@@ -6,6 +6,8 @@ import applicationlogic.SqlConnection;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.sql.Array;
+import java.sql.ResultSet;
 
 public class Opdracht1Tab {
     private Font font;
@@ -25,37 +27,14 @@ public class Opdracht1Tab {
         navPanel.setLayout(new BoxLayout(navPanel, BoxLayout.Y_AXIS));
 
         /*
-        Text layout - south
-        */
-
-        //Labels
-        JLabel projectNaam = new JLabel("Netflix Statistics");
-        JLabel namen = new JLabel("Thomas, Tim, Jan-Paul");
-
-
-        //Setup
-        JPanel infoTextPanel = new JPanel();
-        navPanel.add(infoTextPanel, BorderLayout.SOUTH);
-
-        infoTextPanel.setLayout(new BoxLayout(infoTextPanel, BoxLayout.X_AXIS));
-
-        //Add text
-        infoTextPanel.add(projectNaam);
-        infoTextPanel.add(namen);
-
-        projectNaam.setForeground(Color.WHITE);
-        namen.setForeground(Color.WHITE);
-        namen.setHorizontalTextPosition(SwingConstants.RIGHT);
-
-
-        //color
-        infoTextPanel.setBackground(Color.getHSBColor(0F, 0.93f, 0.86f));
-
-
-        /*
         Data layout - centre
         */
 
+        //Dropdown
+        String[] titels = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
+        JComboBox dropdown = new JComboBox(titels);
+
+        navPanel.add(dropdown);
         //Setup
         JPanel dataPanel = new JPanel();
         navPanel.add(dataPanel, BorderLayout.CENTER);
