@@ -28,7 +28,7 @@ public class TableEditor {
                 for (int i = 0; i < columnnNumber; i++) {
                     objects[i] = resultSet.getObject(i + 1);
                 }
-                tableModel.addRow(objects);
+                //tableModel.addRow(objects);
 
             }
             resultTable.setModel(tableModel);
