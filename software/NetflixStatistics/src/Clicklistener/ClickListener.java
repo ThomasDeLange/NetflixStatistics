@@ -1,14 +1,10 @@
-package ui;
+package Clicklistener;
 
 
-import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
-import javafx.concurrent.Task;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 /*
 ClickListener
@@ -32,8 +28,6 @@ public class ClickListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent event) {
         String task = event.getActionCommand();
-
-        taskExecutor.runTask(task);
 
         object.setText(taskExecutor.runTask(task));
 

@@ -2,10 +2,6 @@ package applicationlogic;
 
 import Objects.Account;
 import Repositories.AccountRepository;
-import Repositories.FilmRepository;
-import ui.UserInterface;
-
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
 /*
 TaskExecutor
@@ -33,22 +29,22 @@ public class TaskExecutor {
 
         switch (taskID){
             case "Account info":
-
                 ArrayList<Account> accounts = accountRepository.readAll();
                 for(Account a: accounts) {
                     resultString +=a + "\n ";
                 }
                 break;
-            case "Account info per id":
 
+            case "Account info per id":
                 resultString = accountRepository.read(1215426) + " ";
                 break;
-            case "Langste film onder de 16":
-                FilmRepository filmRepository = new FilmRepository(sqlConnection);
-                resultString = filmRepository.longestFilmUnder16();
+
+            case "Button 3":
+
                 break;
 
             case "AddUser":
+
                 break;
             //other tasks
         }

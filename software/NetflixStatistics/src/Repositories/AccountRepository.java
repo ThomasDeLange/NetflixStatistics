@@ -27,8 +27,7 @@ public class AccountRepository {
             }
         }
         catch(Exception e) {
-            System.out.println(e);
-            System.out.println("hier gaat iets mis");
+            System.out.println(e + "Geen database connectie");
         }
         return lijst;
     }

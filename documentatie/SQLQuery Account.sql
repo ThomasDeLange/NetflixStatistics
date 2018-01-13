@@ -1,5 +1,6 @@
-﻿CREATE TABLE Account (
- AbonneeNR		int,
+﻿DROP TABLE Account
+CREATE TABLE Account (
+ AccountNR		int,
  Naam			nvarchar(45),
  Straat			nvarchar(45),
  Postcode		nvarchar(7),
@@ -7,24 +8,23 @@
  Woonplaats		nvarchar(30),
 
  CONSTRAINT AccountPK 
-		PRIMARY KEY (AbonneeNR) 	
+		PRIMARY KEY (AccountNR) 	
 		);
 /*
 
 */
 
 CREATE TABLE Profiel (
- AbonneeNR		int,
- ProfielNaam	nvarchar(8),
- Geboortedatum	DateTime2,
-
+ AccountNR		int,
+ ProfielNaam	nvarchar(30),
+ Geboortedatum	DateTime2
 
  CONSTRAINT ProfielPK 
-		PRIMARY KEY (AbonneeNR, ProfielNaam),
+		PRIMARY KEY (AccountNR, ProfielNaam),
 
  CONSTRAINT ProfielFK
- 	FOREIGN KEY (AbonneeNR)
-	REFERENCES Account(AbonneeNR)
+ 	FOREIGN KEY (AccountNR)
+	REFERENCES Account(AccountNR)
 		ON UPDATE CASCADE
 		ON DELETE NO ACTION
 	 	
@@ -33,25 +33,25 @@ CREATE TABLE Profiel (
 
 */
 CREATE TABLE Bekeken (
- AbonneeNR		int,
- ProfielNaam	nvarchar(8),
- Gezien			int,
- Percentage		int,
+ AccountNR		int,
+ ProfielNaam	nvarchar(30),
+ AfleveringID	int,
+ ProcentGezien	int,
  ContentID		int,
 
  CONSTRAINT BekekenPK 
-		PRIMARY KEY (AbonneeNR, ProfielNaam, Gezien),
+		PRIMARY KEY (AccountNR, ProfielNaam, AfleveringID),
 		 	
  CONSTRAINT bekeken_ProfielFK
- 	FOREIGN KEY (AbonneeNr, ProfielNaam)
-	REFERENCES Profiel(AbonneeNR, ProfielNaam)
+ 	FOREIGN KEY (AccountNR, ProfielNaam)
+	REFERENCES Profiel(AccountNR, ProfielNaam)
 	ON DELETE CASCADE,
 
 CONSTRAINT Bekeken_ContentFK
 	FOREIGN KEY (ContentID)
 	REFERENCES Content(ContentID)
 	
-		);
+);
 
 
 

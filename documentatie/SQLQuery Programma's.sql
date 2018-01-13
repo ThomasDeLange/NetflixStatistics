@@ -1,21 +1,20 @@
-﻿/*
+﻿
 CREATE TABLE Content(
-ContentID		int,
-Leeftijd		int,
-Taal			nvarchar(30),
-Genre			nvarchar(30),
-Titel			nvarchar(45),
-
+ContentID			int,
+MinMinLeeftijd		int,
+Taal				nvarchar(30),
+Genre				nvarchar(30),
+Titel				nvarchar(45),
 
 	CONSTRAINT ContentPK
 		PRIMARY KEY (ContentID)
 )
 
-*/
+
 CREATE TABLE Film (
- Tijdsduur		TIME,
  ContentID		int,
- ID				int,
+ AfleveringID	int,
+ Tijdsduur		TIME(0),
 
 	CONSTRAINT FilmPK 
 		PRIMARY KEY (ContentID),
@@ -31,9 +30,10 @@ CREATE TABLE Film (
 */
 
 CREATE TABLE Serie (
- Seizoen		nvarchar(8),
- LijktOp		nvarchar(45),
- ContentID		int,
+	ContentID	int,
+	Seizoen		int,
+	LijktOp		nvarchar(45),
+ 
 
  CONSTRAINT SeriePK 
 		PRIMARY KEY (ContentID),
@@ -49,13 +49,14 @@ CREATE TABLE Serie (
 */
 drop table Aflevering
 CREATE TABLE Aflevering (
- ID				int,
- Aflevering		int,
- Titel			nvarchar(45),
- Tijdsduur		TIME,
- ContentID      int,
+ AfleveringID		int,
+ AfleveringNR		int,
+ Titel				nvarchar(45),
+ Tijdsduur			TIME(0),
+ ContentID			int,
+
  CONSTRAINT AfleveringPK
-		PRIMARY KEY (ID),
+		PRIMARY KEY (AfleveringID),
 		 	
  CONSTRAINT AfleverinFK
  	FOREIGN KEY (ContentID)

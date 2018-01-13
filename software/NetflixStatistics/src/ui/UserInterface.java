@@ -1,14 +1,14 @@
 package ui;
 
+import Clicklistener.ClickListener;
+import Clicklistener.Opdracht1Listener;
+import applicationlogic.SqlConnection;
 import applicationlogic.*;
-import sun.awt.AWTIcon32_java_icon16_png;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
 
 /*
 UI
@@ -19,9 +19,9 @@ Zet de connectie op van de database
 */
 public class UserInterface implements Runnable {
     private JFrame frame;
-    ClickListener clickListener;
-    TaskExecutor taskExecutor;
-    SqlConnection sqlConnection;
+    private ClickListener clickListener;
+    private TaskExecutor taskExecutor;
+    private SqlConnection sqlConnection;
 
     public UserInterface(SqlConnection sqlConnection) {
         this.sqlConnection = sqlConnection;
@@ -66,7 +66,6 @@ public class UserInterface implements Runnable {
         /*
         Hoofd Layout
         */
-
         BorderLayout hoofdLayout = new BorderLayout();
         hoofdContainer.setLayout(hoofdLayout);
 
@@ -74,15 +73,12 @@ public class UserInterface implements Runnable {
         Navigatie layout - west
         */
 
-
-
         //Buttons
-        JButton button1 = new JButton("Account info");
-        JButton button2 = new JButton("Account info per id");
-        JButton button3 = new JButton("Langste film onder de 16");
-        JButton button4 = new JButton("Button4");
-        JButton button5 = new JButton("Button5");
-
+        JButton button1 = new JButton("Opdracht 1");
+        JButton button2 = new JButton("Opdracht 2");
+        JButton button3 = new JButton("Opdracht 3");
+        JButton button4 = new JButton("Opdracht 4");
+        JButton button5 = new JButton("Opdracht 5");
 
 
         //Setup
@@ -98,6 +94,17 @@ public class UserInterface implements Runnable {
         navPanel.add(button3);
         navPanel.add(button4);
         navPanel.add(button5);
+
+        int navButtonSizeX = 200;
+        int navButtonSizeY = 200;
+
+        button1.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
+        button2.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
+        button3.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
+        button4.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
+        button5.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
+
+        SwingUtilities.updateComponentTreeUI(frame);
 
         /*
         Text layout - south
@@ -136,20 +143,31 @@ public class UserInterface implements Runnable {
         hoofdContainer.add(dataPanel, BorderLayout.CENTER);
 
         dataPanel.setLayout(new GridLayout(3,1));
+        //Components
 
+        dataPanel.add(new JLabel("Voor een door de gebruiker geselecteerde serie, geef per aflevering het gemiddeld bekeken\n" +
+                "% van de tijdsduur. Bij elke aflevering worden het volgnummer én titel getoond."));
 
+        JTable resultTable = new JTable();
 
-        //button
-        JTextArea resultsTextArea = new JTextArea("Hier komt de informatie");
-        dataPanel.add(resultsTextArea);
-        dataPanel.add(new JButton("test"));
-        dataPanel.add(new JButton("testtestets"));
+       String[] tableColumnsName = {"Volgnummer", "Titel", "Percentage gemiddeld bekeken"};
+       DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
+       resultTableModel.setColumnIdentifiers(tableColumnsName);
 
-        //Clicklistener
-        ClickListener clickListener = new ClickListener(resultsTextArea, taskExecutor);
+        dataPanel.add(resultTable);
+        dataPanel.add(new JScrollPane(resultTable));
+
+        JTextArea opdracht1Input = new JTextArea("Voer Serie in bv: Sherlock, Breaking Bad of Fargo");
+        dataPanel.add(opdracht1Input);
+
+        /*
+        Clicklistener
+        */
+        //clickListener = new ClickListener(resultTable, taskExecutor);
+        Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, opdracht1Input, sqlConnection, resultTableModel);
 
         //setup
-        button1.addActionListener(clickListener);
+        button1.addActionListener(opdracht1Listener);
         button2.addActionListener(clickListener);
         button3.addActionListener(clickListener);
 

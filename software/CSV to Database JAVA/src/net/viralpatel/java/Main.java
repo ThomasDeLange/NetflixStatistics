@@ -13,7 +13,7 @@ public class Main {
 		try {
 
 			CSVLoader loader = new CSVLoader(getCon());
-			loader.loadCSV("/Users/thomas/School/Periode 2/NetflixStatistics/NetflixStatistics Gegevens/Programma's-Aflevering.csv", "Aflevering", true);
+			loader.loadCSV("/Users/thomas/School/Periode 2/NetflixStatistics/NetflixStatistics Gegevens/Programma's-Film.csv", "Film", true);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
