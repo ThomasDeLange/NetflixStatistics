@@ -44,7 +44,17 @@ public class UserInterface implements Runnable {
             }
         });
 
-        createComponents(frame.getContentPane());
+        try {
+            createComponents(frame.getContentPane());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
 
         frame.pack();
         frame.setVisible(true);
@@ -53,7 +63,7 @@ public class UserInterface implements Runnable {
 
 
 
-    private void createComponents(Container hoofdContainer) {
+    private void createComponents(Container hoofdContainer) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
         //Font
         Font font = new Font("arial", Font.BOLD, 24);
 
@@ -72,10 +82,9 @@ public class UserInterface implements Runnable {
 
         tabbedPane.add(new Opdracht1Tab(font, sqlConnection).createComponents(), "Opdracht 1");
         tabbedPane.add(new Opdracht2Tab(font, sqlConnection).createComponents(), "Opdracht 2");
-//Labels
+        //Labels
         JLabel projectNaam = new JLabel("Netflix Statistics");
         JLabel namen = new JLabel("Thomas, Tim, Jan-Paul");
-
 
         //Setup
 
