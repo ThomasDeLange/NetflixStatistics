@@ -17,7 +17,7 @@ Regelt het afsluiten van het programma
 Zet de connectie op van de database
  */
 
-public class Opdracht1Listener implements ActionListener {
+public class  Opdracht1Listener implements ActionListener {
 
     private JTable resultTable;
     private SqlConnection sqlConnection;
@@ -36,9 +36,7 @@ public class Opdracht1Listener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        for(int i = 0; i < tableModel.getRowCount(); i++) {
-            tableModel.removeRow(i);
-        }
+
         ResultSet resultSet = sqlConnection.executeSql("SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
                                                                 "FROM Bekeken\n" +
                                                                 "INNER JOIN Aflevering\n" +

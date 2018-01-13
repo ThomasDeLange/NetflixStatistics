@@ -24,11 +24,14 @@ public class TableFiller {
             ResultSetMetaData rsmd = resultSet.getMetaData();
             int columnnNumber = rsmd.getColumnCount();
             while (resultSet.next()) {
+
                 Object[] objects = new Object[columnnNumber];
 
                 for (int i = 0; i < columnnNumber; i++) {
                     objects[i] = resultSet.getObject(i + 1);
                 }
+
+
                 //tableModel.addRow(objects);
 
             }
@@ -40,6 +43,10 @@ public class TableFiller {
         {
             e1.printStackTrace();
         }
+    }
+
+    public void emptyTable(DefaultTableModel tableModel) {
+            tableModel.setRowCount(0);
     }
 }
 
