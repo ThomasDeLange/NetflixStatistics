@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 /*
 
-UI
+Opdracht1Listener
 
 Als er op de bijbehorende knop wordt gedrukt wordt actionPerformed()
 Regelt het afsluiten van het programma
