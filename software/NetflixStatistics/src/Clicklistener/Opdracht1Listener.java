@@ -22,10 +22,10 @@ public class Opdracht1Listener implements ActionListener {
 
     private JTable resultTable;
     private SqlConnection sqlConnection;
-    private JTextArea input;
+    private Object input;
     private DefaultTableModel tableModel;
 
-    public Opdracht1Listener(JTable resultTable, JTextArea input, SqlConnection sqlConnection, DefaultTableModel tableModel) {
+    public Opdracht1Listener(JTable resultTable, Object input, SqlConnection sqlConnection, DefaultTableModel tableModel) {
         this.resultTable = resultTable;
         this.input = input;
         this.sqlConnection = sqlConnection;
@@ -34,13 +34,16 @@ public class Opdracht1Listener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        for(int i = 0; i < tableModel.getRowCount(); i++) {
+            tableModel.removeRow(i);
+        }
         ResultSet resultSet = sqlConnection.executeSql("SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
                                                                 "FROM Bekeken\n" +
                                                                 "INNER JOIN Aflevering\n" +
                                                                 "ON Aflevering.AfleveringID = Bekeken.AfleveringID\n" +
                                                                 "INNER JOIN Content\n" +
                                                                 "ON Content.ContentID = Aflevering.ContentID\n" +
-                                                                "WHERE Content.Titel =" + "'" + input.getText() + "'" + "\n" +
+                                                                "WHERE Content.Titel =" + "'" + input + "'" + "\n" +
                                                                 "GROUP BY Bekeken.AfleveringID, Aflevering.Titel");
         try {
             ResultSetMetaData rsmd = resultSet.getMetaData();
