@@ -54,7 +54,7 @@ public class Opdracht2Tab {
         */
         
         //clickListener = new ClickListener(resultTable, taskExecutor);
-        Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, opdracht1Input, sqlConnection, resultTableModel);
+//        Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, dropdo, sqlConnection, resultTableModel);
 
         return hoofdPanel;
     }

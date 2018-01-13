@@ -21,11 +21,11 @@ public class  Opdracht1Listener implements ActionListener {
 
     private JTable resultTable;
     private SqlConnection sqlConnection;
-    private Object input;
+    private JComboBox input;
     private DefaultTableModel tableModel;
     private TableEditor tableEditor;
 
-    public Opdracht1Listener(JTable resultTable, Object input, SqlConnection sqlConnection, DefaultTableModel tableModel) {
+    public Opdracht1Listener(JTable resultTable, JComboBox input, SqlConnection sqlConnection, DefaultTableModel tableModel) {
         this.resultTable = resultTable;
         this.input = input;
         this.sqlConnection = sqlConnection;
@@ -43,8 +43,9 @@ public class  Opdracht1Listener implements ActionListener {
                                                                 "ON Aflevering.AfleveringID = Bekeken.AfleveringID\n" +
                                                                 "INNER JOIN Content\n" +
                                                                 "ON Content.ContentID = Aflevering.ContentID\n" +
-                                                                "WHERE Content.Titel =" + "'" + input + "'" + "\n" +
+                                                                "WHERE Content.Titel =" + "'" + input.getSelectedItem() + "'" + "\n" +
                                                                 "GROUP BY Bekeken.AfleveringID, Aflevering.Titel");
         tableEditor.fillTable(resultSet);
+        System.out.println(input);
     }
 }

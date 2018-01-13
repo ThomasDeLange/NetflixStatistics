@@ -62,14 +62,14 @@ public class Opdracht1Tab {
         dataPanel.add(new JScrollPane(resultTable));
 
 
-        Object opdracht1Input = dropdown.getSelectedItem();
+
 
 
         /*
         Clicklistener
         */
         //clickListener = new ClickListener(resultTable, taskExecutor);
-        Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, opdracht1Input, sqlConnection, resultTableModel);
+        Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, dropdown, sqlConnection, resultTableModel);
 
         dropdown.addActionListener(opdracht1Listener);
 
