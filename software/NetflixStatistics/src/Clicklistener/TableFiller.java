@@ -2,7 +2,6 @@ package Clicklistener;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -40,6 +39,9 @@ public class TableFiller {
         {
             e1.printStackTrace();
         }
+    }
+    public void emptyTable(){
+        tableModel.setRowCount(0);
     }
 }
 
