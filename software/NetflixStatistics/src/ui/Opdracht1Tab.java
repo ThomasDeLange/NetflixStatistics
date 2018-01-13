@@ -22,9 +22,9 @@ public class Opdracht1Tab {
 
 
         //Setup
-        JPanel navPanel = new JPanel();
+        JPanel hoofdPanel = new JPanel();
 
-        navPanel.setLayout(new BoxLayout(navPanel, BoxLayout.Y_AXIS));
+        hoofdPanel.setLayout(new BoxLayout(hoofdPanel, BoxLayout.Y_AXIS));
 
         /*
         Data layout - centre
@@ -35,16 +35,16 @@ public class Opdracht1Tab {
 //        String fargo = "Fargo";
 //        String sherlock = "Sherlock";
 //        JComboBox<String> dropdown = new JComboBox<String>();
-        String[] items = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
-        JComboBox dropdown = new JComboBox(items);
+          String[] items = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
+          JComboBox dropdown = new JComboBox(items);
 //        dropdown.addItem(bb);
 //        dropdown.addItem(fargo);
 //        dropdown.addItem(sherlock);
 
-        navPanel.add(dropdown);
+        hoofdPanel.add(dropdown);
         //Setup
         JPanel dataPanel = new JPanel();
-        navPanel.add(dataPanel, BorderLayout.CENTER);
+        hoofdPanel.add(dataPanel, BorderLayout.CENTER);
 
         dataPanel.setLayout(new GridLayout(2, 1));
         //Components
@@ -73,7 +73,7 @@ public class Opdracht1Tab {
 
         dropdown.addActionListener(opdracht1Listener);
 
-        return navPanel;
+        return hoofdPanel;
     }
 
 
