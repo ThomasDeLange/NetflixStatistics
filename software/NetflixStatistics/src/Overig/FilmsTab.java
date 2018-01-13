@@ -1,7 +1,8 @@
-package ui;
+package Overig;
 
 import applicationlogic.SqlConnection;
 import applicationlogic.TaskExecutor;
+import ui.UserInterface;
 
 import javax.swing.*;
 import java.awt.*;
