@@ -41,8 +41,8 @@
       <file leaf-file-name="Opdracht2Tab.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/ui/Opdracht2Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+            <state relative-caret-position="259">
+              <caret line="49" column="38" lean-forward="false" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,12 +172,12 @@
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/applicationlogic/TaskExecutor.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/Clicklistener/ClickListener.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/ui/FilmsTab.java" />
-        <option value="$PROJECT_DIR$/software/NetflixStatistics/src/ui/Opdracht2Tab.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/Clicklistener/TableFiller.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/Clicklistener/TableEditor.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/Clicklistener/Opdracht1Listener.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/ui/Opdracht1Tab.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/ui/UserInterface.java" />
+        <option value="$PROJECT_DIR$/software/NetflixStatistics/src/ui/Opdracht2Tab.java" />
       </list>
     </option>
   </component>
@@ -194,8 +194,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="822" />
-    <option name="y" value="559" />
+    <option name="x" value="392" />
+    <option name="y" value="682" />
     <option name="width" value="1736" />
     <option name="height" value="883" />
   </component>
@@ -412,10 +412,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22798000" />
+    <option name="totallyTimeSpent" value="22848000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="822" y="559" width="1736" height="883" extended-state="0" />
+    <frame x="392" y="682" width="1736" height="883" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -711,8 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/ui/Opdracht2Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+        <state relative-caret-position="259">
+          <caret line="49" column="38" lean-forward="false" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
