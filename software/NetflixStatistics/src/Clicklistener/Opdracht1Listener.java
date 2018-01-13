@@ -23,14 +23,14 @@ public class  Opdracht1Listener implements ActionListener {
     private SqlConnection sqlConnection;
     private Object input;
     private DefaultTableModel tableModel;
-    private TableFiller tableFiller;
+    private TableEditor tableEditor;
 
     public Opdracht1Listener(JTable resultTable, Object input, SqlConnection sqlConnection, DefaultTableModel tableModel) {
         this.resultTable = resultTable;
         this.input = input;
         this.sqlConnection = sqlConnection;
         this.tableModel = tableModel;
-        tableFiller = new TableFiller(tableModel, resultTable);
+        tableEditor = new TableEditor(tableModel, resultTable);
 
     }
 
@@ -46,6 +46,6 @@ public class  Opdracht1Listener implements ActionListener {
                                                                 "WHERE Content.Titel =" + "'" + input + "'" + "\n" +
                                                                 "GROUP BY Bekeken.AfleveringID, Aflevering.Titel");
 
-        tableFiller.fillTable(resultSet);
+        tableEditor.fillTable(resultSet);
     }
 }

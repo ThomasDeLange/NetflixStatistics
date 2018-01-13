@@ -19,3 +19,4 @@ software\NetflixStatistics\.idea\libraries
 software/.DS_Store
 >>>>>>> origin/master
 *.xml
+software/NetflixStatistics/src/Clicklistener/TableFiller.java

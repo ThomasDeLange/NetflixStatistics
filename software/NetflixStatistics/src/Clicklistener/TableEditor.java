@@ -2,18 +2,17 @@ package Clicklistener;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
-public class TableFiller {
+public class TableEditor {
 
     private ResultSet resultSet;
     private DefaultTableModel tableModel;
     private JTable resultTable;
 
-    public TableFiller(DefaultTableModel tableModel, JTable resultTable) {
+    public TableEditor(DefaultTableModel tableModel, JTable resultTable) {
         this.resultSet = resultSet;
         this.tableModel = tableModel;
         this.resultTable = resultTable;
@@ -44,9 +43,14 @@ public class TableFiller {
             e1.printStackTrace();
         }
     }
+<<<<<<< HEAD:software/NetflixStatistics/src/Clicklistener/TableFiller.java
 
     public void emptyTable(DefaultTableModel tableModel) {
             tableModel.setRowCount(0);
+=======
+    public void emptyTable(){
+        tableModel.setRowCount(0);
+>>>>>>> 469e0405505fd56328ccf2d2064274d3c0062e64:software/NetflixStatistics/src/Clicklistener/TableEditor.java
     }
 }
 
