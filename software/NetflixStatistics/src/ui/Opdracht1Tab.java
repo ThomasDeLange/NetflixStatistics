@@ -30,9 +30,15 @@ public class Opdracht1Tab {
         Data layout - centre
         */
 
+
         //Dropdown
-        String[] titels = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
-        JComboBox dropdown = new JComboBox(titels);
+        String bb = "Breaking Bad";
+        String fargo = "Fargo";
+        String sherlock = "Sherlock";
+        JComboBox dropdown = new JComboBox();
+        dropdown.addItem(bb);
+        dropdown.addItem(fargo);
+        dropdown.addItem(sherlock);
 
         navPanel.add(dropdown);
         //Setup
@@ -54,14 +60,16 @@ public class Opdracht1Tab {
         dataPanel.add(resultTable);
         dataPanel.add(new JScrollPane(resultTable));
 
-        JTextArea opdracht1Input = new JTextArea("Voer Serie in bv: Sherlock, Breaking Bad of Fargo");
-        dataPanel.add(opdracht1Input);
+
+        Object opdracht1Input = dropdown.getSelectedItem();
+
 
     /*
     Clicklistener
     */
         //clickListener = new ClickListener(resultTable, taskExecutor);
         Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, opdracht1Input, sqlConnection, resultTableModel);
+        dropdown.addActionListener(opdracht1Listener);
 
         return navPanel;
     }
