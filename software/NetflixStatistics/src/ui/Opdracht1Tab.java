@@ -31,13 +31,15 @@ public class Opdracht1Tab {
         */
 
         //Dropdown
-        String bb = "Breaking Bad";
-        String fargo = "Fargo";
-        String sherlock = "Sherlock";
-        JComboBox dropdown = new JComboBox();
-        dropdown.addItem(bb);
-        dropdown.addItem(fargo);
-        dropdown.addItem(sherlock);
+//        String bb = "Breaking Bad";
+//        String fargo = "Fargo";
+//        String sherlock = "Sherlock";
+//        JComboBox<String> dropdown = new JComboBox<String>();
+        String[] items = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
+        JComboBox dropdown = new JComboBox(items);
+//        dropdown.addItem(bb);
+//        dropdown.addItem(fargo);
+//        dropdown.addItem(sherlock);
 
         navPanel.add(dropdown);
         //Setup
@@ -68,9 +70,12 @@ public class Opdracht1Tab {
         */
         //clickListener = new ClickListener(resultTable, taskExecutor);
         Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, opdracht1Input, sqlConnection, resultTableModel);
+
         dropdown.addActionListener(opdracht1Listener);
 
         return navPanel;
     }
+
+
 }
 
