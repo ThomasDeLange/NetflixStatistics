@@ -74,102 +74,17 @@ public class UserInterface implements Runnable {
         */
 
         //Buttons
-        JButton button1 = new JButton("Opdracht 1");
-        JButton button2 = new JButton("Opdracht 2");
-        JButton button3 = new JButton("Opdracht 3");
-        JButton button4 = new JButton("Opdracht 4");
-        JButton button5 = new JButton("Opdracht 5");
+        JTabbedPane tabbedPane = new JTabbedPane();
+        
+        tabbedPane.add(new Opdracht1Tab(font, sqlConnection).createComponents(), "Opdracht 1");
+
+        hoofdContainer.add(tabbedPane);
 
 
-        //Setup
-        JPanel navPanel = new JPanel();
-        hoofdContainer.add(navPanel, BorderLayout.WEST);
-
-        navPanel.setLayout(new BoxLayout(navPanel, BoxLayout.Y_AXIS));
 
 
-        //Add buttons
-        navPanel.add(button1);
-        navPanel.add(button2);
-        navPanel.add(button3);
-        navPanel.add(button4);
-        navPanel.add(button5);
-
-        int navButtonSizeX = 200;
-        int navButtonSizeY = 200;
-
-        button1.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
-        button2.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
-        button3.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
-        button4.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
-        button5.setPreferredSize(new Dimension(navButtonSizeX, navButtonSizeY));
-
-        SwingUtilities.updateComponentTreeUI(frame);
-
-        /*
-        Text layout - south
-        */
-
-        //Labels
-        JLabel projectNaam = new JLabel("Netflix Statistics");
-        JLabel namen = new JLabel("Thomas, Tim, Jan-Paul");
 
 
-        //Setup
-        JPanel infoTextPanel = new JPanel();
-        hoofdContainer.add(infoTextPanel, BorderLayout.SOUTH);
-
-        infoTextPanel.setLayout(new BoxLayout(infoTextPanel, BoxLayout.X_AXIS));
-
-        //Add text
-        infoTextPanel.add(projectNaam);
-        infoTextPanel.add(namen);
-
-        projectNaam.setForeground(Color.WHITE);
-        namen.setForeground(Color.WHITE);
-        namen.setHorizontalTextPosition(SwingConstants.RIGHT);
-
-
-        //color
-        infoTextPanel.setBackground(Color.getHSBColor(0F, 0.93f, 0.86f));
-
-
-        /*
-        Data layout - centre
-        */
-
-        //Setup
-        JPanel dataPanel = new JPanel();
-        hoofdContainer.add(dataPanel, BorderLayout.CENTER);
-
-        dataPanel.setLayout(new GridLayout(3,1));
-        //Components
-
-        dataPanel.add(new JLabel("Voor een door de gebruiker geselecteerde serie, geef per aflevering het gemiddeld bekeken\n" +
-                "% van de tijdsduur. Bij elke aflevering worden het volgnummer én titel getoond."));
-
-        JTable resultTable = new JTable();
-
-       String[] tableColumnsName = {"Volgnummer", "Titel", "Percentage gemiddeld bekeken"};
-       DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
-       resultTableModel.setColumnIdentifiers(tableColumnsName);
-
-        dataPanel.add(resultTable);
-        dataPanel.add(new JScrollPane(resultTable));
-
-        JTextArea opdracht1Input = new JTextArea("Voer Serie in bv: Sherlock, Breaking Bad of Fargo");
-        dataPanel.add(opdracht1Input);
-
-        /*
-        Clicklistener
-        */
-        //clickListener = new ClickListener(resultTable, taskExecutor);
-        Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, opdracht1Input, sqlConnection, resultTableModel);
-
-        //setup
-        button1.addActionListener(opdracht1Listener);
-        button2.addActionListener(clickListener);
-        button3.addActionListener(clickListener);
 
 
 //        BorderLayout layout = new BorderLayout();
