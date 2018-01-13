@@ -30,7 +30,6 @@ public class Opdracht1Tab {
         Data layout - centre
         */
 
-
         //Dropdown
         String bb = "Breaking Bad";
         String fargo = "Fargo";
@@ -45,7 +44,7 @@ public class Opdracht1Tab {
         JPanel dataPanel = new JPanel();
         navPanel.add(dataPanel, BorderLayout.CENTER);
 
-        dataPanel.setLayout(new GridLayout(3, 1));
+        dataPanel.setLayout(new GridLayout(2, 1));
         //Components
 
         dataPanel.add(new JLabel("Voor een door de gebruiker geselecteerde serie, geef per aflevering het gemiddeld bekeken\n" +
@@ -64,9 +63,9 @@ public class Opdracht1Tab {
         Object opdracht1Input = dropdown.getSelectedItem();
 
 
-    /*
-    Clicklistener
-    */
+        /*
+        Clicklistener
+        */
         //clickListener = new ClickListener(resultTable, taskExecutor);
         Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, opdracht1Input, sqlConnection, resultTableModel);
         dropdown.addActionListener(opdracht1Listener);
