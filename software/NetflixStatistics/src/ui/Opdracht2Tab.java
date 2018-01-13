@@ -1,6 +1,5 @@
 package ui;
 
-import Clicklistener.Opdracht1Listener;
 import applicationlogic.SqlConnection;
 
 import javax.swing.*;

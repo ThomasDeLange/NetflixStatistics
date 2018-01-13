@@ -1,12 +1,10 @@
 package ui;
 
 import Clicklistener.ClickListener;
-import Clicklistener.Opdracht1Listener;
 import applicationlogic.SqlConnection;
 import applicationlogic.*;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -56,10 +54,6 @@ public class UserInterface implements Runnable {
 
 
     private void createComponents(Container hoofdContainer) {
-
-        //Taskexecutor
-        TaskExecutor taskExecutor = new TaskExecutor(sqlConnection);
-
         //Font
         Font font = new Font("arial", Font.BOLD, 24);
 

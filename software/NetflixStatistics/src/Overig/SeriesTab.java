@@ -50,7 +50,7 @@ public class SeriesTab {
         JLabel label = new JLabel("Plz werk");
 
         UserInterface userInterface = new UserInterface(sqlConnection);
-        TaskExecutor taskExecutor = new TaskExecutor(sqlConnection);
+        //TaskExecutor taskExecutor = new TaskExecutor(sqlConnection);
         //ClickListener clickListener = new ClickListener(label, taskExecutor);
 
         //button.addActionListener(clickListener);

@@ -1,13 +1,11 @@
 package ui;
 
-import Clicklistener.Opdracht1Listener;
+import Clicklistener.ClickListener;
 import applicationlogic.SqlConnection;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.sql.Array;
-import java.sql.ResultSet;
 
 public class Opdracht1Tab {
     private Font font;
@@ -31,17 +29,11 @@ public class Opdracht1Tab {
         */
 
         //Dropdown
-//        String bb = "Breaking Bad";
-//        String fargo = "Fargo";
-//        String sherlock = "Sherlock";
-//        JComboBox<String> dropdown = new JComboBox<String>();
-          String[] items = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
-          JComboBox dropdown = new JComboBox(items);
-//        dropdown.addItem(bb);
-//        dropdown.addItem(fargo);
-//        dropdown.addItem(sherlock);
+        String[] items = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
+        JComboBox Opdracht1Dropdown = new JComboBox(items);
 
-        hoofdPanel.add(dropdown);
+
+        hoofdPanel.add(Opdracht1Dropdown);
         //Setup
         JPanel dataPanel = new JPanel();
         hoofdPanel.add(dataPanel, BorderLayout.CENTER);
@@ -62,16 +54,13 @@ public class Opdracht1Tab {
         dataPanel.add(new JScrollPane(resultTable));
 
 
-
-
-
         /*
         Clicklistener
         */
-        //clickListener = new ClickListener(resultTable, taskExecutor);
-        Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, dropdown, sqlConnection, resultTableModel);
+        ClickListener clickListener = new ClickListener(resultTable, Opdracht1Dropdown, sqlConnection, resultTableModel, "Opdracht1");
+        //Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, dropdown, sqlConnection, resultTableModel);
 
-        dropdown.addActionListener(opdracht1Listener);
+        Opdracht1Dropdown.addActionListener(clickListener);
 
         return hoofdPanel;
     }

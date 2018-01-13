@@ -33,10 +33,7 @@ public class TableEditor {
             }
             resultTable.setModel(tableModel);
             tableModel.fireTableDataChanged();
-        } catch(
-                SQLException e1)
-
-        {
+        } catch(SQLException e1) {
             e1.printStackTrace();
         }
     }
