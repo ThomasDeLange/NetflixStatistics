@@ -80,6 +80,28 @@ public class UserInterface implements Runnable {
 
         hoofdContainer.add(tabbedPane);
 
+        //Labels
+        JLabel projectNaam = new JLabel("Netflix Statistics");
+        JLabel namen = new JLabel("Thomas, Tim, Jan-Paul");
+
+
+        //Setup
+        JPanel infoTextPanel = new JPanel();
+        hoofdContainer.add(infoTextPanel, BorderLayout.SOUTH);
+
+        infoTextPanel.setLayout(new BoxLayout(infoTextPanel, BoxLayout.X_AXIS));
+
+        //Add text
+        infoTextPanel.add(projectNaam);
+        infoTextPanel.add(namen);
+
+        projectNaam.setForeground(Color.WHITE);
+        namen.setForeground(Color.WHITE);
+        namen.setHorizontalTextPosition(SwingConstants.RIGHT);
+
+
+        //color
+        infoTextPanel.setBackground(Color.getHSBColor(0F, 0.93f, 0.86f));
 
 
 

@@ -17,40 +17,14 @@ public class Opdracht1Tab {
     }
 
     public JPanel createComponents() {
-
-
+        
         //Setup
-        JPanel navPanel = new JPanel();
-
-        navPanel.setLayout(new BoxLayout(navPanel, BoxLayout.Y_AXIS));
+        JPanel hoofdPanel = new JPanel();
+        hoofdPanel.setLayout(new BorderLayout());
 
         /*
         Text layout - south
         */
-
-        //Labels
-        JLabel projectNaam = new JLabel("Netflix Statistics");
-        JLabel namen = new JLabel("Thomas, Tim, Jan-Paul");
-
-
-        //Setup
-        JPanel infoTextPanel = new JPanel();
-        navPanel.add(infoTextPanel, BorderLayout.SOUTH);
-
-        infoTextPanel.setLayout(new BoxLayout(infoTextPanel, BoxLayout.X_AXIS));
-
-        //Add text
-        infoTextPanel.add(projectNaam);
-        infoTextPanel.add(namen);
-
-        projectNaam.setForeground(Color.WHITE);
-        namen.setForeground(Color.WHITE);
-        namen.setHorizontalTextPosition(SwingConstants.RIGHT);
-
-
-        //color
-        infoTextPanel.setBackground(Color.getHSBColor(0F, 0.93f, 0.86f));
-
 
         /*
         Data layout - centre
@@ -58,7 +32,7 @@ public class Opdracht1Tab {
 
         //Setup
         JPanel dataPanel = new JPanel();
-        navPanel.add(dataPanel, BorderLayout.CENTER);
+        hoofdPanel.add(dataPanel, BorderLayout.CENTER);
 
         dataPanel.setLayout(new GridLayout(3, 1));
         //Components
@@ -78,13 +52,13 @@ public class Opdracht1Tab {
         JTextArea opdracht1Input = new JTextArea("Voer Serie in bv: Sherlock, Breaking Bad of Fargo");
         dataPanel.add(opdracht1Input);
 
-    /*
-    Clicklistener
-    */
+        /*
+        Clicklistener
+         */
         //clickListener = new ClickListener(resultTable, taskExecutor);
         Opdracht1Listener opdracht1Listener = new Opdracht1Listener(resultTable, opdracht1Input, sqlConnection, resultTableModel);
 
-        return navPanel;
+        return hoofdPanel;
     }
 }
 
