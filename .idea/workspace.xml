@@ -4,16 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/software/NetflixStatistics" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b1f2d5-45b8-44e8-ac4f-f2a562785c86" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/software/NetflixStatistics/src/Clicklistener/Opdracht1Listener.java" afterPath="$PROJECT_DIR$/software/NetflixStatistics/src/Overig/Opdracht1Listener.java" />
-      <change beforePath="$PROJECT_DIR$/software/NetflixStatistics/src/Clicklistener/Opdracht2Listener.java" afterPath="$PROJECT_DIR$/software/NetflixStatistics/src/Overig/Opdracht2Listener.java" />
-      <change beforePath="$PROJECT_DIR$/software/NetflixStatistics/src/Clicklistener/TableEditor.java" afterPath="$PROJECT_DIR$/software/NetflixStatistics/src/Clicklistener/TableEditor.java" />
-      <change beforePath="$PROJECT_DIR$/software/NetflixStatistics/src/Overig/FilmsTab.java" afterPath="$PROJECT_DIR$/software/NetflixStatistics/src/Overig/FilmsTab.java" />
-      <change beforePath="$PROJECT_DIR$/software/NetflixStatistics/src/Overig/SeriesTab.java" afterPath="$PROJECT_DIR$/software/NetflixStatistics/src/Overig/SeriesTab.java" />
-      <change beforePath="$PROJECT_DIR$/software/NetflixStatistics/src/ui/Opdracht2Tab.java" afterPath="$PROJECT_DIR$/software/NetflixStatistics/src/ui/Opdracht2Tab.java" />
-      <change beforePath="$PROJECT_DIR$/software/NetflixStatistics/src/ui/UserInterface.java" afterPath="$PROJECT_DIR$/software/NetflixStatistics/src/ui/UserInterface.java" />
-    </list>
+    <list default="true" id="39b1f2d5-45b8-44e8-ac4f-f2a562785c86" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -410,7 +401,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28845000" />
+    <option name="totallyTimeSpent" value="28871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
