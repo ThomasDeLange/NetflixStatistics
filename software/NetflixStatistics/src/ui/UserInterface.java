@@ -1,12 +1,9 @@
 package ui;
 
 import Clicklistener.ClickListener;
-import Clicklistener.Opdracht1Listener;
 import applicationlogic.SqlConnection;
 import applicationlogic.*;
-
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -34,6 +31,7 @@ public class UserInterface implements Runnable {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setMinimumSize(new Dimension(600, 500));
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent windowEvent) {
@@ -70,44 +68,38 @@ public class UserInterface implements Runnable {
         hoofdContainer.setLayout(hoofdLayout);
 
         /*
-        Navigatie layout - west
+        Navigatie layout - North
         */
 
-        //Buttons
         JTabbedPane tabbedPane = new JTabbedPane();
         
         tabbedPane.add(new Opdracht1Tab(font, sqlConnection).createComponents(), "Opdracht 1");
 
         hoofdContainer.add(tabbedPane);
 
+        /*
+        Info Text
+        */
+
         //Labels
         JLabel projectNaam = new JLabel("Netflix Statistics");
         JLabel namen = new JLabel("Thomas, Tim, Jan-Paul");
 
-
         //Setup
         JPanel infoTextPanel = new JPanel();
         hoofdContainer.add(infoTextPanel, BorderLayout.SOUTH);
-
         infoTextPanel.setLayout(new BoxLayout(infoTextPanel, BoxLayout.X_AXIS));
 
         //Add text
         infoTextPanel.add(projectNaam);
         infoTextPanel.add(namen);
+        //color
 
         projectNaam.setForeground(Color.WHITE);
         namen.setForeground(Color.WHITE);
         namen.setHorizontalTextPosition(SwingConstants.RIGHT);
 
-
-        //color
         infoTextPanel.setBackground(Color.getHSBColor(0F, 0.93f, 0.86f));
-
-
-
-
-
-
 
 //        BorderLayout layout = new BorderLayout();
 //        hoofdContainer.setLayout(layout);
