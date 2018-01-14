@@ -9,11 +9,9 @@ import java.awt.*;
 
 public class Opdracht5Tab {
 
-    private Font font;
     private SqlConnection sqlConnection;
 
     public Opdracht5Tab(SqlConnection sqlConnection) {
-        this.font = font;
         this.sqlConnection = sqlConnection;
     }
 
@@ -33,18 +31,6 @@ public class Opdracht5Tab {
         JPanel dropdownPanel = new JPanel();
         dropdownPanel.setLayout(new FlowLayout());
 
-
-
-        String[] accountDropdownItems = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
-        JComboBox accountDropdown = new JComboBox(accountDropdownItems);
-
-        String[] serieDropdwonItems = new String[]{"1215426", "5602533", "5285824"};
-        JComboBox serieDropdown = new JComboBox(serieDropdwonItems);
-
-        dropdownPanel.add(new JLabel("Kies een account"));
-        dropdownPanel.add(accountDropdown);
-        dropdownPanel.add(new JLabel("Kies een serie"));
-        dropdownPanel.add(serieDropdown);
         JButton runButton = new JButton("Voer uit!");
         dropdownPanel.add(runButton);
 
@@ -55,7 +41,7 @@ public class Opdracht5Tab {
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+        JLabel opdrachtLabel = new JLabel("Geef de accounts met slechts 1 profiel.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 
@@ -63,7 +49,7 @@ public class Opdracht5Tab {
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
-        String[] tableColumnsName = {"Volgnummer", "Titel", "Percentage gemiddeld bekeken"};
+        String[] tableColumnsName = {"Accountnummer", "Accountnaam", "Profielnaam"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
@@ -72,7 +58,7 @@ public class Opdracht5Tab {
 
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(accountDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht5");
+        ClickListener clickListener = new ClickListener(resultTable, sqlConnection, resultTableModel, "Opdracht5");
         runButton.addActionListener(clickListener);
 
         return hoofdPanel;

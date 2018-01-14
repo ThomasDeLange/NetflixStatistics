@@ -35,7 +35,7 @@ public class Opdracht6Tab {
 
 
 
-        String[] accountDropdownItems = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
+        String[] accountDropdownItems = new String[]{"The Abominable Bride", "The Life of Brian", "Pulp Fiction", "Pruimebloesem", "Reservoir Dogs", "The Good, the Bad and the Ugly", "Andy Warhol's Dracula", "Ober", "Der Untergang", "De helaasheid der dingen", "A Clockwork Orange"};
         JComboBox accountDropdown = new JComboBox(accountDropdownItems);
 
         dropdownPanel.add(new JLabel("Kies een film"));

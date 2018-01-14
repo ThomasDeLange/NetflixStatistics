@@ -144,11 +144,11 @@ public class TaskExecutor {
                         "FROM Account\n" +
                         "INNER JOIN Profiel\n" +
                         "ON Profiel.AccountNR = Account.AccountNR\n" +
-                        "GROUP BY Profiel.AccountNR, Account.AccountNR, Account.Naam\n" +
+                        "GROUP BY Profiel.AccountNR, Account.AccountNR, Account.Naam, Profiel.ProfielNaam\n" +
                         "HAVING COUNT(Profiel.AccountNR) = 1");
                 break;
 
-            case "opdracht6":
+            case "Opdracht6":
                 //Er komt een dropdown binnen - Film
                 JComboBox cbFilm = ((JComboBox) input1);
                 String inputFilm = (String) cbFilm.getSelectedItem();
@@ -157,16 +157,14 @@ public class TaskExecutor {
                 6 Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in zín geheel be-
                 keken?
                 */
-
-                resultSet = sqlConnection.executeSql("SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien, Bekeken.ProcentGezien\n" +
+                System.out.println(inputFilm);
+                resultSet = sqlConnection.executeSql("SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien\n" +
                         "FROM Film\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Film.ContentID\n" +
                         "INNER JOIN Bekeken\n" +
                         "ON Bekeken.AfleveringID = Film.AfleveringID\n" +
-                        "WHERE Content.Titel =" + "'" + inputFilm + "'" + "\n" +
-                        "GROUP BY Film.AfleveringID, Bekeken.ProcentGezien, Content.Titel\n" +
-                        "HAVING Bekeken.ProcentGezien = 100\n" +
+                        "WHERE Content.Titel = '" + inputFilm + "'\n" +
                         "GROUP BY Film.AfleveringID, Bekeken.ProcentGezien, Content.Titel\n" +
                         "HAVING Bekeken.ProcentGezien = 100");
                 break;
