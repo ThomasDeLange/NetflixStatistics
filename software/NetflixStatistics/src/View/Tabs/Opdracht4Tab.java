@@ -21,38 +21,17 @@ public class Opdracht4Tab {
         //Setup hoofdpanel
         JPanel hoofdPanel = new JPanel();
         hoofdPanel.setLayout(new BorderLayout());
+        
+        //Opdracht
         hoofdPanel.setBorder(BorderFactory.createTitledBorder("Geef de film met de langste tijdsduur voor kijkers onder 16 jaar"));
 
-
-<<<<<<< HEAD
+        //Button
         JButton runButton = new JButton("Voer uit!");
         hoofdPanel.add(runButton, BorderLayout.SOUTH);
-=======
-        //Components
-
-        //Dropdown panel - Label, Dropdown
-        JPanel dropdownPanel = new JPanel();
-        dropdownPanel.setLayout(new FlowLayout());
-
-        JButton runButton = new JButton("Voer uit!");
-        dropdownPanel.add(runButton);
-
-
-        hoofdPanel.add(dropdownPanel);
-
-        //OpdrachtLabel
-        JPanel opdrachtLabelPanel = new JPanel();
-        opdrachtLabelPanel.setLayout(new FlowLayout());
-
-        JLabel opdrachtLabel = new JLabel("o Geef de film met de langste tijdsduur voor kijkers onder 16 jaar.");
-        opdrachtLabelPanel.add(opdrachtLabel);
-        hoofdPanel.add(opdrachtLabelPanel);
->>>>>>> f70f5650663e2fd47909e01241e4901f5604864a
 
         //Table
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
-
 
         String[] tableColumnsName = {"Volgnummer", "Titel", "Percentage gemiddeld bekeken"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();

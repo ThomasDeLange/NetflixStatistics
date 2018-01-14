@@ -39,8 +39,8 @@
       <file leaf-file-name="Opdracht4Tab.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht4Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="-38">
+              <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -159,8 +159,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="247" />
-    <option name="y" value="586" />
+    <option name="x" value="-4" />
+    <option name="y" value="804" />
     <option name="width" value="1736" />
     <option name="height" value="884" />
   </component>
@@ -383,15 +383,15 @@
       <workItem from="1512135538502" duration="1403000" />
       <workItem from="1515859831252" duration="2230000" />
       <workItem from="1515933495449" duration="34000" />
-      <workItem from="1515936023447" duration="1645000" />
+      <workItem from="1515936023447" duration="1855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26783000" />
+    <option name="totallyTimeSpent" value="26993000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="247" y="586" width="1736" height="884" extended-state="0" />
+    <frame x="-4" y="804" width="1736" height="884" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -620,8 +620,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht4Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="12" />
+        <state relative-caret-position="-38">
+          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding />
         </state>
       </provider>
