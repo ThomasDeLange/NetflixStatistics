@@ -70,10 +70,10 @@ public class UserInterface implements Runnable {
         //Buttons
         JTabbedPane tabbedPane = new JTabbedPane();
 
-        tabbedPane.add(new Opdracht1Tab(font, sqlConnection).createComponents(), "Overzicht 1");
-        tabbedPane.add(new Opdracht2Tab(font, sqlConnection).createComponents(), "Overzicht 2");
-        tabbedPane.add(new Opdracht3Tab(font, sqlConnection).createComponents(), "Overzicht 3");
-        tabbedPane.add(new Opdracht4Tab(font, sqlConnection).createComponents(), "Overzicht 4");
+        tabbedPane.add(new Opdracht1Tab(sqlConnection).createComponents(), "Overzicht 1");
+        tabbedPane.add(new Opdracht2Tab(sqlConnection).createComponents(), "Overzicht 2");
+        tabbedPane.add(new Opdracht3Tab(sqlConnection).createComponents(), "Overzicht 3");
+        tabbedPane.add(new Opdracht4Tab(sqlConnection).createComponents(), "Overzicht 4");
         tabbedPane.add(new Opdracht5Tab(font, sqlConnection).createComponents(), "Overzicht 5");
         tabbedPane.add(new Opdracht6Tab(font, sqlConnection).createComponents(), "Overzicht 6");
 

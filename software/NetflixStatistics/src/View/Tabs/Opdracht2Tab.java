@@ -7,15 +7,14 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-public class Opdracht2Tab {
-    private Font font;
-    private SqlConnection sqlConnection;
+public class Opdracht2Tab extends Tab{
 
-    public Opdracht2Tab(Font font, SqlConnection sqlConnection) {
-        this.font = font;
-        this.sqlConnection = sqlConnection;
+
+    public Opdracht2Tab(SqlConnection sqlConnection) {
+        super(sqlConnection);
     }
 
+    @Override
     public JPanel createComponents() {
 
         //Setup hoofdpanel
@@ -72,7 +71,7 @@ public class Opdracht2Tab {
 
         //Clicklistener
         //Eerst account dan serie
-        ClickListener clickListener = new ClickListener(accountDropdown, serieDropdown, resultTable,  sqlConnection, resultTableModel, "Opdracht2");
+        ClickListener clickListener = new ClickListener(accountDropdown, serieDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht2");
         runButton.addActionListener(clickListener);
 
         return hoofdPanel;
