@@ -8,11 +8,9 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 public class Opdracht4Tab {
-    private Font font;
     private SqlConnection sqlConnection;
 
-    public Opdracht4Tab(Font font, SqlConnection sqlConnection) {
-        this.font = font;
+    public Opdracht4Tab(SqlConnection sqlConnection) {
         this.sqlConnection = sqlConnection;
     }
 

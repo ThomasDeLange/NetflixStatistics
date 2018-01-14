@@ -12,7 +12,7 @@ public class Opdracht5Tab {
     private Font font;
     private SqlConnection sqlConnection;
 
-    public Opdracht5Tab(Font font, SqlConnection sqlConnection) {
+    public Opdracht5Tab(SqlConnection sqlConnection) {
         this.font = font;
         this.sqlConnection = sqlConnection;
     }
