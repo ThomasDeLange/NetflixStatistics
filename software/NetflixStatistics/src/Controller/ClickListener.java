@@ -35,7 +35,7 @@ public class ClickListener implements ActionListener {
         this.tableModel = tableModel;
         this.taskId = taskID;
         tableEditor = new TableEditor(tableModel, resultTable);
-        taskExecutor = new TaskExecutor(sqlConnection);
+        taskExecutor = new TaskExecutor(sqlConnection, tableModel, resultTable);
     }
     //1 input
     public ClickListener(Object input,JTable resultTable,  SqlConnection sqlConnection, DefaultTableModel tableModel, String taskID) {
@@ -43,7 +43,7 @@ public class ClickListener implements ActionListener {
         this.tableModel = tableModel;
         this.taskId = taskID;
         tableEditor = new TableEditor(tableModel, resultTable);
-        taskExecutor = new TaskExecutor(sqlConnection, input1);
+        taskExecutor = new TaskExecutor(sqlConnection, tableModel, resultTable, input);
     }
     //2 input
     public ClickListener(Object input,Object input2, JTable resultTable,  SqlConnection sqlConnection, DefaultTableModel tableModel, String taskID) {
@@ -52,7 +52,7 @@ public class ClickListener implements ActionListener {
         this.tableModel = tableModel;
         this.taskId = taskID;
         tableEditor = new TableEditor(tableModel, resultTable);
-        taskExecutor = new TaskExecutor(sqlConnection, input1, input2);
+        taskExecutor = new TaskExecutor(sqlConnection, tableModel, resultTable, input1, input2);
     }
 
     @Override

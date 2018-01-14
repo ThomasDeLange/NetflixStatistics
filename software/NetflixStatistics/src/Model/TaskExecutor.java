@@ -22,25 +22,29 @@ public class TaskExecutor {
     private Object input2;
 
     //0 input
-    public TaskExecutor(SqlConnection sqlConnection) {
-        //this.userInterface = userInterface;
-        this.sqlConnection = sqlConnection;
-
-    }
-
-    //1 input
-    public TaskExecutor(SqlConnection sqlConnection, Object input) {
-        //this.userInterface = userInterface;
-        this.sqlConnection = sqlConnection;
-        this.input1 = input;
-
-    }
-    //2 input
-    public TaskExecutor(SqlConnection sqlConnection, Object input1, Object input2) {
+    public TaskExecutor(SqlConnection sqlConnection, DefaultTableModel defaultTableModel, JTable resultTable) {
         //this.userInterface = userInterface;
         this.sqlConnection = sqlConnection;
         this.input1 = input1;
         this.input2 = input2;
+        tableEditor = new TableEditor(defaultTableModel, resultTable);
+    }
+
+    //1 input
+    public TaskExecutor(SqlConnection sqlConnection, DefaultTableModel defaultTableModel, JTable resultTable, Object input) {
+        //this.userInterface = userInterface;
+        this.sqlConnection = sqlConnection;
+        this.input1 = input;
+        tableEditor = new TableEditor(defaultTableModel, resultTable);
+
+    }
+    //2 input
+    public TaskExecutor(SqlConnection sqlConnection, DefaultTableModel defaultTableModel, JTable resultTable, Object input1, Object input2) {
+        //this.userInterface = userInterface;
+        this.sqlConnection = sqlConnection;
+        this.input1 = input1;
+        this.input2 = input2;
+        tableEditor = new TableEditor(defaultTableModel, resultTable);
     }
 
 
@@ -52,7 +56,7 @@ public class TaskExecutor {
             case "Opdracht1":
                 //Er komt 1 combobox binnen - Titel
                 JComboBox cbTitel = ((JComboBox) input1);
-                String inputSerieTitel = (String)cbTitel.getSelectedItem();
+                String inputSerieTitel = (String) cbTitel.getSelectedItem();
 
                 /*
                 1 Voor een door de gebruiker geselecteerde serie, geef per aflevering het gemiddeld bekeken
@@ -91,9 +95,9 @@ public class TaskExecutor {
                         "ON Content.ContentID = Aflevering.ContentID\n" +
                         "INNER JOIN Account\n" +
                         "ON Account.AccountNR = Bekeken.AccountNR\t\n" +
-                        "WHERE Content.Titel =" + "'" + inputSerieTitel2 + "'" + "\n" +
-                        "AND\n" +
-                        "Account.AccountNR =" + "'" + inputAccount + "'" + "\n" +
+                        "WHERE\tContent.Titel =" + "'" + inputSerieTitel2 + "'" + "\n" +
+                        "\t\tAND\n" +
+                        "\t\tAccount.AccountNR =" + "'" + inputAccount + "'" + "\n" +
                         "GROUP BY Bekeken.AfleveringID, Aflevering.Titel");
                 break;
 
@@ -101,6 +105,7 @@ public class TaskExecutor {
                 //Er komt 1 dropdown binnen - Account
                 JComboBox cbAccount2 = ((JComboBox) input1);
                 String inputAccount2 = (String) cbAccount2.getSelectedItem();
+
                 System.out.println(inputAccount2);
                 /*
                 3 Welke films zijn er door een door de gebruiker geselecteerd account bekeken?
@@ -115,7 +120,7 @@ public class TaskExecutor {
                         "ON Film.ContentID = Content.ContentID\n" +
                         "INNER JOIN Profiel\n" +
                         "ON Profiel.AccountNR = Account.AccountNR\n" +
-                        "WHERE Account.AccountNR =" +  "'" +  inputAccount2 + "'");
+                        "WHERE Account.AccountNR =" + "'" + inputAccount2 + "'");
                 break;
 
             case "Opdracht4":
