@@ -12,6 +12,10 @@ ON Content.ContentID = Aflevering.ContentID
 WHERE Content.Titel = 'Sherlock'
 GROUP BY Bekeken.AfleveringID, Aflevering.Titel
 
+SELECT *
+FROM SERIE 
+INNER JOIN Content
+ON Content.ContentID = Serie.ContentID
 
 /*
 o Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemid-
@@ -34,15 +38,13 @@ GROUP BY Bekeken.AfleveringID, Aflevering.Titel
 /*
 o Welke films zijn er door een door de gebruiker geselecteerd account bekeken?
 */
-SELECT Bekeken.AfleveringID, Aflevering.Titel
+SELECT Bekeken.AfleveringID, Content.Titel
 FROM Bekeken
-INNER JOIN Aflevering
-ON Aflevering.AfleveringID = Bekeken.AfleveringID
-INNER JOIN Content
-ON Content.ContentID = Aflevering.ContentID
-INNER JOIN Account
-ON Account.AccountNR = Bekeken.AccountNR	
 INNER JOIN Film
+ON Film.AfleveringID = Bekeken.AfleveringID
+INNER JOIN Content
+ON Content.ContentID = Film.ContentID
+INNER JOIN Account
 ON Film.ContentID = Content.ContentID
 WHERE Account.AccountNR = '1215426'
 
@@ -82,6 +84,14 @@ ON Bekeken.AfleveringID = Film.AfleveringID
 WHERE Content.Titel = 'The Life of Brian'
 GROUP BY Film.AfleveringID, Bekeken.ProcentGezien, Content.Titel
 HAVING Bekeken.ProcentGezien = 100
+/*
+Voor een door de gebruiker geselecteerde serie, geef het gemiddeld bekeken % van de tijdsduur van die serie als geheel 
+(d.w.z. alle afleveringen van die serie).
+*/
 
---GROUP BY Film.AfleveringID, Bekeken.ProcentGezien, Content.Titel
---HAVING Bekeken.ProcentGezien > 100
+
+
+/*  
+Voor een door de gebruiker geselecteerde film, hoeveel procent van de kijkers hebben deze in z’n geheel bekeken? 
+Geeft hierbij ook het absolute aantal kijkers dat deze film helemaal afkeek en het totaal aantal kijkers.
+*/
