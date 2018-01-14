@@ -32,18 +32,6 @@ public class Opdracht4Tab {
         JPanel dropdownPanel = new JPanel();
         dropdownPanel.setLayout(new FlowLayout());
 
-
-
-        String[] accountDropdownItems = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
-        JComboBox accountDropdown = new JComboBox(accountDropdownItems);
-
-        String[] serieDropdwonItems = new String[]{"1215426", "5602533", "5285824"};
-        JComboBox serieDropdown = new JComboBox(serieDropdwonItems);
-
-        dropdownPanel.add(new JLabel("Kies een account"));
-        dropdownPanel.add(accountDropdown);
-        dropdownPanel.add(new JLabel("Kies een serie"));
-        dropdownPanel.add(serieDropdown);
         JButton runButton = new JButton("Voer uit!");
         dropdownPanel.add(runButton);
 
@@ -54,7 +42,7 @@ public class Opdracht4Tab {
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+        JLabel opdrachtLabel = new JLabel("o Geef de film met de langste tijdsduur voor kijkers onder 16 jaar.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 
@@ -71,7 +59,7 @@ public class Opdracht4Tab {
 
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(accountDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht4");
+        ClickListener clickListener = new ClickListener(resultTable, sqlConnection, resultTableModel, "Opdracht4");
         runButton.addActionListener(clickListener);
 
         return hoofdPanel;
