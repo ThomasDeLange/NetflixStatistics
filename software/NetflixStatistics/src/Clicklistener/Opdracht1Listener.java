@@ -36,7 +36,7 @@ public class  Opdracht1Listener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //tableEditor.emptyTable();
+        tableEditor.emptyTable();
         ResultSet resultSet = sqlConnection.executeSql("SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
                                                                 "FROM Bekeken\n" +
                                                                 "INNER JOIN Aflevering\n" +
@@ -46,6 +46,5 @@ public class  Opdracht1Listener implements ActionListener {
                                                                 "WHERE Content.Titel =" + "'" + input.getSelectedItem() + "'" + "\n" +
                                                                 "GROUP BY Bekeken.AfleveringID, Aflevering.Titel");
         tableEditor.fillTable(resultSet);
-        System.out.println(input);
     }
 }
