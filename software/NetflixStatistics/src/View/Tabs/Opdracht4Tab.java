@@ -20,47 +20,17 @@ public class Opdracht4Tab {
 
         //Setup hoofdpanel
         JPanel hoofdPanel = new JPanel();
-        hoofdPanel.setLayout(new BoxLayout(hoofdPanel, BoxLayout.Y_AXIS));
-
-        /*
-        DataPanel - Dropdown Panel, OpdrachtLabel, Table
-        */
-
-        //Components
-
-        //Dropdown panel - Label, Dropdown
-        JPanel dropdownPanel = new JPanel();
-        dropdownPanel.setLayout(new FlowLayout());
+        hoofdPanel.setLayout(new BorderLayout());
+        hoofdPanel.setBorder(BorderFactory.createTitledBorder("Geef de film met de langste tijdsduur voor kijkers onder 16 jaar"));
 
 
-
-        String[] accountDropdownItems = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
-        JComboBox accountDropdown = new JComboBox(accountDropdownItems);
-
-        String[] serieDropdwonItems = new String[]{"1215426", "5602533", "5285824"};
-        JComboBox serieDropdown = new JComboBox(serieDropdwonItems);
-
-        dropdownPanel.add(new JLabel("Kies een account"));
-        dropdownPanel.add(accountDropdown);
-        dropdownPanel.add(new JLabel("Kies een serie"));
-        dropdownPanel.add(serieDropdown);
         JButton runButton = new JButton("Voer uit!");
-        dropdownPanel.add(runButton);
-
-
-        hoofdPanel.add(dropdownPanel);
-
-        //OpdrachtLabel
-        JPanel opdrachtLabelPanel = new JPanel();
-        opdrachtLabelPanel.setLayout(new FlowLayout());
-
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
-        opdrachtLabelPanel.add(opdrachtLabel);
-        hoofdPanel.add(opdrachtLabelPanel);
+        hoofdPanel.add(runButton, BorderLayout.SOUTH);
 
         //Table
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
+
 
         String[] tableColumnsName = {"Volgnummer", "Titel", "Percentage gemiddeld bekeken"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
@@ -71,7 +41,7 @@ public class Opdracht4Tab {
 
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(accountDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht4");
+        ClickListener clickListener = new ClickListener(resultTable, sqlConnection, resultTableModel, "Opdracht4");
         runButton.addActionListener(clickListener);
 
         return hoofdPanel;
