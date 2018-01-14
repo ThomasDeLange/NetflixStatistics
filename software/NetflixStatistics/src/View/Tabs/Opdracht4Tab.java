@@ -4,49 +4,38 @@ import Controller.ClickListener;
 import Model.SqlConnection;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-public class Opdracht4Tab {
-    private Font font;
-    private SqlConnection sqlConnection;
+public class Opdracht4Tab extends Tab{
 
-    public Opdracht4Tab(Font font, SqlConnection sqlConnection) {
-        this.font = font;
-        this.sqlConnection = sqlConnection;
+    public Opdracht4Tab(SqlConnection sqlConnection) {
+        super(sqlConnection);
+
     }
 
     public JPanel createComponents() {
 
-        //Setup hoofdpanel
+        //Hoofdpanel
         JPanel hoofdPanel = new JPanel();
-        hoofdPanel.setLayout(new BoxLayout(hoofdPanel, BoxLayout.Y_AXIS));
+        hoofdPanel.setLayout(new BorderLayout());
 
-        /*
-        DataPanel - Dropdown Panel, OpdrachtLabel, Table
-        */
+        //Buttonpanel
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new FlowLayout());
+        hoofdPanel.add(buttonPanel, BorderLayout.NORTH);
 
-        //Components
 
-        //Dropdown panel - Label, Dropdown
-        JPanel dropdownPanel = new JPanel();
-        dropdownPanel.setLayout(new FlowLayout());
 
+        //Button
         JButton runButton = new JButton("Voer uit!");
-        dropdownPanel.add(runButton);
-
-
-        hoofdPanel.add(dropdownPanel);
-
-        //OpdrachtLabel
-        JPanel opdrachtLabelPanel = new JPanel();
-        opdrachtLabelPanel.setLayout(new FlowLayout());
-
-        JLabel opdrachtLabel = new JLabel("Geef de film met de langste tijdsduur voor kijkers onder 16 jaar.");
-        opdrachtLabelPanel.add(opdrachtLabel);
-        hoofdPanel.add(opdrachtLabelPanel);
+        buttonPanel.add(runButton);
 
         //Table
+        JPanel tablePanel = new JPanel();
+        tablePanel.setLayout(new BorderLayout());
+
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
@@ -54,12 +43,16 @@ public class Opdracht4Tab {
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
-        hoofdPanel.add(resultTable);
-        hoofdPanel.add(new JScrollPane(resultTable));
+        tablePanel.add(resultTable, BorderLayout.CENTER);
+        tablePanel.add(new JScrollPane(resultTable));
 
+        //Opdracht
+        tablePanel.setBorder(BorderFactory.createTitledBorder("Geef de film met de langste tijdsduur voor kijkers onder 16 jaar"));
+
+        hoofdPanel.add(tablePanel);
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(resultTable, sqlConnection, resultTableModel, "Opdracht4");
+        ClickListener clickListener = new ClickListener(resultTable, super.getSqlConnection(), resultTableModel, "Opdracht4");
         runButton.addActionListener(clickListener);
 
         return hoofdPanel;
