@@ -38,13 +38,8 @@ public class Opdracht6Tab {
         String[] accountDropdownItems = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
         JComboBox accountDropdown = new JComboBox(accountDropdownItems);
 
-        String[] serieDropdwonItems = new String[]{"1215426", "5602533", "5285824"};
-        JComboBox serieDropdown = new JComboBox(serieDropdwonItems);
-
-        dropdownPanel.add(new JLabel("Kies een account"));
+        dropdownPanel.add(new JLabel("Kies een film"));
         dropdownPanel.add(accountDropdown);
-        dropdownPanel.add(new JLabel("Kies een serie"));
-        dropdownPanel.add(serieDropdown);
         JButton runButton = new JButton("Voer uit!");
         dropdownPanel.add(runButton);
 
@@ -55,7 +50,7 @@ public class Opdracht6Tab {
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in zín geheel bekeken?");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 
@@ -63,7 +58,7 @@ public class Opdracht6Tab {
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
-        String[] tableColumnsName = {"Volgnummer", "Titel", "Percentage gemiddeld bekeken"};
+        String[] tableColumnsName = {"FilmID", "Titel", "Aantal gebruikers"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
