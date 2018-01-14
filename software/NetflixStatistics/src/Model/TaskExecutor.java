@@ -159,6 +159,7 @@ public class TaskExecutor {
                 6 Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in zín geheel be-
                 keken?
                 */
+
                 System.out.println(inputFilm);
                 resultSet = sqlConnection.executeSql("SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien\n" +
                         "FROM Film\n" +
