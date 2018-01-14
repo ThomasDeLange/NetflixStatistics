@@ -7,15 +7,14 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-public class Opdracht3Tab {
-    private Font font;
-    private SqlConnection sqlConnection;
+public class Opdracht3Tab extends Tab{
 
-    public Opdracht3Tab(Font font, SqlConnection sqlConnection) {
-        this.font = font;
-        this.sqlConnection = sqlConnection;
+
+    public Opdracht3Tab(SqlConnection sqlConnection) {
+        super(sqlConnection);
     }
 
+    @Override
     public JPanel createComponents() {
 
         //Setup hoofdpanel
@@ -65,7 +64,7 @@ public class Opdracht3Tab {
 
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(accountDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht3");
+        ClickListener clickListener = new ClickListener(accountDropdown,resultTable, super.getSqlConnection(), resultTableModel, "Opdracht3");
         accountDropdown.addActionListener(clickListener);
 
         return hoofdPanel;
