@@ -7,10 +7,9 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
+public class Opdracht8Tab extends Tab {
 
-public class Opdracht5Tab extends Tab {
-
-    public Opdracht5Tab(SqlConnection sqlConnection) {
+    public Opdracht8Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
     }
 
@@ -31,6 +30,13 @@ public class Opdracht5Tab extends Tab {
         JPanel dropdownPanel = new JPanel();
         dropdownPanel.setLayout(new FlowLayout());
 
+
+
+        String[] accountDropdownItems = new String[]{"The Abominable Bride", "The Life of Brian", "Pulp Fiction", "Pruimebloesem", "Reservoir Dogs", "The Good, the Bad and the Ugly", "Andy Warhol's Dracula", "Ober", "Der Untergang", "De helaasheid der dingen", "A Clockwork Orange"};
+        JComboBox<String> accountDropdown = new JComboBox<>(accountDropdownItems);
+
+        dropdownPanel.add(new JLabel("Kies een film"));
+        dropdownPanel.add(accountDropdown);
         JButton runButton = new JButton("Voer uit!");
         dropdownPanel.add(runButton);
 
@@ -41,7 +47,7 @@ public class Opdracht5Tab extends Tab {
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Geef de accounts met slechts 1 profiel.");
+        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde film, hoeveel procent van de kijkers hebben deze in z’n geheel bekeken? Geeft hierbij ook het absolute aantal kijkers dat deze film helemaal afkeek en het totaal aantal kijkers.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 
@@ -52,7 +58,7 @@ public class Opdracht5Tab extends Tab {
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
-        String[] tableColumnsName = {"Accountnummer", "Accountnaam", "Profielnaam"};
+        String[] tableColumnsName = {"FilmID", "Titel", "Aantal gebruikers"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
@@ -61,7 +67,7 @@ public class Opdracht5Tab extends Tab {
         hoofdPanel.add(tablePanel);
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(resultTable, super.getSqlConnection(), resultTableModel, "Opdracht5");
+        ClickListener clickListener = new ClickListener(accountDropdown,resultTable, super.getSqlConnection(), resultTableModel, "Opdracht8");
         runButton.addActionListener(clickListener);
 
         return hoofdPanel;
