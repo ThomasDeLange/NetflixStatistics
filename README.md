@@ -1,4 +1,4 @@
-# NetflixStatistics
+# Netflix Statistix
 School project, Avans informatica, Jaar 1 periode 2
 
 Thomas de Lange (2125564), Tim Welter (2125099), Jan-Paul Mosterdijk (2131602)
