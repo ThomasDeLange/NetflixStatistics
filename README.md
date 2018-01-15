@@ -3,7 +3,7 @@ School project, Avans informatica, Jaar 1 periode 2
 
 # Installatie/Gebruiksaanwijzingen
 Er is lokale database nodig omdat deze online wordt gehost.
-1. Open het bijgeleverde "Netflix Statistix.jar" bestand met Java Platform SE Binary.
+1. Open het bijgeleverde "NetflixStatistix.jar" bestand met Java Platform SE Binary.
 2. Kies het benodigde overzicht:
     1. Geeft per aflevering het gemiddeld bekeken percentage van de tijdsduur.
     2. Geeft per aflevering het gemiddeld bekeken percentage van de tijdsduur per account.
