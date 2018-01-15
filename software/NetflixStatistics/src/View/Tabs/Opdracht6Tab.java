@@ -94,6 +94,7 @@ public class Opdracht6Tab extends Tab {
         //Clicklistener
         ClickListener clickListener = new ClickListener(filmDropdown, resultTable, sqlConnection, resultTableModel, "Opdracht6", noDataLabel);
         filmDropdown.addActionListener(clickListener);
+        filmDropdown.setSelectedIndex(0);
 
         return hoofdPanel;
     }

@@ -93,6 +93,7 @@ public class Opdracht3Tab extends Tab{
         //Clicklistener
         ClickListener clickListener = new ClickListener(accountDropdown,resultTable, super.getSqlConnection(), resultTableModel, "Opdracht3", noDataLabel);
         accountDropdown.addActionListener(clickListener);
+        accountDropdown.setSelectedIndex(0);
 
         return hoofdPanel;
     }

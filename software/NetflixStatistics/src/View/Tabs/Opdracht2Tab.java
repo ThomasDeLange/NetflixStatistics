@@ -100,6 +100,7 @@ public class Opdracht2Tab extends Tab {
         //Eerst account dan serie
         ClickListener clickListener = new ClickListener(accountDropdown, serieDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht2", noDataLabel);
         runButton.addActionListener(clickListener);
+        runButton.doClick();
 
         return hoofdPanel;
     }
