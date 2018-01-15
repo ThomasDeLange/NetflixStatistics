@@ -115,18 +115,20 @@ WHERE Content.Titel = 'The Abominable Bride'
 Voor een door de gebruiker geselecteerde film, hoeveel procent van de kijkers hebben deze in z’n geheel bekeken? 
 Geeft hierbij ook het absolute aantal kijkers dat deze film helemaal afkeek en het totaal aantal kijkers.
 */
-
-SELECT *  --COUNT(TotaalAfgezien.ProcentGezien), COUNT(*) --TotaalGezien.Profielnaam, TotaalGezienAfgekeken.Profielnaam
-FROM Bekeken
+SELECT Content.Titel, COUNT(Film.AfleveringID) as TotaalGezien, COUNT(TotaalAfgezien.AfleveringID) TotaalAfgezien, COUNT(TotaalAfgezien.AfleveringID) / COUNT(Film.AfleveringID) * 100 as PercentageMensenAfGekeken
+FROM Content
 INNER JOIN Film
-ON Film.AfleveringID = Bekeken.AfleveringID
-WHERE EXISTS (	SELECT Film.AfleveringID, ProcentGezien
-				FROM Bekeken
+ON Film.ContentID = Content.ContentID
+INNER JOIN Bekeken
+ON Bekeken.AfleveringID = film.AfleveringID
+FULL OUTER JOIN (SELECT Film.AfleveringID, AVG(Bekeken.ProcentGezien) as avgGezien
+				FROM Content
 				INNER JOIN Film
-				ON Film.AfleveringID = Bekeken.AfleveringID
-				WHERE Bekeken.ProcentGezien = 100	
-									) 
-
-
-
-
+				ON Film.ContentID = Content.ContentID
+				INNER JOIN Bekeken
+				ON Bekeken.AfleveringID = film.AfleveringID
+				WHERE Bekeken.ProcentGezien = 100
+				GROUP BY Film.AfleveringID) as  TotaalAfgezien
+ON TotaalAfgezien.AfleveringID = Film.AfleveringID
+WHERE Content.titel = 'Pulp Fiction'
+GROUP BY Content.Titel, Film.AfleveringID;
