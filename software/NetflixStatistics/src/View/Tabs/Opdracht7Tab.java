@@ -8,7 +8,22 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.SQLException;
+/*
+Opdracht7Tab:
+Een extra opdracht
 
+1. Extend de Tab class
+
+createComponents():
+1. Elke tab maakt components aan die in de hoofdlayout gezet worden
+2. Volgorde is altijd:
+Setup van het hoofdpaneel
+Een Dropdown of Button of geen panel waar de gebruiker input kan selecteren
+Elke combobox wordt gevuld vanuit de database
+Een infoPanel waar de informatie over de opdracht wordt getoont en waar staat als een zoekopdracht geen resultaat heeft
+Een table waar de data in komt
+Een clicklistener die wordt toegevoeg aan een button of een combobox
+ */
 public class Opdracht7Tab extends Tab {
 
     private ComboBoxEditor comboBoxEditor;

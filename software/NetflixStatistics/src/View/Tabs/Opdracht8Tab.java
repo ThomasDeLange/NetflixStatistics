@@ -31,7 +31,6 @@ public class Opdracht8Tab extends Tab {
         dropdownPanel.setLayout(new FlowLayout());
 
 
-
         String[] accountDropdownItems = new String[]{"The Abominable Bride", "The Life of Brian", "Pulp Fiction", "Pruimebloesem", "Reservoir Dogs", "The Good, the Bad and the Ugly", "Andy Warhol's Dracula", "Ober", "Der Untergang", "De helaasheid der dingen", "A Clockwork Orange"};
         JComboBox<String> accountDropdown = new JComboBox<>(accountDropdownItems);
 
@@ -62,7 +61,6 @@ public class Opdracht8Tab extends Tab {
         infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
 
 
-
         JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
         noDataLabel.setVisible(false);
 
@@ -88,7 +86,7 @@ public class Opdracht8Tab extends Tab {
         hoofdPanel.add(tablePanel);
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(accountDropdown,resultTable, super.getSqlConnection(), resultTableModel, "Opdracht8", noDataLabel);
+        ClickListener clickListener = new ClickListener(accountDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht8", noDataLabel);
         runButton.addActionListener(clickListener);
 
         return hoofdPanel;

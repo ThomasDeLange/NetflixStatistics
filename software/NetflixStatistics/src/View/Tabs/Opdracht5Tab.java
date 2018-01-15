@@ -7,6 +7,19 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
+/*
+Opdracht5Tab:
+1. Extend de Tab class
+
+createComponents():
+1. Elke tab maakt components aan die in de hoofdlayout gezet worden
+2. Volgorde is altijd:
+Setup van het hoofdpaneel
+een Dropdown of Button of geen panel waar de gebruiker input kan selecteren
+Een infoPanel waar de informatie over de opdracht wordt getoont en waar staat als een zoekopdracht geen resultaat heeft
+Een table waar de data in komt
+Een clicklistener die wordt toegevoeg aan een button of een combobox
+*/
 
 public class Opdracht5Tab extends Tab {
 
@@ -21,28 +34,17 @@ public class Opdracht5Tab extends Tab {
         JPanel hoofdPanel = new JPanel();
         hoofdPanel.setLayout(new BoxLayout(hoofdPanel, BoxLayout.Y_AXIS));
 
-        /*
-        DataPanel - Dropdown Panel, OpdrachtLabel, Table
-        */
-
         //Components
 
         //Button
         JButton runButton = new JButton("Voer uit!");
 
         //Info Panel
-        //Het info panel beval een boxlayout waar aan twee labels worden toegevoegd:
-        //De omschrijving van de opdracht en daarboven eventueel een foutmelding label die zichtbaar wordt als er geen gegevens zijn
-        //De boxlayout wordt in een flowlayout gestopt om zo de text mooi te centreren
-        //Het panel met de flowlayout wordt vervolgends als eerste aan de hoofdlayout toegevoegd
-
-
         JPanel infoLabelPanelFlow = new JPanel();
         infoLabelPanelFlow.setLayout(new FlowLayout());
 
         JPanel infoLabelPanelBox = new JPanel();
         infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
-
 
         JLabel opdrachtLabel = new JLabel("Dit overzicht toont alle accounts met één profiel.");
 

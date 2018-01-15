@@ -7,6 +7,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.SQLException;
 
+/*
+Superclass voor opdracht[x]Tab
+ */
+
 public abstract class Tab {
     private SqlConnection sqlConnection;
     private ComboBoxEditor comboBoxEditor;

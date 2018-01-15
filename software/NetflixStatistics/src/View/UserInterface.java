@@ -34,7 +34,7 @@ public class UserInterface implements Runnable {
             @Override
             public void windowClosing(WindowEvent windowEvent) {
                 if (JOptionPane.showConfirmDialog(frame,
-                        "Are you sure to close this window?", "Really Closing?",
+                        "Wil u het programma afsluiten?", "Echt sluiten?",
                         JOptionPane.YES_NO_OPTION,
                         JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION) {
                     System.exit(0);
@@ -88,8 +88,6 @@ public class UserInterface implements Runnable {
         //Setup
 
         JPanel infoTextPanel = new JPanel();
-
-
         infoTextPanel.setLayout(new BoxLayout(infoTextPanel, BoxLayout.X_AXIS));
 
         //Add text
@@ -100,36 +98,11 @@ public class UserInterface implements Runnable {
         namen.setForeground(Color.WHITE);
         namen.setHorizontalTextPosition(SwingConstants.RIGHT);
 
-
         //color
         infoTextPanel.setBackground(Color.getHSBColor(0F, 0.93f, 0.86f));
         hoofdContainer.add(infoTextPanel, BorderLayout.SOUTH);
         hoofdContainer.add(tabbedPane, BorderLayout.CENTER);
 
-
-//        BorderLayout layout = new BorderLayout();
-//        hoofdContainer.setLayout(layout);
-//        Font font = new Font("arial", Font.BOLD, 24);
-//
-//        JTabbedPane tabs = new JTabbedPane();
-//
-//        SeriesTab seriesTab = new SeriesTab(font, sqlConnection);
-//        FilmsTab filmsTab = new FilmsTab(font, sqlConnection);
-//        AccountsTab accountsTab = new AccountsTab(font);
-//
-//        tabs.add(seriesTab.getSeriesTab(), "Series");
-//        tabs.add(filmsTab.getFilmsTab(), "Films");
-//        tabs.add(accountsTab.getAccountsTab(), "Accounts");
-//
-//        JPanel bottomPanel = new JPanel();
-//        bottomPanel.setLayout(new BorderLayout());
-//        JLabel title = new JLabel("Netflix Statistix");
-//        JLabel names = new JLabel("text, text, text, text, text, text, text, text, ");
-//        bottomPanel.add(title, BorderLayout.WEST);
-//        bottomPanel.add(names, BorderLayout.EAST);
-//
-//        hoofdContainer.add(bottomPanel, BorderLayout.SOUTH);
-//        hoofdContainer.add(tabs, BorderLayout.CENTER);
     }
 
 
