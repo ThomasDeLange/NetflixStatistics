@@ -7,11 +7,17 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
+<<<<<<< HEAD
 
 public class Opdracht5Tab extends Tab {
 
     private SqlConnection sqlConnection;
 
+=======
+public class Opdracht5Tab extends Tab {
+
+    private SqlConnection sqlConnection;
+>>>>>>> 02c9fa566f28e72cf66ed7cfa22405fc3d946406
 
     public Opdracht5Tab(SqlConnection sqlConnection) {
         super(sqlConnection);

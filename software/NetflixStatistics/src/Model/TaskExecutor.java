@@ -168,7 +168,7 @@ public class TaskExecutor {
                         "ON Bekeken.AfleveringID = Film.AfleveringID\n" +
                         "WHERE Content.Titel = '" + inputFilm + "'\n" +
                         "GROUP BY Film.AfleveringID, Bekeken.ProcentGezien, Content.Titel\n" +
-                        "HAVING Bekeken.ProcentGezien = 100");
+                        "WHERE Bekeken.ProcentGezien = 100");
                 break;
 
             case "Opdracht7":
