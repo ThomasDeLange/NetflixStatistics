@@ -57,13 +57,17 @@ public class Opdracht1Tab extends Tab {
         infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
 
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+        JLabel opdrachtLabel = new JLabel("Dit overzicht toont het gemiddeld bekeken percentage van een gekoze serie.");
 
         JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
         noDataLabel.setVisible(false);
 
         infoLabelPanelBox.add(noDataLabel);
         infoLabelPanelBox.add(opdrachtLabel);
+
+        infoLabelPanelFlow.add(infoLabelPanelBox);
+        hoofdPanel.add(infoLabelPanelFlow);
+
 
         //Table
         JPanel tablePanel = new JPanel();
@@ -83,6 +87,7 @@ public class Opdracht1Tab extends Tab {
         //Clicklistener
         ClickListener clickListener = new ClickListener(serieDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht1",noDataLabel );
         serieDropdown.addActionListener(clickListener);
+
 
         return hoofdPanel;
     }

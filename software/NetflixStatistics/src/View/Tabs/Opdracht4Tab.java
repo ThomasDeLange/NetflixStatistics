@@ -19,29 +19,8 @@ public class Opdracht4Tab extends Tab {
         JPanel hoofdPanel = new JPanel();
         hoofdPanel.setLayout(new BoxLayout(hoofdPanel, BoxLayout.Y_AXIS));
 
-        //Buttonpanel
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new FlowLayout());
-
-
-        hoofdPanel.add(buttonPanel, BorderLayout.NORTH);
-
         //Button
-
-        hoofdPanel.add(buttonPanel);
-
-        hoofdPanel.add(buttonPanel);
-
-
-
-        hoofdPanel.add(buttonPanel, BorderLayout.NORTH);
-
-        //Button
-        hoofdPanel.add(buttonPanel);
-
-
         JButton runButton = new JButton("Voer uit!");
-        buttonPanel.add(runButton);
 
         //Info Panel
         //Het info panel beval een boxlayout waar aan twee labels worden toegevoegd:
@@ -57,13 +36,16 @@ public class Opdracht4Tab extends Tab {
         infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
 
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+        JLabel opdrachtLabel = new JLabel("Dit overzicht toont de langste film met een minimum leeftijd onder de 16 jaar");
 
-        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas er is geen data beschikbaar om te laten zien");
         noDataLabel.setVisible(false);
 
         infoLabelPanelBox.add(noDataLabel);
         infoLabelPanelBox.add(opdrachtLabel);
+
+        infoLabelPanelFlow.add(infoLabelPanelBox);
+        hoofdPanel.add(infoLabelPanelFlow);
 
         //Table
         JPanel tablePanel = new JPanel();
@@ -72,7 +54,7 @@ public class Opdracht4Tab extends Tab {
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
-        String[] tableColumnsName = {"Volgnummer", "Titel", "Percentage gemiddeld bekeken"};
+        String[] tableColumnsName = {"Volgnummer", "Titel", "Tijdsduur"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
@@ -84,6 +66,8 @@ public class Opdracht4Tab extends Tab {
         //Clicklistener
         ClickListener clickListener = new ClickListener(resultTable, super.getSqlConnection(), resultTableModel, "Opdracht4", noDataLabel);
         runButton.addActionListener(clickListener);
+
+        runButton.doClick();
 
         return hoofdPanel;
     }

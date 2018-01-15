@@ -40,9 +40,9 @@ public class Opdracht7Tab extends Tab {
 
         JComboBox serieDropdown = null;
         serieDropdown = comboBoxEditor.fillCombobox(serieDropdown, "SerieTitels");
-
-        dropdownPanel.add(serieDropdown);
+        
         dropdownPanel.add(new JLabel("Kies een serie"));
+        dropdownPanel.add(serieDropdown);
 
         hoofdPanel.add(dropdownPanel);
 
@@ -60,13 +60,17 @@ public class Opdracht7Tab extends Tab {
         infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
 
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+        JLabel opdrachtLabel = new JLabel("Dit overzicht toont voor een geselecteerde serie het totaal en gemiddeld bekeken persentage van alle afleveringen van die serie.");
 
         JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
         noDataLabel.setVisible(false);
 
         infoLabelPanelBox.add(noDataLabel);
         infoLabelPanelBox.add(opdrachtLabel);
+
+        infoLabelPanelFlow.add(infoLabelPanelBox);
+        hoofdPanel.add(infoLabelPanelFlow);
+
 
         //Table
         JPanel tablePanel = new JPanel();

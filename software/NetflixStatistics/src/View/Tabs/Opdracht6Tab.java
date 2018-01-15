@@ -58,13 +58,17 @@ public class Opdracht6Tab extends Tab {
         infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
 
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+        JLabel opdrachtLabel = new JLabel("Dit overzicht toont hoeveel gebruikers een geselecteerde film af hebben gekeken");
 
         JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
         noDataLabel.setVisible(false);
 
         infoLabelPanelBox.add(noDataLabel);
         infoLabelPanelBox.add(opdrachtLabel);
+
+        infoLabelPanelFlow.add(infoLabelPanelBox);
+        hoofdPanel.add(infoLabelPanelFlow);
+
 
         //Table
         JPanel tablePanel = new JPanel();

@@ -27,15 +27,8 @@ public class Opdracht5Tab extends Tab {
 
         //Components
 
-        //Dropdown panel - Label, Dropdown
-        JPanel dropdownPanel = new JPanel();
-        dropdownPanel.setLayout(new FlowLayout());
-
+        //Button
         JButton runButton = new JButton("Voer uit!");
-        dropdownPanel.add(runButton);
-
-
-        hoofdPanel.add(dropdownPanel);
 
         //Info Panel
         //Het info panel beval een boxlayout waar aan twee labels worden toegevoegd:
@@ -51,13 +44,17 @@ public class Opdracht5Tab extends Tab {
         infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
 
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+        JLabel opdrachtLabel = new JLabel("Dit overzicht toont alle accounts met één profiel.");
 
-        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas er is geen data beschikbaar om te laten zien");
         noDataLabel.setVisible(false);
 
         infoLabelPanelBox.add(noDataLabel);
         infoLabelPanelBox.add(opdrachtLabel);
+
+        infoLabelPanelFlow.add(infoLabelPanelBox);
+        hoofdPanel.add(infoLabelPanelFlow);
+
         //Table
         JPanel tablePanel = new JPanel();
         tablePanel.setLayout(new FlowLayout());
@@ -76,6 +73,8 @@ public class Opdracht5Tab extends Tab {
         //Clicklistener
         ClickListener clickListener = new ClickListener(resultTable, super.getSqlConnection(), resultTableModel, "Opdracht5", noDataLabel);
         runButton.addActionListener(clickListener);
+
+        runButton.doClick();
 
         return hoofdPanel;
     }

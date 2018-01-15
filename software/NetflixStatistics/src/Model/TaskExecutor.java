@@ -200,7 +200,7 @@ public class TaskExecutor {
                 inputSerieTitel3 = makeStringSqlReady(inputSerieTitel3);
 
 
-                sqlConnection.executeSql("SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +
+                resultSet = sqlConnection.executeSql("SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +
                         "FROM Serie\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Serie.ContentID\n" +
