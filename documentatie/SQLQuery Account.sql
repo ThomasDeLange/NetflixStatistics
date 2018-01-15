@@ -1,5 +1,4 @@
-﻿DROP TABLE Account
-CREATE TABLE Account (
+﻿CREATE TABLE Account (
  AccountNR		int,
  Naam			nvarchar(45),
  Straat			nvarchar(45),
@@ -38,7 +37,6 @@ CREATE TABLE Bekeken (
  AfleveringID	int,
  ProcentGezien	int,
  ContentID		int,
-
  CONSTRAINT BekekenPK 
 		PRIMARY KEY (AccountNR, ProfielNaam, AfleveringID),
 		 	

@@ -32,7 +32,7 @@ public class Opdracht3Tab extends Tab{
         dropdownPanel.setLayout(new FlowLayout());
 
         String[] accountDropdownItems = new String[]{"1215426", "5602533", "5285824"};
-        JComboBox accountDropdown = new JComboBox(accountDropdownItems);
+        JComboBox<String> accountDropdown = new JComboBox<>(accountDropdownItems);
 
         dropdownPanel.add(new JLabel("Kies een account"));
         dropdownPanel.add(accountDropdown);
@@ -52,6 +52,9 @@ public class Opdracht3Tab extends Tab{
         hoofdPanel.add(opdrachtLabelPanel);
 
         //Table
+        JPanel tablePanel = new JPanel();
+        tablePanel.setLayout(new FlowLayout());
+
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
@@ -59,9 +62,9 @@ public class Opdracht3Tab extends Tab{
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
-        hoofdPanel.add(resultTable);
-        hoofdPanel.add(new JScrollPane(resultTable));
-
+        tablePanel.add(resultTable);
+        tablePanel.add(new JScrollPane(resultTable));
+        hoofdPanel.add(tablePanel);
 
         //Clicklistener
         ClickListener clickListener = new ClickListener(accountDropdown,resultTable, super.getSqlConnection(), resultTableModel, "Opdracht3");

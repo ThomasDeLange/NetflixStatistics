@@ -7,12 +7,12 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-public class Opdracht5Tab {
+public class Opdracht5Tab extends Tab {
 
     private SqlConnection sqlConnection;
 
     public Opdracht5Tab(SqlConnection sqlConnection) {
-        this.sqlConnection = sqlConnection;
+        super(sqlConnection);
     }
 
     public JPanel createComponents() {
@@ -46,6 +46,9 @@ public class Opdracht5Tab {
         hoofdPanel.add(opdrachtLabelPanel);
 
         //Table
+        JPanel tablePanel = new JPanel();
+        tablePanel.setLayout(new FlowLayout());
+
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
@@ -53,9 +56,9 @@ public class Opdracht5Tab {
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
-        hoofdPanel.add(resultTable);
-        hoofdPanel.add(new JScrollPane(resultTable));
-
+        tablePanel.add(resultTable);
+        tablePanel.add(new JScrollPane(resultTable));
+        hoofdPanel.add(tablePanel);
 
         //Clicklistener
         ClickListener clickListener = new ClickListener(resultTable, sqlConnection, resultTableModel, "Opdracht5");
