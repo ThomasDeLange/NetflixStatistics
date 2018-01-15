@@ -1,8 +1,6 @@
 package Model;
 
-import Controller.TableEditor;
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.sql.ResultSet;
 
 /*
@@ -17,7 +15,6 @@ TaskExecutor
 public class TaskExecutor {
 
     private SqlConnection sqlConnection;
-    private TableEditor tableEditor;
     private Object input1;
     private Object input2;
 
@@ -35,6 +32,7 @@ public class TaskExecutor {
         this.input1 = input;
 
     }
+
     //2 input
     public TaskExecutor(SqlConnection sqlConnection, Object input1, Object input2) {
         //this.userInterface = userInterface;
@@ -43,6 +41,12 @@ public class TaskExecutor {
         this.input2 = input2;
     }
 
+    public String makeStringSqlReady(String string) {
+        if (string.contains("'")) {
+            string = string.replace("'", "''");
+        }
+        return string;
+    }
 
     public ResultSet runTask(String taskID) {
 
@@ -51,39 +55,46 @@ public class TaskExecutor {
         switch (taskID) {
             case "Opdracht1":
                 //Er komt 1 combobox binnen - Titel
-                JComboBox cbTitel = ((JComboBox) input1);
-                String inputSerieTitel = (String)cbTitel.getSelectedItem();
+                JComboBox cbTitel1 = ((JComboBox) input1);
+                String inputSerieTitel1 = (String) cbTitel1.getSelectedItem();
+
+                inputSerieTitel1 = makeStringSqlReady(inputSerieTitel1);
 
                 /*
                 1 Voor een door de gebruiker geselecteerde serie, geef per aflevering het gemiddeld bekeken
                 % van de tijdsduur. Bij elke aflevering worden het volgnummer Èn titel getoond.
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
                         "FROM Bekeken\n" +
                         "INNER JOIN Aflevering\n" +
                         "ON Aflevering.AfleveringID = Bekeken.AfleveringID\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Aflevering.ContentID\n" +
-                        "WHERE Content.Titel =" + "'" + inputSerieTitel + "'" + "\n" +
+                        "WHERE Content.Titel =" + "'" + inputSerieTitel1 + "'" + "\n" +
                         "GROUP BY Bekeken.AfleveringID, Aflevering.Titel");
                 break;
 
             case "Opdracht2":
                 //Er komen twee comboboxen binnen - Account, Serie
 
-                JComboBox cbAccount = ((JComboBox) input1);
-                String inputAccount = (String) cbAccount.getSelectedItem();
+                JComboBox cbAccount1 = ((JComboBox) input1);
+                String inputAccount1 = (String) cbAccount1.getSelectedItem();
 
-                JComboBox cbSerie = ((JComboBox) input2);
-                String inputSerieTitel2 = (String) cbSerie.getSelectedItem();
+                JComboBox cbSerie2 = ((JComboBox) input2);
+                String inputSerieTitel2 = (String) cbSerie2.getSelectedItem();
+
+                inputAccount1 = makeStringSqlReady(inputAccount1);
+                inputSerieTitel2 = makeStringSqlReady(inputSerieTitel2);
 
                 /*
                 2 Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemid-
                 deld bekeken % van de tijdsduur.
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
                         "FROM Bekeken\n" +
                         "INNER JOIN Aflevering\n" +
                         "ON Aflevering.AfleveringID = Bekeken.AfleveringID\n" +
@@ -93,7 +104,7 @@ public class TaskExecutor {
                         "ON Account.AccountNR = Bekeken.AccountNR\t\n" +
                         "WHERE Content.Titel =" + "'" + inputSerieTitel2 + "'" + "\n" +
                         "AND\n" +
-                        "Account.AccountNR =" + "'" + inputAccount + "'" + "\n" +
+                        "Account.AccountNR =" + "'" + inputAccount1 + "'" + "\n" +
                         "GROUP BY Bekeken.AfleveringID, Aflevering.Titel");
                 break;
 
@@ -102,10 +113,13 @@ public class TaskExecutor {
                 JComboBox cbAccount2 = ((JComboBox) input1);
                 String inputAccount2 = (String) cbAccount2.getSelectedItem();
                 System.out.println(inputAccount2);
+
+                inputAccount2 = makeStringSqlReady(inputAccount2);
                 /*
                 3 Welke films zijn er door een door de gebruiker geselecteerd account bekeken?
                 */
-                resultSet = sqlConnection.executeSql("SELECT DISTINCT Bekeken.AfleveringID, Content.Titel\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT DISTINCT Bekeken.AfleveringID, Content.Titel\n" +
                         "FROM Bekeken\n" +
                         "INNER JOIN Film\n" +
                         "ON Film.AfleveringID = Bekeken.AfleveringID\n" +
@@ -115,7 +129,7 @@ public class TaskExecutor {
                         "ON Film.ContentID = Content.ContentID\n" +
                         "INNER JOIN Profiel\n" +
                         "ON Profiel.AccountNR = Account.AccountNR\n" +
-                        "WHERE Account.AccountNR =" +  "'" +  inputAccount2 + "'");
+                        "WHERE Account.AccountNR =" + "'" + inputAccount2 + "'");
                 break;
 
             case "Opdracht4":
@@ -125,7 +139,8 @@ public class TaskExecutor {
                 4 Geef de film met de langste tijdsduur voor kijkers onder 16 jaar.
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT TOP 1 Film.AfleveringID, Content.Titel, Film.Tijdsduur\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT TOP 1 Film.AfleveringID, Content.Titel, Film.Tijdsduur\n" +
                         "FROM Film\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Film.ContentID\n" +
@@ -140,7 +155,8 @@ public class TaskExecutor {
                 5 Geef de accounts met slechts 1 profiel.
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT Profiel.AccountNR, Account.Naam, Profiel.ProfielNaam\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Profiel.AccountNR, Account.Naam, Profiel.ProfielNaam\n" +
                         "FROM Account, Profiel\n" +
                         "WHERE Account.AccountNR = ( SELECT Profiel.AccountNR \n" +
                         "FROM Account\n" +
@@ -152,32 +168,39 @@ public class TaskExecutor {
 
             case "Opdracht6":
                 //Er komt een dropdown binnen - Film
-                JComboBox cbFilm = ((JComboBox) input1);
-                String inputFilm = (String) cbFilm.getSelectedItem();
+                JComboBox cbFilmTitel = ((JComboBox) input1);
+                String inputFilmTitel = (String) cbFilmTitel.getSelectedItem();
+
+                inputFilmTitel = makeStringSqlReady(inputFilmTitel);
 
                 /*
                 6 Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in zín geheel be-
                 keken?
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien\n" +
                         "FROM Film\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Film.ContentID\n" +
                         "INNER JOIN Bekeken\n" +
                         "ON Bekeken.AfleveringID = Film.AfleveringID\n" +
-                        "WHERE Content.Titel = '" + inputFilm + "'\n" +
+                        "WHERE Content.Titel =" + "'" + inputFilmTitel + "'" + "\n" +
                         "GROUP BY Film.AfleveringID, Bekeken.ProcentGezien, Content.Titel\n" +
-                        "WHERE Bekeken.ProcentGezien = 100");
+                        "HAVING Bekeken.ProcentGezien = 100");
+
+
                 break;
 
             case "Opdracht7":
                 //Er komt een dropdown binnen - serie
-                JComboBox cbSerie2 = ((JComboBox) input1);
-                String inputSerieTitel3 = (String) cbSerie2.getSelectedItem();
+                JComboBox cbSerie3 = ((JComboBox) input1);
+                String inputSerieTitel3 = (String) cbSerie3.getSelectedItem();
 
+                inputSerieTitel3 = makeStringSqlReady(inputSerieTitel3);
 
-                resultSet = sqlConnection.executeSql("SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +
                         "FROM Serie\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Serie.ContentID\n" +

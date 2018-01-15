@@ -1,21 +1,27 @@
 package View.Tabs;
 
 import Controller.ClickListener;
+import Model.ComboBoxEditor;
 import Model.SqlConnection;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.sql.SQLException;
 
 public class Opdracht2Tab extends Tab {
 
+    private ComboBoxEditor comboBoxEditor;
 
     public Opdracht2Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
+        comboBoxEditor = new ComboBoxEditor(sqlConnection);
     }
 
     @Override
-    public JPanel createComponents() {
+    public JPanel createComponents() throws SQLException {
+
+
 
         //Setup hoofdpanel
         JPanel hoofdPanel = new JPanel();
@@ -32,11 +38,11 @@ public class Opdracht2Tab extends Tab {
         dropdownPanel.setLayout(new FlowLayout());
 
 
-        String[] serieDropdwonItems = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
-        JComboBox<String> serieDropdown = new JComboBox<>(serieDropdwonItems);
+        JComboBox serieDropdown = null;
+        serieDropdown = comboBoxEditor.fillCombobox(serieDropdown, "SerieTitels");
 
-        String[] accountDropdownItems = new String[]{"1215426", "5602533", "5285824"};
-        JComboBox<String> accountDropdown = new JComboBox<>(accountDropdownItems);
+        JComboBox<String> accountDropdown = null;
+        accountDropdown = comboBoxEditor.fillCombobox(accountDropdown, "AccountNRs");
 
         dropdownPanel.add(new JLabel("Kies een account"));
         dropdownPanel.add(accountDropdown);
@@ -48,13 +54,36 @@ public class Opdracht2Tab extends Tab {
 
         hoofdPanel.add(dropdownPanel);
 
-        //OpdrachtLabel
-        JPanel opdrachtLabelPanel = new JPanel();
-        opdrachtLabelPanel.setLayout(new FlowLayout());
+        //Info Panel
+        //Het info panel beval een boxlayout waar aan twee labels worden toegevoegd:
+        //De omschrijving van de opdracht en daarboven eventueel een foutmelding label die zichtbaar wordt als er geen gegevens zijn
+        //De boxlayout wordt in een flowlayout gestopt om zo de text mooi te centreren
+        //Het panel met de flowlayout wordt vervolgends als eerste aan de hoofdlayout toegevoegd
 
+
+        JPanel infoLabelPanelFlow = new JPanel();
+        infoLabelPanelFlow.setLayout(new FlowLayout());
+
+        JPanel infoLabelPanelBox = new JPanel();
+        infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
+
+
+<<<<<<< HEAD
         JLabel opdrachtLabel = new JLabel("Geeft per aflevering het gemiddeld bekeken percentage van de tijdsduur per account.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
+=======
+        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+
+        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        noDataLabel.setVisible(false);
+
+        infoLabelPanelBox.add(noDataLabel);
+        infoLabelPanelBox.add(opdrachtLabel);
+
+        infoLabelPanelFlow.add(infoLabelPanelBox);
+        hoofdPanel.add(infoLabelPanelFlow);
+>>>>>>> 75d0db83f20579265aa93e553005d467a4eae36f
 
         //Table
         JPanel tablePanel = new JPanel();
@@ -73,7 +102,7 @@ public class Opdracht2Tab extends Tab {
 
         //Clicklistener
         //Eerst account dan serie
-        ClickListener clickListener = new ClickListener(accountDropdown, serieDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht2");
+        ClickListener clickListener = new ClickListener(accountDropdown, serieDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht2", noDataLabel);
         runButton.addActionListener(clickListener);
 
         return hoofdPanel;

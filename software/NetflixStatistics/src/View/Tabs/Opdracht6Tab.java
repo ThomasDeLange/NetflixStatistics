@@ -1,21 +1,26 @@
 package View.Tabs;
 
 import Controller.ClickListener;
+import Model.ComboBoxEditor;
 import Model.SqlConnection;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.sql.SQLException;
 
 public class Opdracht6Tab extends Tab {
 
     private SqlConnection sqlConnection;
+    private ComboBoxEditor comboBoxEditor;
 
     public Opdracht6Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
+        this.sqlConnection = sqlConnection;
+        comboBoxEditor = new ComboBoxEditor(sqlConnection);
     }
 
-    public JPanel createComponents() {
+    public JPanel createComponents() throws SQLException {
 
         //Setup hoofdpanel
         JPanel hoofdPanel = new JPanel();
@@ -31,26 +36,44 @@ public class Opdracht6Tab extends Tab {
         JPanel dropdownPanel = new JPanel();
         dropdownPanel.setLayout(new FlowLayout());
 
-
-
-        String[] accountDropdownItems = new String[]{"The Abominable Bride", "The Life of Brian", "Pulp Fiction", "Pruimebloesem", "Reservoir Dogs", "The Good, the Bad and the Ugly", "Andy Warhol's Dracula", "Ober", "Der Untergang", "De helaasheid der dingen", "A Clockwork Orange"};
-        JComboBox<String> accountDropdown = new JComboBox<>(accountDropdownItems);
+        JComboBox filmDropdown = null;
+        filmDropdown = comboBoxEditor.fillCombobox(filmDropdown, "FilmTitels");
 
         dropdownPanel.add(new JLabel("Kies een film"));
-        dropdownPanel.add(accountDropdown);
-        JButton runButton = new JButton("Voer uit!");
-        dropdownPanel.add(runButton);
-
+        dropdownPanel.add(filmDropdown);
 
         hoofdPanel.add(dropdownPanel);
 
-        //OpdrachtLabel
-        JPanel opdrachtLabelPanel = new JPanel();
-        opdrachtLabelPanel.setLayout(new FlowLayout());
+        //Info Panel
+        //Het info panel beval een boxlayout waar aan twee labels worden toegevoegd:
+        //De omschrijving van de opdracht en daarboven eventueel een foutmelding label die zichtbaar wordt als er geen gegevens zijn
+        //De boxlayout wordt in een flowlayout gestopt om zo de text mooi te centreren
+        //Het panel met de flowlayout wordt vervolgends als eerste aan de hoofdlayout toegevoegd
 
+
+        JPanel infoLabelPanelFlow = new JPanel();
+        infoLabelPanelFlow.setLayout(new FlowLayout());
+
+        JPanel infoLabelPanelBox = new JPanel();
+        infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
+
+
+        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+
+        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        noDataLabel.setVisible(false);
+
+        infoLabelPanelBox.add(noDataLabel);
+        infoLabelPanelBox.add(opdrachtLabel);
+
+<<<<<<< HEAD
         JLabel opdrachtLabel = new JLabel("Geeft de hoeveelheid gebruikers die de geselecteerde film hebben bekeken.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
+=======
+        infoLabelPanelFlow.add(infoLabelPanelBox);
+        hoofdPanel.add(infoLabelPanelFlow);
+>>>>>>> 75d0db83f20579265aa93e553005d467a4eae36f
 
         //Table
         JPanel tablePanel = new JPanel();
@@ -68,8 +91,8 @@ public class Opdracht6Tab extends Tab {
         hoofdPanel.add(tablePanel);
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(accountDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht6");
-        runButton.addActionListener(clickListener);
+        ClickListener clickListener = new ClickListener(filmDropdown, resultTable, sqlConnection, resultTableModel, "Opdracht6", noDataLabel);
+        filmDropdown.addActionListener(clickListener);
 
         return hoofdPanel;
     }
