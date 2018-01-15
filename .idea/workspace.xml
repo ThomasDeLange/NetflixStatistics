@@ -39,8 +39,8 @@
       <file leaf-file-name="TableEditor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/Controller/TableEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="136">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,8 +51,8 @@
       <file leaf-file-name="Opdracht4Tab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht4Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="e#262#263#0" expanded="true" />
                 <element signature="e#298#299#0" expanded="true" />
@@ -81,196 +81,194 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Opdracht5Tab.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Opdracht5Tab.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht5Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="121">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#267#268#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JAVA/" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JAVA/" pinned="false" current-in-tab="false">
         <entry file="uml://JAVA/">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>JAVA</ID>
               <OriginalElement />
               <nodes>
-                <node x="663.7168010752688" y="553.0">View.Tabs.Tab</node>
+                <node x="663.7168010752689" y="553.0">View.Tabs.Tab</node>
                 <node x="245.55685483870968" y="241.0">Model.TaskExecutor</node>
-                <node x="29.0625" y="0.0">Controller.TableEditor</node>
-                <node x="592.0625" y="0.5">Model.SqlConnection</node>
-                <node x="926.5625" y="867.0">View.Tabs.Opdracht6Tab</node>
-                <node x="347.43750000000006" y="878.5">View.Tabs.Opdracht3Tab</node>
+                <node x="29.062500000000114" y="0.0">Controller.TableEditor</node>
+                <node x="592.0625000000001" y="0.5">Model.SqlConnection</node>
+                <node x="926.5625000000002" y="867.0">View.Tabs.Opdracht6Tab</node>
+                <node x="672.5625000000002" y="878.5">View.Tabs.Opdracht3Tab</node>
                 <node x="0.0" y="878.5">View.Tabs.Opdracht2Tab</node>
-                <node x="672.5625" y="878.5">View.Tabs.Opdracht1Tab</node>
-                <node x="732.0278225806452" y="1024.0">View.UserInterface</node>
+                <node x="347.4375000000001" y="878.5">View.Tabs.Opdracht1Tab</node>
+                <node x="732.0278225806453" y="1024.0">View.UserInterface</node>
                 <node x="126.43185483870968" y="498.0">Controller.ClickListener</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="Controller.ClickListener" target="Model.TaskExecutor">
-                  <point x="98.0" y="-114.5" />
-                  <point x="469.4318548387097" y="478.0" />
-                  <point x="477.3068548387097" y="478.0" />
-                  <point x="77.25" y="103.5" />
+                  <point x="0.0" y="-114.5" />
+                  <point x="371.4318548387097" y="478.0" />
+                  <point x="322.8068548387097" y="478.0" />
+                  <point x="-77.25" y="103.5" />
                 </edge>
                 <edge source="View.Tabs.Opdracht1Tab" target="Controller.ClickListener">
-                  <point x="-29.25" y="-37.0" />
-                  <point x="760.3125" y="797.0" />
-                  <point x="463.3068548387097" y="797.0" />
-                  <point x="91.875" y="114.5" />
+                  <point x="-87.75" y="-37.0" />
+                  <point x="376.6875000000001" y="827.0" />
+                  <point x="279.5568548387097" y="827.0" />
+                  <point x="-91.875" y="114.5" />
                 </edge>
                 <edge source="View.Tabs.Opdracht6Tab" target="Model.SqlConnection">
                   <point x="93.59999999999991" y="-48.5" />
-                  <point x="1137.1625" y="747.0" />
-                  <point x="1052.9918010752688" y="747.0" />
-                  <point x="1052.9918010752688" y="181.0" />
-                  <point x="796.3125" y="181.0" />
+                  <point x="1137.1625000000001" y="747.0" />
+                  <point x="1052.991801075269" y="747.0" />
+                  <point x="1052.991801075269" y="181.0" />
+                  <point x="796.3125000000001" y="181.0" />
                   <point x="75.25" y="70.0" />
                 </edge>
                 <edge source="View.Tabs.Opdracht3Tab" target="View.Tabs.Tab">
-                  <point x="87.75" y="-37.0" />
-                  <point x="552.1875" y="847.0" />
-                  <point x="758.5918010752688" y="847.0" />
-                  <point x="-31.625" y="59.5" />
+                  <point x="29.249999999999943" y="-37.0" />
+                  <point x="818.8125000000001" y="847.0" />
+                  <point x="821.8418010752689" y="847.0" />
+                  <point x="31.625" y="59.5" />
                 </edge>
                 <edge source="Model.TaskExecutor" target="Model.SqlConnection">
-                  <point x="103.0" y="-103.5" />
-                  <point x="503.0568548387097" y="201.0" />
-                  <point x="645.8125" y="201.0" />
-                  <point x="-75.25" y="70.0" />
+                  <point x="0.0" y="-103.5" />
+                  <point x="400.0568548387097" y="191.0" />
+                  <point x="624.3125000000001" y="191.0" />
+                  <point x="-96.75" y="70.0" />
                 </edge>
                 <edge source="View.UserInterface" target="Model.SqlConnection">
-                  <point x="106.66666666666663" y="-81.5" />
-                  <point x="966.6944892473118" y="1004.0" />
-                  <point x="1182.0625" y="1004.0" />
-                  <point x="1182.0625" y="161.0" />
-                  <point x="839.3125" y="161.0" />
-                  <point x="118.25" y="70.0" />
+                  <point x="64.0" y="-81.5" />
+                  <point x="924.0278225806453" y="994.0" />
+                  <point x="1171.0625000000002" y="994.0" />
+                  <point x="1171.0625000000002" y="171.0" />
+                  <point x="817.8125000000001" y="171.0" />
+                  <point x="96.75" y="70.0" />
                 </edge>
                 <edge source="View.Tabs.Opdracht2Tab" target="Model.SqlConnection">
                   <point x="-87.75" y="-37.0" />
                   <point x="29.25" y="847.0" />
                   <point x="72.11935483870968" y="847.0" />
                   <point x="72.11935483870968" y="181.0" />
-                  <point x="602.8125" y="181.0" />
+                  <point x="602.8125000000001" y="181.0" />
                   <point x="-118.25" y="70.0" />
                 </edge>
                 <edge source="Model.TaskExecutor" target="Controller.TableEditor">
                   <point x="-103.0" y="-103.5" />
                   <point x="297.0568548387097" y="171.0" />
-                  <point x="262.3958333333335" y="171.0" />
-                  <point x="93.33333333333348" y="70.5" />
+                  <point x="262.3958333333334" y="171.0" />
+                  <point x="93.33333333333331" y="70.5" />
                 </edge>
                 <edge source="View.Tabs.Opdracht6Tab" target="Controller.ClickListener">
-                  <point x="-93.59999999999991" y="-48.5" />
-                  <point x="949.9625000000001" y="787.0" />
-                  <point x="524.5568548387097" y="787.0" />
-                  <point x="153.125" y="114.5" />
+                  <point x="-46.799999999999955" y="-48.5" />
+                  <point x="996.7625000000003" y="777.0" />
+                  <point x="585.8068548387097" y="777.0" />
+                  <point x="214.375" y="114.5" />
                 </edge>
                 <edge source="View.UserInterface" target="View.Tabs.Opdracht2Tab">
                   <point x="-106.66666666666663" y="-81.5" />
-                  <point x="753.3611559139786" y="1004.0" />
+                  <point x="753.3611559139787" y="1004.0" />
                   <point x="117.0" y="1004.0" />
                   <point x="0.0" y="37.0" />
                 </edge>
                 <edge source="View.Tabs.Opdracht3Tab" target="Model.SqlConnection">
-                  <point x="29.25" y="-37.0" />
-                  <point x="493.68750000000006" y="827.0" />
-                  <point x="626.9318548387097" y="827.0" />
-                  <point x="626.9318548387097" y="221.0" />
-                  <point x="688.8125" y="221.0" />
-                  <point x="-32.25" y="70.0" />
+                  <point x="87.74999999999994" y="-37.0" />
+                  <point x="877.3125000000001" y="847.0" />
+                  <point x="943.6193548387098" y="847.0" />
+                  <point x="943.6193548387098" y="201.0" />
+                  <point x="753.3125000000001" y="201.0" />
+                  <point x="32.25" y="70.0" />
                 </edge>
                 <edge source="View.Tabs.Opdracht2Tab" target="Controller.ClickListener">
-                  <point x="29.25" y="-37.0" />
-                  <point x="146.25" y="827.0" />
-                  <point x="218.30685483870968" y="827.0" />
-                  <point x="-153.125" y="114.5" />
+                  <point x="-29.25" y="-37.0" />
+                  <point x="87.75" y="817.0" />
+                  <point x="157.05685483870968" y="817.0" />
+                  <point x="-214.375" y="114.5" />
                 </edge>
                 <edge source="View.UserInterface" target="View.Tabs.Opdracht6Tab">
                   <point x="21.33333333333337" y="-81.5" />
-                  <point x="881.3611559139786" y="984.0" />
-                  <point x="1043.5625" y="984.0" />
+                  <point x="881.3611559139787" y="984.0" />
+                  <point x="1043.5625000000002" y="984.0" />
                   <point x="0.0" y="48.5" />
                 </edge>
                 <edge source="Controller.ClickListener" target="Controller.TableEditor">
-                  <point x="-196.0" y="-114.5" />
-                  <point x="175.43185483870968" y="478.0" />
-                  <point x="158.0625" y="478.0" />
-                  <point x="158.0625" y="171.0" />
-                  <point x="75.72916666666652" y="171.0" />
-                  <point x="-93.33333333333348" y="70.5" />
+                  <point x="-98.0" y="-114.5" />
+                  <point x="273.4318548387097" y="468.0" />
+                  <point x="169.0625000000001" y="468.0" />
+                  <point x="0.0" y="70.5" />
                 </edge>
                 <edge source="View.Tabs.Opdracht3Tab" target="Controller.ClickListener">
-                  <point x="-87.75" y="-37.0" />
-                  <point x="376.68750000000006" y="827.0" />
-                  <point x="279.5568548387097" y="827.0" />
-                  <point x="-91.875" y="114.5" />
+                  <point x="-29.250000000000057" y="-37.0" />
+                  <point x="760.3125000000001" y="797.0" />
+                  <point x="463.3068548387097" y="797.0" />
+                  <point x="91.875" y="114.5" />
                 </edge>
                 <edge source="View.Tabs.Tab" target="Model.SqlConnection">
-                  <point x="-63.25" y="-59.5" />
-                  <point x="726.9668010752688" y="478.0" />
-                  <point x="743.3693548387097" y="478.0" />
-                  <point x="743.3693548387097" y="221.0" />
-                  <point x="710.3125" y="221.0" />
-                  <point x="-10.75" y="70.0" />
+                  <point x="63.25" y="-59.5" />
+                  <point x="853.4668010752689" y="478.0" />
+                  <point x="754.3693548387098" y="478.0" />
+                  <point x="754.3693548387098" y="211.0" />
+                  <point x="731.8125000000001" y="211.0" />
+                  <point x="10.75" y="70.0" />
                 </edge>
                 <edge source="View.Tabs.Opdracht1Tab" target="View.Tabs.Tab">
-                  <point x="29.25" y="-37.0" />
-                  <point x="818.8125" y="847.0" />
-                  <point x="821.8418010752688" y="847.0" />
-                  <point x="31.625" y="59.5" />
+                  <point x="87.75" y="-37.0" />
+                  <point x="552.1875000000001" y="847.0" />
+                  <point x="758.5918010752689" y="847.0" />
+                  <point x="-31.625" y="59.5" />
                 </edge>
                 <edge source="View.Tabs.Opdracht2Tab" target="View.Tabs.Tab">
                   <point x="87.75" y="-37.0" />
                   <point x="204.75" y="837.0" />
-                  <point x="695.3418010752688" y="837.0" />
+                  <point x="695.3418010752689" y="837.0" />
                   <point x="-94.875" y="59.5" />
                 </edge>
                 <edge source="View.UserInterface" target="View.Tabs.Opdracht1Tab">
-                  <point x="-21.333333333333314" y="-81.5" />
-                  <point x="838.6944892473118" y="984.0" />
-                  <point x="789.5625" y="984.0" />
+                  <point x="-64.0" y="-81.5" />
+                  <point x="796.0278225806453" y="994.0" />
+                  <point x="464.4375000000001" y="994.0" />
                   <point x="0.0" y="37.0" />
                 </edge>
                 <edge source="View.Tabs.Opdracht6Tab" target="View.Tabs.Tab">
                   <point x="0.0" y="-48.5" />
-                  <point x="1043.5625" y="767.0" />
-                  <point x="885.0918010752688" y="767.0" />
+                  <point x="1043.5625000000002" y="767.0" />
+                  <point x="885.0918010752689" y="767.0" />
                   <point x="94.875" y="59.5" />
                 </edge>
                 <edge source="View.Tabs.Opdracht1Tab" target="Model.SqlConnection">
-                  <point x="87.75" y="-37.0" />
-                  <point x="877.3125" y="847.0" />
-                  <point x="943.6193548387097" y="847.0" />
-                  <point x="943.6193548387097" y="201.0" />
-                  <point x="753.3125" y="201.0" />
-                  <point x="32.25" y="70.0" />
+                  <point x="29.25" y="-37.0" />
+                  <point x="493.6875000000001" y="827.0" />
+                  <point x="626.9318548387097" y="827.0" />
+                  <point x="626.9318548387097" y="221.0" />
+                  <point x="688.8125000000001" y="221.0" />
+                  <point x="-32.25" y="70.0" />
                 </edge>
                 <edge source="Controller.ClickListener" target="Model.SqlConnection">
                   <point x="196.0" y="-114.5" />
                   <point x="567.4318548387097" y="478.0" />
                   <point x="565.0568548387097" y="478.0" />
                   <point x="565.0568548387097" y="211.0" />
-                  <point x="667.3125" y="211.0" />
+                  <point x="667.3125000000001" y="211.0" />
                   <point x="-53.75" y="70.0" />
                 </edge>
                 <edge source="View.UserInterface" target="View.Tabs.Opdracht3Tab">
-                  <point x="-64.0" y="-81.5" />
-                  <point x="796.0278225806452" y="994.0" />
-                  <point x="464.43750000000006" y="994.0" />
+                  <point x="-21.33333333333337" y="-81.5" />
+                  <point x="838.6944892473119" y="984.0" />
+                  <point x="789.5625000000002" y="984.0" />
                   <point x="0.0" y="37.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="1200.2499999999995" y="791.4999999999997" />
+              <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="363.9999999999998" y="448.9999999999998" />
               <SelectedNodes />
               <Categories>
                 <Category>Fields</Category>
@@ -286,9 +284,11 @@
       <file leaf-file-name="TaskExecutor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/Model/TaskExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="-2231">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -379,9 +379,9 @@
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht1Tab.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht2Tab.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht3Tab.java" />
-        <option value="$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht5Tab.java" />
-        <option value="$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht4Tab.java" />
         <option value="$PROJECT_DIR$/software/NetflixStatistics/src/View/UserInterface.java" />
+        <option value="$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht4Tab.java" />
+        <option value="$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht5Tab.java" />
       </list>
     </option>
   </component>
@@ -398,8 +398,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="175" />
-    <option name="y" value="155" />
+    <option name="x" value="-150" />
+    <option name="y" value="470" />
     <option name="width" value="1736" />
     <option name="height" value="942" />
   </component>
@@ -625,20 +625,20 @@
       <workItem from="1515936023447" duration="6620000" />
       <workItem from="1515946437419" duration="1635000" />
       <workItem from="1515953086407" duration="2047000" />
-      <workItem from="1516021908346" duration="1652000" />
+      <workItem from="1516021908346" duration="1789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37776000" />
+    <option name="totallyTimeSpent" value="37913000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="175" y="155" width="1736" height="942" extended-state="0" />
+    <frame x="-150" y="470" width="1736" height="942" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32708332" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32630274" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -646,7 +646,7 @@
       <window_info id="TMC Test Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.446875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44665012" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -901,44 +901,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht5Tab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht4Tab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht3Tab.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/Controller/TableEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -954,14 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-295">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/Model/TaskExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -984,175 +943,173 @@
           <ID>JAVA</ID>
           <OriginalElement />
           <nodes>
-            <node x="663.7168010752688" y="553.0">View.Tabs.Tab</node>
+            <node x="663.7168010752689" y="553.0">View.Tabs.Tab</node>
             <node x="245.55685483870968" y="241.0">Model.TaskExecutor</node>
-            <node x="29.0625" y="0.0">Controller.TableEditor</node>
-            <node x="592.0625" y="0.5">Model.SqlConnection</node>
-            <node x="926.5625" y="867.0">View.Tabs.Opdracht6Tab</node>
-            <node x="347.43750000000006" y="878.5">View.Tabs.Opdracht3Tab</node>
+            <node x="29.062500000000114" y="0.0">Controller.TableEditor</node>
+            <node x="592.0625000000001" y="0.5">Model.SqlConnection</node>
+            <node x="926.5625000000002" y="867.0">View.Tabs.Opdracht6Tab</node>
+            <node x="672.5625000000002" y="878.5">View.Tabs.Opdracht3Tab</node>
             <node x="0.0" y="878.5">View.Tabs.Opdracht2Tab</node>
-            <node x="672.5625" y="878.5">View.Tabs.Opdracht1Tab</node>
-            <node x="732.0278225806452" y="1024.0">View.UserInterface</node>
+            <node x="347.4375000000001" y="878.5">View.Tabs.Opdracht1Tab</node>
+            <node x="732.0278225806453" y="1024.0">View.UserInterface</node>
             <node x="126.43185483870968" y="498.0">Controller.ClickListener</node>
           </nodes>
           <notes />
           <edges>
             <edge source="Controller.ClickListener" target="Model.TaskExecutor">
-              <point x="98.0" y="-114.5" />
-              <point x="469.4318548387097" y="478.0" />
-              <point x="477.3068548387097" y="478.0" />
-              <point x="77.25" y="103.5" />
+              <point x="0.0" y="-114.5" />
+              <point x="371.4318548387097" y="478.0" />
+              <point x="322.8068548387097" y="478.0" />
+              <point x="-77.25" y="103.5" />
             </edge>
             <edge source="View.Tabs.Opdracht1Tab" target="Controller.ClickListener">
-              <point x="-29.25" y="-37.0" />
-              <point x="760.3125" y="797.0" />
-              <point x="463.3068548387097" y="797.0" />
-              <point x="91.875" y="114.5" />
+              <point x="-87.75" y="-37.0" />
+              <point x="376.6875000000001" y="827.0" />
+              <point x="279.5568548387097" y="827.0" />
+              <point x="-91.875" y="114.5" />
             </edge>
             <edge source="View.Tabs.Opdracht6Tab" target="Model.SqlConnection">
               <point x="93.59999999999991" y="-48.5" />
-              <point x="1137.1625" y="747.0" />
-              <point x="1052.9918010752688" y="747.0" />
-              <point x="1052.9918010752688" y="181.0" />
-              <point x="796.3125" y="181.0" />
+              <point x="1137.1625000000001" y="747.0" />
+              <point x="1052.991801075269" y="747.0" />
+              <point x="1052.991801075269" y="181.0" />
+              <point x="796.3125000000001" y="181.0" />
               <point x="75.25" y="70.0" />
             </edge>
             <edge source="View.Tabs.Opdracht3Tab" target="View.Tabs.Tab">
-              <point x="87.75" y="-37.0" />
-              <point x="552.1875" y="847.0" />
-              <point x="758.5918010752688" y="847.0" />
-              <point x="-31.625" y="59.5" />
+              <point x="29.249999999999943" y="-37.0" />
+              <point x="818.8125000000001" y="847.0" />
+              <point x="821.8418010752689" y="847.0" />
+              <point x="31.625" y="59.5" />
             </edge>
             <edge source="Model.TaskExecutor" target="Model.SqlConnection">
-              <point x="103.0" y="-103.5" />
-              <point x="503.0568548387097" y="201.0" />
-              <point x="645.8125" y="201.0" />
-              <point x="-75.25" y="70.0" />
+              <point x="0.0" y="-103.5" />
+              <point x="400.0568548387097" y="191.0" />
+              <point x="624.3125000000001" y="191.0" />
+              <point x="-96.75" y="70.0" />
             </edge>
             <edge source="View.UserInterface" target="Model.SqlConnection">
-              <point x="106.66666666666663" y="-81.5" />
-              <point x="966.6944892473118" y="1004.0" />
-              <point x="1182.0625" y="1004.0" />
-              <point x="1182.0625" y="161.0" />
-              <point x="839.3125" y="161.0" />
-              <point x="118.25" y="70.0" />
+              <point x="64.0" y="-81.5" />
+              <point x="924.0278225806453" y="994.0" />
+              <point x="1171.0625000000002" y="994.0" />
+              <point x="1171.0625000000002" y="171.0" />
+              <point x="817.8125000000001" y="171.0" />
+              <point x="96.75" y="70.0" />
             </edge>
             <edge source="View.Tabs.Opdracht2Tab" target="Model.SqlConnection">
               <point x="-87.75" y="-37.0" />
               <point x="29.25" y="847.0" />
               <point x="72.11935483870968" y="847.0" />
               <point x="72.11935483870968" y="181.0" />
-              <point x="602.8125" y="181.0" />
+              <point x="602.8125000000001" y="181.0" />
               <point x="-118.25" y="70.0" />
             </edge>
             <edge source="Model.TaskExecutor" target="Controller.TableEditor">
               <point x="-103.0" y="-103.5" />
               <point x="297.0568548387097" y="171.0" />
-              <point x="262.3958333333335" y="171.0" />
-              <point x="93.33333333333348" y="70.5" />
+              <point x="262.3958333333334" y="171.0" />
+              <point x="93.33333333333331" y="70.5" />
             </edge>
             <edge source="View.Tabs.Opdracht6Tab" target="Controller.ClickListener">
-              <point x="-93.59999999999991" y="-48.5" />
-              <point x="949.9625000000001" y="787.0" />
-              <point x="524.5568548387097" y="787.0" />
-              <point x="153.125" y="114.5" />
+              <point x="-46.799999999999955" y="-48.5" />
+              <point x="996.7625000000003" y="777.0" />
+              <point x="585.8068548387097" y="777.0" />
+              <point x="214.375" y="114.5" />
             </edge>
             <edge source="View.UserInterface" target="View.Tabs.Opdracht2Tab">
               <point x="-106.66666666666663" y="-81.5" />
-              <point x="753.3611559139786" y="1004.0" />
+              <point x="753.3611559139787" y="1004.0" />
               <point x="117.0" y="1004.0" />
               <point x="0.0" y="37.0" />
             </edge>
             <edge source="View.Tabs.Opdracht3Tab" target="Model.SqlConnection">
-              <point x="29.25" y="-37.0" />
-              <point x="493.68750000000006" y="827.0" />
-              <point x="626.9318548387097" y="827.0" />
-              <point x="626.9318548387097" y="221.0" />
-              <point x="688.8125" y="221.0" />
-              <point x="-32.25" y="70.0" />
+              <point x="87.74999999999994" y="-37.0" />
+              <point x="877.3125000000001" y="847.0" />
+              <point x="943.6193548387098" y="847.0" />
+              <point x="943.6193548387098" y="201.0" />
+              <point x="753.3125000000001" y="201.0" />
+              <point x="32.25" y="70.0" />
             </edge>
             <edge source="View.Tabs.Opdracht2Tab" target="Controller.ClickListener">
-              <point x="29.25" y="-37.0" />
-              <point x="146.25" y="827.0" />
-              <point x="218.30685483870968" y="827.0" />
-              <point x="-153.125" y="114.5" />
+              <point x="-29.25" y="-37.0" />
+              <point x="87.75" y="817.0" />
+              <point x="157.05685483870968" y="817.0" />
+              <point x="-214.375" y="114.5" />
             </edge>
             <edge source="View.UserInterface" target="View.Tabs.Opdracht6Tab">
               <point x="21.33333333333337" y="-81.5" />
-              <point x="881.3611559139786" y="984.0" />
-              <point x="1043.5625" y="984.0" />
+              <point x="881.3611559139787" y="984.0" />
+              <point x="1043.5625000000002" y="984.0" />
               <point x="0.0" y="48.5" />
             </edge>
             <edge source="Controller.ClickListener" target="Controller.TableEditor">
-              <point x="-196.0" y="-114.5" />
-              <point x="175.43185483870968" y="478.0" />
-              <point x="158.0625" y="478.0" />
-              <point x="158.0625" y="171.0" />
-              <point x="75.72916666666652" y="171.0" />
-              <point x="-93.33333333333348" y="70.5" />
+              <point x="-98.0" y="-114.5" />
+              <point x="273.4318548387097" y="468.0" />
+              <point x="169.0625000000001" y="468.0" />
+              <point x="0.0" y="70.5" />
             </edge>
             <edge source="View.Tabs.Opdracht3Tab" target="Controller.ClickListener">
-              <point x="-87.75" y="-37.0" />
-              <point x="376.68750000000006" y="827.0" />
-              <point x="279.5568548387097" y="827.0" />
-              <point x="-91.875" y="114.5" />
+              <point x="-29.250000000000057" y="-37.0" />
+              <point x="760.3125000000001" y="797.0" />
+              <point x="463.3068548387097" y="797.0" />
+              <point x="91.875" y="114.5" />
             </edge>
             <edge source="View.Tabs.Tab" target="Model.SqlConnection">
-              <point x="-63.25" y="-59.5" />
-              <point x="726.9668010752688" y="478.0" />
-              <point x="743.3693548387097" y="478.0" />
-              <point x="743.3693548387097" y="221.0" />
-              <point x="710.3125" y="221.0" />
-              <point x="-10.75" y="70.0" />
+              <point x="63.25" y="-59.5" />
+              <point x="853.4668010752689" y="478.0" />
+              <point x="754.3693548387098" y="478.0" />
+              <point x="754.3693548387098" y="211.0" />
+              <point x="731.8125000000001" y="211.0" />
+              <point x="10.75" y="70.0" />
             </edge>
             <edge source="View.Tabs.Opdracht1Tab" target="View.Tabs.Tab">
-              <point x="29.25" y="-37.0" />
-              <point x="818.8125" y="847.0" />
-              <point x="821.8418010752688" y="847.0" />
-              <point x="31.625" y="59.5" />
+              <point x="87.75" y="-37.0" />
+              <point x="552.1875000000001" y="847.0" />
+              <point x="758.5918010752689" y="847.0" />
+              <point x="-31.625" y="59.5" />
             </edge>
             <edge source="View.Tabs.Opdracht2Tab" target="View.Tabs.Tab">
               <point x="87.75" y="-37.0" />
               <point x="204.75" y="837.0" />
-              <point x="695.3418010752688" y="837.0" />
+              <point x="695.3418010752689" y="837.0" />
               <point x="-94.875" y="59.5" />
             </edge>
             <edge source="View.UserInterface" target="View.Tabs.Opdracht1Tab">
-              <point x="-21.333333333333314" y="-81.5" />
-              <point x="838.6944892473118" y="984.0" />
-              <point x="789.5625" y="984.0" />
+              <point x="-64.0" y="-81.5" />
+              <point x="796.0278225806453" y="994.0" />
+              <point x="464.4375000000001" y="994.0" />
               <point x="0.0" y="37.0" />
             </edge>
             <edge source="View.Tabs.Opdracht6Tab" target="View.Tabs.Tab">
               <point x="0.0" y="-48.5" />
-              <point x="1043.5625" y="767.0" />
-              <point x="885.0918010752688" y="767.0" />
+              <point x="1043.5625000000002" y="767.0" />
+              <point x="885.0918010752689" y="767.0" />
               <point x="94.875" y="59.5" />
             </edge>
             <edge source="View.Tabs.Opdracht1Tab" target="Model.SqlConnection">
-              <point x="87.75" y="-37.0" />
-              <point x="877.3125" y="847.0" />
-              <point x="943.6193548387097" y="847.0" />
-              <point x="943.6193548387097" y="201.0" />
-              <point x="753.3125" y="201.0" />
-              <point x="32.25" y="70.0" />
+              <point x="29.25" y="-37.0" />
+              <point x="493.6875000000001" y="827.0" />
+              <point x="626.9318548387097" y="827.0" />
+              <point x="626.9318548387097" y="221.0" />
+              <point x="688.8125000000001" y="221.0" />
+              <point x="-32.25" y="70.0" />
             </edge>
             <edge source="Controller.ClickListener" target="Model.SqlConnection">
               <point x="196.0" y="-114.5" />
               <point x="567.4318548387097" y="478.0" />
               <point x="565.0568548387097" y="478.0" />
               <point x="565.0568548387097" y="211.0" />
-              <point x="667.3125" y="211.0" />
+              <point x="667.3125000000001" y="211.0" />
               <point x="-53.75" y="70.0" />
             </edge>
             <edge source="View.UserInterface" target="View.Tabs.Opdracht3Tab">
-              <point x="-64.0" y="-81.5" />
-              <point x="796.0278225806452" y="994.0" />
-              <point x="464.43750000000006" y="994.0" />
+              <point x="-21.33333333333337" y="-81.5" />
+              <point x="838.6944892473119" y="984.0" />
+              <point x="789.5625000000002" y="984.0" />
               <point x="0.0" y="37.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="1200.2499999999995" y="791.4999999999997" />
+          <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="363.9999999999998" y="448.9999999999998" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
@@ -1161,6 +1118,49 @@
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/Controller/TableEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/Model/TaskExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2231">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht4Tab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht5Tab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
