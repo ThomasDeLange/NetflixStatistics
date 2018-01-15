@@ -1,22 +1,26 @@
 package View.Tabs;
 
 import Controller.ClickListener;
+import Model.ComboBoxEditor;
 import Model.SqlConnection;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.sql.SQLException;
 
 public class Opdracht7Tab extends Tab {
 
+    private ComboBoxEditor comboBoxEditor;
     private SqlConnection sqlConnection;
 
     public Opdracht7Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
+        comboBoxEditor = new ComboBoxEditor(sqlConnection);
     }
 
     @Override
-    public JPanel createComponents() {
+    public JPanel createComponents() throws SQLException {
 
         //Setup hoofdpanel
         JPanel hoofdPanel = new JPanel();
@@ -33,24 +37,38 @@ public class Opdracht7Tab extends Tab {
         dropdownPanel.setLayout(new FlowLayout());
 
 
-
-        String[] serieDropdownItems = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
-        JComboBox<String> serieDropdown = new JComboBox<>(serieDropdownItems);
+        JComboBox serieDropdown = null;
+        serieDropdown = comboBoxEditor.fillCombobox(serieDropdown, "SerieTitels");
 
         dropdownPanel.add(new JLabel("Kies een serie"));
         dropdownPanel.add(serieDropdown);
 
         hoofdPanel.add(dropdownPanel);
 
-        //OpdrachtLabel
-        JPanel opdrachtLabelPanel = new JPanel();
-        opdrachtLabelPanel.setLayout(new FlowLayout());
+        //Info Panel
+        //Het info panel beval een boxlayout waar aan twee labels worden toegevoegd:
+        //De omschrijving van de opdracht en daarboven eventueel een foutmelding label die zichtbaar wordt als er geen gegevens zijn
+        //De boxlayout wordt in een flowlayout gestopt om zo de text mooi te centreren
+        //Het panel met de flowlayout wordt vervolgends als eerste aan de hoofdlayout toegevoegd
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde serie, geef het gemiddeld bekeken % van de tijdsduur van die serie als geheel \n" +
-                "(d.w.z. alle afleveringen van die serie)");
 
-        opdrachtLabelPanel.add(opdrachtLabel);
-        hoofdPanel.add(opdrachtLabelPanel);
+        JPanel infoLabelPanelFlow = new JPanel();
+        infoLabelPanelFlow.setLayout(new FlowLayout());
+
+        JPanel infoLabelPanelBox = new JPanel();
+        infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
+
+
+        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
+
+        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        noDataLabel.setVisible(false);
+
+        infoLabelPanelBox.add(noDataLabel);
+        infoLabelPanelBox.add(opdrachtLabel);
+
+        infoLabelPanelFlow.add(infoLabelPanelBox);
+        hoofdPanel.add(infoLabelPanelFlow);
 
         //Table
         JPanel tablePanel = new JPanel();
@@ -68,7 +86,7 @@ public class Opdracht7Tab extends Tab {
         hoofdPanel.add(tablePanel);
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(serieDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht7");
+        ClickListener clickListener = new ClickListener(serieDropdown, resultTable, sqlConnection, resultTableModel, "Opdracht7", noDataLabel);
         serieDropdown.addActionListener(clickListener);
 
         return hoofdPanel;

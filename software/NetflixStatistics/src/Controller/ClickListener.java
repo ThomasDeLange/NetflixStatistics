@@ -9,6 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /*
 ClickListener
@@ -28,25 +29,34 @@ public class ClickListener implements ActionListener {
     private TaskExecutor taskExecutor;
     private TableEditor tableEditor;
     private String taskId;
+    private JLabel noDataLabel;
 
     //0 input
-    public ClickListener(JTable resultTable, SqlConnection sqlConnection, DefaultTableModel tableModel, String taskID) {
+    public ClickListener(JTable resultTable, SqlConnection sqlConnection, DefaultTableModel tableModel, String taskID, JLabel noDataLabel) {
         this.taskId = taskID;
+        this.noDataLabel = noDataLabel;
+
         tableEditor = new TableEditor(tableModel, resultTable);
         taskExecutor = new TaskExecutor(sqlConnection);
     }
     //1 input
-    public ClickListener(Object input,JTable resultTable,  SqlConnection sqlConnection, DefaultTableModel tableModel, String taskID) {
+    public ClickListener(Object input,JTable resultTable,  SqlConnection sqlConnection, DefaultTableModel tableModel, String taskID, JLabel noDataLabel) {
         this.input1 = input;
         this.taskId = taskID;
+        this.noDataLabel = noDataLabel;
+
+
         tableEditor = new TableEditor(tableModel, resultTable);
         taskExecutor = new TaskExecutor(sqlConnection, input1);
     }
     //2 input
-    public ClickListener(Object input,Object input2, JTable resultTable,  SqlConnection sqlConnection, DefaultTableModel tableModel, String taskID) {
+    public ClickListener(Object input,Object input2, JTable resultTable,  SqlConnection sqlConnection, DefaultTableModel tableModel, String taskID, JLabel noDataLabel) {
         this.input1 = input;
         this.input2 = input2;
         this.taskId = taskID;
+        this.noDataLabel = noDataLabel;
+
+
         tableEditor = new TableEditor(tableModel, resultTable);
         taskExecutor = new TaskExecutor(sqlConnection, input1, input2);
     }
@@ -55,9 +65,21 @@ public class ClickListener implements ActionListener {
     public void actionPerformed(ActionEvent event) {
 
         tableEditor.emptyTable();
-        ResultSet resultSet = taskExecutor.runTask(taskId);
-        if (resultSet != null) {
-            tableEditor.fillTable(resultSet);
+        ResultSet resultSet = null;
+        resultSet = taskExecutor.runTask(taskId);
+
+        try {
+            if (!resultSet.isBeforeFirst() ) {
+                noDataLabel.setVisible(true);
+            }else {
+                noDataLabel.setVisible(false);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+
+        tableEditor.fillTable(resultSet);
+
     }
 }
