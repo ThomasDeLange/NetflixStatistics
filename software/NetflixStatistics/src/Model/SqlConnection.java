@@ -43,7 +43,7 @@ public class SqlConnection {
         }
     }
 
-    //Voert sql die gegeven opvraagd
+    //Voert sql die gegevens opvraagd
     public ResultSet executeSql(String sqlQuery) {
         ResultSet resultSet = null;
         try {

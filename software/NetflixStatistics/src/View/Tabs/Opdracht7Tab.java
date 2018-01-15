@@ -17,6 +17,7 @@ public class Opdracht7Tab extends Tab {
     public Opdracht7Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
         comboBoxEditor = new ComboBoxEditor(sqlConnection);
+        this.sqlConnection = sqlConnection;
     }
 
     @Override
@@ -40,8 +41,8 @@ public class Opdracht7Tab extends Tab {
         JComboBox serieDropdown = null;
         serieDropdown = comboBoxEditor.fillCombobox(serieDropdown, "SerieTitels");
 
-        dropdownPanel.add(new JLabel("Kies een serie"));
         dropdownPanel.add(serieDropdown);
+        dropdownPanel.add(new JLabel("Kies een serie"));
 
         hoofdPanel.add(dropdownPanel);
 
@@ -57,7 +58,6 @@ public class Opdracht7Tab extends Tab {
 
         JPanel infoLabelPanelBox = new JPanel();
         infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
-
 
         JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
 
@@ -77,7 +77,7 @@ public class Opdracht7Tab extends Tab {
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
-        String[] tableColumnsName = {"FilmID", "Titel", "Aantal gebruikers"};
+        String[] tableColumnsName = {"Serie", "Seizoen", "Totaal gemiddeld gezien in %"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 

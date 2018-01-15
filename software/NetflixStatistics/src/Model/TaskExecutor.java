@@ -199,8 +199,8 @@ public class TaskExecutor {
 
                 inputSerieTitel3 = makeStringSqlReady(inputSerieTitel3);
 
-                resultSet = sqlConnection.executeSql("" +
-                        "SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +
+
+                sqlConnection.executeSql("SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +
                         "FROM Serie\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Serie.ContentID\n" +
@@ -214,8 +214,7 @@ public class TaskExecutor {
                         "ON Serie.ContentID = Content.ContentID\n" +
                         "GROUP BY Serie.ContentID) as TotaalBekeken\n" +
                         "ON TotaalBekeken.ContentIDTotaal = Content.ContentID\n" +
-                        "WHERE Content.Titel =" + "'" + inputSerieTitel3 + "'");
-
+                        "WHERE Content.Titel =" +  "'" + inputSerieTitel3 + "'");
 
                 break;
 
