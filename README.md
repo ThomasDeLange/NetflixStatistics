@@ -19,10 +19,12 @@ Er is geen lokale database nodig omdat deze online wordt gehost.
 4. Na stap 3 zal de opgevraagde informatie in de tabel komen te staan. De tabel is te bewerken en versleepbaar.
 
 # Tests uitvoeren
-1. Open Project Structure
-2. Klik op Libraries
-3. Voeg de library "org.junit.jupiter:junit-jupiter-api:5.0.2" toe met Maven
+1. Open Project Structure.
+2. Klik op Libraries.
+3. Voeg de library "org.junit.jupiter:junit-jupiter-api:5.0.2" toe met Maven.
 4. Druk op OK en Apply.
+5. Rechts klikken op "tests" in de project explorer.
+6. Klik op run "All Tests".
 
 # UML Class Diagram
 
