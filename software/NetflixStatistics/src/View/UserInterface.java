@@ -78,8 +78,8 @@ public class UserInterface implements Runnable {
         tabbedPane.add(new Opdracht4Tab(sqlConnection).createComponents(), "Overzicht 4");
         tabbedPane.add(new Opdracht5Tab(sqlConnection).createComponents(), "Overzicht 5");
         tabbedPane.add(new Opdracht6Tab(sqlConnection).createComponents(), "Overzicht 6");
-        tabbedPane.add(new Opdracht7Tab(sqlConnection).createComponents(), "overzicht 7");
-        
+        tabbedPane.add(new Opdracht7Tab(sqlConnection).createComponents(), "Extra overzicht 7");
+        tabbedPane.add(new Opdracht8Tab(sqlConnection).createComponents(), "Extra overzicht 8");
 
         //Labels
         JLabel projectNaam = new JLabel("Netflix Statistix   ");

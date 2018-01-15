@@ -47,7 +47,6 @@ public class ComboBoxEditor {
                 }
 
                 jComboBox = new JComboBox<>(filmTitelsArray.toArray());
-
                 break;
 
             case "SerieTitels":
@@ -79,6 +78,7 @@ public class ComboBoxEditor {
                     accountsNRsArray.add(accountNRs.getString(1));
                 }
                 jComboBox = new JComboBox<>(accountsNRsArray.toArray());
+
 
                 break;
         }

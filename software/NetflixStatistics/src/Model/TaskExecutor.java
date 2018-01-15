@@ -173,10 +173,10 @@ public class TaskExecutor {
 
             case "Opdracht6":
                 //Er komt een dropdown binnen - Film
-                JComboBox cbFilmTitel = ((JComboBox) input1);
-                String inputFilmTitel = (String) cbFilmTitel.getSelectedItem();
+                JComboBox cbFilmTitel1 = ((JComboBox) input1);
+                String inputFilmTitel1 = (String) cbFilmTitel1.getSelectedItem();
 
-                inputFilmTitel = makeStringSqlReady(inputFilmTitel);
+                inputFilmTitel1 = makeStringSqlReady(inputFilmTitel1);
 
                 /*
                 6 Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in zín geheel be-
@@ -190,7 +190,7 @@ public class TaskExecutor {
                         "ON Content.ContentID = Film.ContentID\n" +
                         "INNER JOIN Bekeken\n" +
                         "ON Bekeken.AfleveringID = Film.AfleveringID\n" +
-                        "WHERE Content.Titel =" + "'" + inputFilmTitel + "'" + "\n" +
+                        "WHERE Content.Titel =" + "'" + inputFilmTitel1 + "'" + "\n" +
                         "GROUP BY Film.AfleveringID, Bekeken.ProcentGezien, Content.Titel\n" +
                         "HAVING Bekeken.ProcentGezien = 100");
 
@@ -223,6 +223,32 @@ public class TaskExecutor {
 
                 break;
 
+            case "Opdracht8":
+                //Er komt een dropdown binnen - serie
+                JComboBox cbFilmTitel2 = ((JComboBox) input1);
+                String inputFilmTitel2 = (String) cbFilmTitel2.getSelectedItem();
+
+                inputFilmTitel2 = makeStringSqlReady(inputFilmTitel2);
+
+
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Content.Titel, COUNT(Film.AfleveringID) as TotaalGezien, COUNT(TotaalAfgezien.AfleveringID) TotaalAfgezien, COUNT(TotaalAfgezien.AfleveringID) / COUNT(Film.AfleveringID) * 100 as PercentageMensenAfGekeken\n" +
+                        "FROM Content\n" +
+                        "INNER JOIN Film\n" +
+                        "ON Film.ContentID = Content.ContentID\n" +
+                        "INNER JOIN Bekeken\n" +
+                        "ON Bekeken.AfleveringID = film.AfleveringID\n" +
+                        "FULL OUTER JOIN (SELECT Film.AfleveringID, AVG(Bekeken.ProcentGezien) as avgGezien\n" +
+                        "FROM Content\n" +
+                        "INNER JOIN Film\n" +
+                        "ON Film.ContentID = Content.ContentID\n" +
+                        "INNER JOIN Bekeken\n" +
+                        "ON Bekeken.AfleveringID = film.AfleveringID\n" +
+                        "WHERE Bekeken.ProcentGezien = 100\n" +
+                        "GROUP BY Film.AfleveringID) as  TotaalAfgezien\n" +
+                        "ON TotaalAfgezien.AfleveringID = Film.AfleveringID\n" +
+                        "WHERE Content.titel =" + "'" + inputFilmTitel2  + "'" + "\n" +
+                        "GROUP BY Content.Titel, Film.AfleveringID;\n");
         }
         return resultSet;
     }

@@ -1,28 +1,47 @@
 package View.Tabs;
 
 import Controller.ClickListener;
+import Model.ComboBoxEditor;
 import Model.SqlConnection;
+import javafx.scene.control.ComboBox;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.sql.SQLException;
+
+/*
+Opdracht8Tab:
+Een extra opdracht
+
+1. Extend de Tab class
+
+createComponents():
+1. Elke tab maakt components aan die in de hoofdlayout gezet worden
+2. Volgorde is altijd:
+Setup van het hoofdpaneel
+Een Dropdown of Button of geen panel waar de gebruiker input kan selecteren
+Elke combobox wordt gevuld vanuit de database
+Een infoPanel waar de informatie over de opdracht wordt getoont en waar staat als een zoekopdracht geen resultaat heeft
+Een table waar de data in komt
+Een clicklistener die wordt toegevoeg aan een button of een combobox
+*/
 
 public class Opdracht8Tab extends Tab {
 
+    private ComboBoxEditor comboBoxEditor;
+
     public Opdracht8Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
+        comboBoxEditor = new ComboBoxEditor(sqlConnection);
     }
 
     @Override
-    public JPanel createComponents() {
+    public JPanel createComponents() throws SQLException {
 
         //Setup hoofdpanel
         JPanel hoofdPanel = new JPanel();
         hoofdPanel.setLayout(new BoxLayout(hoofdPanel, BoxLayout.Y_AXIS));
-
-        /*
-        DataPanel - Dropdown Panel, OpdrachtLabel, Table
-        */
 
         //Components
 
@@ -30,24 +49,16 @@ public class Opdracht8Tab extends Tab {
         JPanel dropdownPanel = new JPanel();
         dropdownPanel.setLayout(new FlowLayout());
 
+        JComboBox filmTitelDropdown = null;
+        filmTitelDropdown = comboBoxEditor.fillCombobox(filmTitelDropdown, "FilmTitels");
 
-        String[] accountDropdownItems = new String[]{"The Abominable Bride", "The Life of Brian", "Pulp Fiction", "Pruimebloesem", "Reservoir Dogs", "The Good, the Bad and the Ugly", "Andy Warhol's Dracula", "Ober", "Der Untergang", "De helaasheid der dingen", "A Clockwork Orange"};
-        JComboBox<String> accountDropdown = new JComboBox<>(accountDropdownItems);
 
         dropdownPanel.add(new JLabel("Kies een film"));
-        dropdownPanel.add(accountDropdown);
-        JButton runButton = new JButton("Voer uit!");
-        dropdownPanel.add(runButton);
-
+        dropdownPanel.add(filmTitelDropdown);
 
         hoofdPanel.add(dropdownPanel);
 
         //Info Panel
-        //Het info panel beval een boxlayout waar aan twee labels worden toegevoegd:
-        //De omschrijving van de opdracht en daarboven eventueel een foutmelding label die zichtbaar wordt als er geen gegevens zijn
-        //De boxlayout wordt in een flowlayout gestopt om zo de text mooi te centreren
-        //Het panel met de flowlayout wordt vervolgends als eerste aan de hoofdlayout toegevoegd
-
         JLabel opdrachtLabelPanel = new JLabel();
 
         JLabel opdrachtLabel = new JLabel("Geeft het gemiddeld percentage kijkers en absoluut aantal kijkers die de geselecteerde film afkeken en geeft het totaal aantal kijkers die de film keken.");
@@ -77,7 +88,7 @@ public class Opdracht8Tab extends Tab {
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
-        String[] tableColumnsName = {"FilmID", "Titel", "Percentage gebruikers die de film afkeken", "Aantal gebruikers die de film afkeken", "Totaal aantal kijkers"};
+        String[] tableColumnsName = {"Titel", "Totaal Aantal gebruikers gezien", "Totaal aantal gebruikers helemaal afgezien", "Percentage gebruikers hele film afgekeken"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
@@ -86,8 +97,8 @@ public class Opdracht8Tab extends Tab {
         hoofdPanel.add(tablePanel);
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(accountDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht8", noDataLabel);
-        runButton.addActionListener(clickListener);
+        ClickListener clickListener = new ClickListener(filmTitelDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht8", noDataLabel);
+        filmTitelDropdown.addActionListener(clickListener);
 
         return hoofdPanel;
     }
