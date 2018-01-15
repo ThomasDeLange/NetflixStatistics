@@ -1,21 +1,26 @@
 package View.Tabs;
 
 import Controller.ClickListener;
+import Model.ComboBoxEditor;
 import Model.SqlConnection;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.sql.SQLException;
 
 public class Opdracht6Tab extends Tab {
 
     private SqlConnection sqlConnection;
+    private ComboBoxEditor comboBoxEditor;
 
     public Opdracht6Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
+        this.sqlConnection = sqlConnection;
+        comboBoxEditor = new ComboBoxEditor(sqlConnection);
     }
 
-    public JPanel createComponents() {
+    public JPanel createComponents() throws SQLException {
 
         //Setup hoofdpanel
         JPanel hoofdPanel = new JPanel();
@@ -31,16 +36,11 @@ public class Opdracht6Tab extends Tab {
         JPanel dropdownPanel = new JPanel();
         dropdownPanel.setLayout(new FlowLayout());
 
-
-
-        String[] accountDropdownItems = new String[]{"The Abominable Bride", "The Life of Brian", "Pulp Fiction", "Pruimebloesem", "Reservoir Dogs", "The Good, the Bad and the Ugly", "Andy Warhol's Dracula", "Ober", "Der Untergang", "De helaasheid der dingen", "A Clockwork Orange"};
-        JComboBox<String> accountDropdown = new JComboBox<>(accountDropdownItems);
+        JComboBox filmDropdown = new JComboBox();
+        filmDropdown = comboBoxEditor.fillCombobox(filmDropdown, "FilmTitels");
 
         dropdownPanel.add(new JLabel("Kies een film"));
-        dropdownPanel.add(accountDropdown);
-        JButton runButton = new JButton("Voer uit!");
-        dropdownPanel.add(runButton);
-
+        dropdownPanel.add(filmDropdown);
 
         hoofdPanel.add(dropdownPanel);
 
@@ -68,8 +68,8 @@ public class Opdracht6Tab extends Tab {
         hoofdPanel.add(tablePanel);
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(accountDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht6");
-        runButton.addActionListener(clickListener);
+        ClickListener clickListener = new ClickListener(filmDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht6");
+        filmDropdown.addActionListener(clickListener);
 
         return hoofdPanel;
     }

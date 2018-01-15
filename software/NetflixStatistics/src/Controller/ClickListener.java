@@ -9,6 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /*
 ClickListener
@@ -55,9 +56,19 @@ public class ClickListener implements ActionListener {
     public void actionPerformed(ActionEvent event) {
 
         tableEditor.emptyTable();
-        ResultSet resultSet = taskExecutor.runTask(taskId);
-        if (resultSet != null) {
-            tableEditor.fillTable(resultSet);
+        ResultSet resultSet = null;
+        resultSet = taskExecutor.runTask(taskId);
+
+        try {
+            if (!resultSet.isBeforeFirst() ) {
+                System.out.println("No data");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+
+
+        tableEditor.fillTable(resultSet);
+
     }
 }

@@ -4,6 +4,7 @@ import Model.SqlConnection;
 
 import javax.swing.*;
 import java.awt.*;
+import java.sql.SQLException;
 
 public abstract class Tab {
     private SqlConnection sqlConnection;
@@ -12,7 +13,7 @@ public abstract class Tab {
         this.sqlConnection = sqlConnection;
     }
 
-    public abstract JPanel createComponents();
+    public abstract JPanel createComponents() throws SQLException;
 
     public SqlConnection getSqlConnection() {
         return this.sqlConnection;

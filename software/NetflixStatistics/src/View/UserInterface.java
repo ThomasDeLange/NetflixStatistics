@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.sql.SQLException;
 
 /*
 UI
@@ -46,6 +47,8 @@ public class UserInterface implements Runnable {
             createComponents(frame.getContentPane());
         } catch (ClassNotFoundException | UnsupportedLookAndFeelException | InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
         frame.pack();
@@ -53,7 +56,7 @@ public class UserInterface implements Runnable {
     }
 
 
-    private void createComponents(Container hoofdContainer) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
+    private void createComponents(Container hoofdContainer) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException, SQLException {
         //Font
         Font font = new Font("arial", Font.BOLD, 24);
 

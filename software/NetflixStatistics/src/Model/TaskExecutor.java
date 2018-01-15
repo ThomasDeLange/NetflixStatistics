@@ -4,6 +4,7 @@ import Controller.TableEditor;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /*
 TaskExecutor
@@ -59,7 +60,8 @@ public class TaskExecutor {
                 % van de tijdsduur. Bij elke aflevering worden het volgnummer Èn titel getoond.
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
                         "FROM Bekeken\n" +
                         "INNER JOIN Aflevering\n" +
                         "ON Aflevering.AfleveringID = Bekeken.AfleveringID\n" +
@@ -83,7 +85,8 @@ public class TaskExecutor {
                 deld bekeken % van de tijdsduur.
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Bekeken.AfleveringID, Aflevering.Titel, AVG(Bekeken.ProcentGezien) as gemiddeldBekekenPercentage\n" +
                         "FROM Bekeken\n" +
                         "INNER JOIN Aflevering\n" +
                         "ON Aflevering.AfleveringID = Bekeken.AfleveringID\n" +
@@ -105,7 +108,8 @@ public class TaskExecutor {
                 /*
                 3 Welke films zijn er door een door de gebruiker geselecteerd account bekeken?
                 */
-                resultSet = sqlConnection.executeSql("SELECT DISTINCT Bekeken.AfleveringID, Content.Titel\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT DISTINCT Bekeken.AfleveringID, Content.Titel\n" +
                         "FROM Bekeken\n" +
                         "INNER JOIN Film\n" +
                         "ON Film.AfleveringID = Bekeken.AfleveringID\n" +
@@ -125,7 +129,8 @@ public class TaskExecutor {
                 4 Geef de film met de langste tijdsduur voor kijkers onder 16 jaar.
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT TOP 1 Film.AfleveringID, Content.Titel, Film.Tijdsduur\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT TOP 1 Film.AfleveringID, Content.Titel, Film.Tijdsduur\n" +
                         "FROM Film\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Film.ContentID\n" +
@@ -140,7 +145,8 @@ public class TaskExecutor {
                 5 Geef de accounts met slechts 1 profiel.
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT Profiel.AccountNR, Account.Naam, Profiel.ProfielNaam\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Profiel.AccountNR, Account.Naam, Profiel.ProfielNaam\n" +
                         "FROM Account, Profiel\n" +
                         "WHERE Account.AccountNR = ( SELECT Profiel.AccountNR \n" +
                         "FROM Account\n" +
@@ -160,15 +166,20 @@ public class TaskExecutor {
                 keken?
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien\n" +
                         "FROM Film\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Film.ContentID\n" +
                         "INNER JOIN Bekeken\n" +
                         "ON Bekeken.AfleveringID = Film.AfleveringID\n" +
-                        "WHERE Content.Titel = '" + inputFilm + "'\n" +
+                        "WHERE Content.Titel =" + "'" + inputFilm + "'" + "\n" +
                         "GROUP BY Film.AfleveringID, Bekeken.ProcentGezien, Content.Titel\n" +
-                        "WHERE Bekeken.ProcentGezien = 100");
+                        "HAVING Bekeken.ProcentGezien = 100");
+
+
+
+
                 break;
 
             case "Opdracht7":
@@ -177,7 +188,8 @@ public class TaskExecutor {
                 String inputSerieTitel3 = (String) cbSerie2.getSelectedItem();
 
 
-                resultSet = sqlConnection.executeSql("SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +
+                resultSet = sqlConnection.executeSql("" +
+                        "SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +
                         "FROM Serie\n" +
                         "INNER JOIN Content\n" +
                         "ON Content.ContentID = Serie.ContentID\n" +
