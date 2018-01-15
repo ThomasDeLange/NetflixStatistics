@@ -1,21 +1,25 @@
 package View.Tabs;
 
 import Controller.ClickListener;
+import Model.ComboBoxEditor;
 import Model.SqlConnection;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.sql.SQLException;
 
 public class Opdracht3Tab extends Tab{
 
+    private ComboBoxEditor comboBoxEditor;
 
     public Opdracht3Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
+        comboBoxEditor = new ComboBoxEditor(sqlConnection);
     }
 
     @Override
-    public JPanel createComponents() {
+    public JPanel createComponents() throws SQLException {
 
         //Setup hoofdpanel
         JPanel hoofdPanel = new JPanel();
@@ -31,8 +35,9 @@ public class Opdracht3Tab extends Tab{
         JPanel dropdownPanel = new JPanel();
         dropdownPanel.setLayout(new FlowLayout());
 
-        String[] accountDropdownItems = new String[]{"1215426", "5602533", "5285824"};
-        JComboBox<String> accountDropdown = new JComboBox<>(accountDropdownItems);
+        JComboBox accountDropdown = null;
+        accountDropdown = comboBoxEditor.fillCombobox(accountDropdown, "AccountNRs");
+
 
         dropdownPanel.add(new JLabel("Kies een account"));
         dropdownPanel.add(accountDropdown);

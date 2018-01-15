@@ -18,7 +18,6 @@ TaskExecutor
 public class TaskExecutor {
 
     private SqlConnection sqlConnection;
-    private TableEditor tableEditor;
     private Object input1;
     private Object input2;
 

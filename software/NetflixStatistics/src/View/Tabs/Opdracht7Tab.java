@@ -1,22 +1,26 @@
 package View.Tabs;
 
 import Controller.ClickListener;
+import Model.ComboBoxEditor;
 import Model.SqlConnection;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.sql.SQLException;
 
 public class Opdracht7Tab extends Tab {
 
+    private ComboBoxEditor comboBoxEditor;
     private SqlConnection sqlConnection;
 
     public Opdracht7Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
+        comboBoxEditor = new ComboBoxEditor(sqlConnection);
     }
 
     @Override
-    public JPanel createComponents() {
+    public JPanel createComponents() throws SQLException {
 
         //Setup hoofdpanel
         JPanel hoofdPanel = new JPanel();
@@ -33,9 +37,8 @@ public class Opdracht7Tab extends Tab {
         dropdownPanel.setLayout(new FlowLayout());
 
 
-
-        String[] serieDropdownItems = new String[]{"Fargo", "Breaking Bad", "Sherlock"};
-        JComboBox<String> serieDropdown = new JComboBox<>(serieDropdownItems);
+        JComboBox serieDropdown = null;
+        serieDropdown = comboBoxEditor.fillCombobox(serieDropdown, "SerieTitels");
 
         dropdownPanel.add(new JLabel("Kies een serie"));
         dropdownPanel.add(serieDropdown);
@@ -68,7 +71,7 @@ public class Opdracht7Tab extends Tab {
         hoofdPanel.add(tablePanel);
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(serieDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht7");
+        ClickListener clickListener = new ClickListener(serieDropdown, resultTable, sqlConnection, resultTableModel, "Opdracht7");
         serieDropdown.addActionListener(clickListener);
 
         return hoofdPanel;

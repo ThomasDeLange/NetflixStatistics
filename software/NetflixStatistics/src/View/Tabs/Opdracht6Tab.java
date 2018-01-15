@@ -36,7 +36,7 @@ public class Opdracht6Tab extends Tab {
         JPanel dropdownPanel = new JPanel();
         dropdownPanel.setLayout(new FlowLayout());
 
-        JComboBox filmDropdown = new JComboBox();
+        JComboBox filmDropdown = null;
         filmDropdown = comboBoxEditor.fillCombobox(filmDropdown, "FilmTitels");
 
         dropdownPanel.add(new JLabel("Kies een film"));
@@ -68,7 +68,7 @@ public class Opdracht6Tab extends Tab {
         hoofdPanel.add(tablePanel);
 
         //Clicklistener
-        ClickListener clickListener = new ClickListener(filmDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht6");
+        ClickListener clickListener = new ClickListener(filmDropdown, resultTable, sqlConnection, resultTableModel, "Opdracht6");
         filmDropdown.addActionListener(clickListener);
 
         return hoofdPanel;
