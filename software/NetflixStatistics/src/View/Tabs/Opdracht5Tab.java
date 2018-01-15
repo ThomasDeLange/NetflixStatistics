@@ -40,16 +40,16 @@ public class Opdracht5Tab extends Tab {
         JButton runButton = new JButton("Voer uit!");
 
         //Info Panel
-        JLabel opdrachtLabel = new JLabel("Helaas er is geen data beschikbaar om te laten zien");
+        JLabel opdrachtLabel = new JLabel("Dit overzicht geeft de accounts met één profiel.");
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 
-        JLabel noDataLabel = new JLabel("Helaas met de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas er is geen resultaat voor het overzicht");
         JPanel noDataLabelPanel = new JPanel();
-        noDataLabelPanel.add(noDataLabel);
         noDataLabel.setVisible(false);
         hoofdPanel.add(noDataLabelPanel);
+
 
         //Table
         JPanel tablePanel = new JPanel();

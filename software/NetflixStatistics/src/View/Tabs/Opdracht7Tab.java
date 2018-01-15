@@ -70,6 +70,7 @@ public class Opdracht7Tab extends Tab {
         JLabel noDataLabel = new JLabel("Helaas met de opgegeven zoektermen zijn er geen resultaaten");
         JPanel noDataLabelPanel = new JPanel();
         noDataLabelPanel.add(noDataLabel);
+        hoofdPanel.add(noDataLabelPanel);
 
         //Table
         JPanel tablePanel = new JPanel();

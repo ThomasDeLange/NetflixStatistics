@@ -41,9 +41,8 @@ public class Opdracht4Tab extends Tab {
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 
-        JLabel noDataLabel = new JLabel("Helaas met de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas er is geen resultaat voor het overzicht");
         JPanel noDataLabelPanel = new JPanel();
-        noDataLabelPanel.add(noDataLabel);
         noDataLabel.setVisible(false);
         hoofdPanel.add(noDataLabelPanel);
 
