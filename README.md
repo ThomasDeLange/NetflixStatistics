@@ -13,7 +13,7 @@ Er is geen lokale database nodig omdat deze online wordt gehost.
     6. Geeft de hoeveelheid gebruikers die de geselecteerde film hebben bekeken.
     7. Geeft het gemiddeld bekeken percentage van een aflevering van de geselecteerde serie. (Extra opdracht)
     8. Geeft het gemiddeld percentage kijkers en absoluut aantal kijkers die de geselecteerde film afkeken en geeft het totaal aantal            kijkers die de film keken. (Extra opracht)
-3. Afhankelijk van het overzicht druk je op de "Voer uit!" knop of kies je een serie/film uit het dropdown menu of beide.
+3. Afhankelijk van het overzicht drukt u op de "Voer uit!" knop of kiest u een serie/film uit het dropdown menu of beide.
 4. Na stap 3 zal de opgevraagde informatie in de tabel komen te staan. De tabel is te bewerken en versleepbaar.
 
 # UML Class Diagram
