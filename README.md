@@ -28,4 +28,4 @@ Er is geen lokale database nodig omdat deze online wordt gehost.
 
 # UML Class Diagram
 
-![img](https://raw.githubusercontent.com/ThomasDeLange/NetflixStatistics/master/documentatie/UML_Class_Diagram.png?token=AgYaICetDmwCxpEATbPuoF80X0JcvBNRks5aZkNiwA%3D%3D)
+![img](https://raw.githubusercontent.com/ThomasDeLange/NetflixStatistics/master/documentatie/UML_Class_Diagram.png?token=AgYaIKpfntSba3iEaD64Pa7XolQ2xW3Aks5aZk8LwA%3D%3D)
