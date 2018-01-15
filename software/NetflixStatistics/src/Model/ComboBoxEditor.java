@@ -31,11 +31,19 @@ public class ComboBoxEditor {
                 while (filmTitels.next()) {
                     filmTitelsArray.add(filmTitels.getString(1));
                 }
+
+//                for (int i = 0; i < filmTitelsArray.size(); i++) {
+//                    if (filmTitelsArray.get(i).contains("'")) {
+//                        filmTitelsArray.set(i, filmTitelsArray.get(i).replace("'", "''"));
+//                    }
+//                }
+
+
                 jComboBox = new JComboBox<>(filmTitelsArray.toArray());
 
                 break;
 
-            case "SerieTitels" :
+            case "SerieTitels":
                 ResultSet serieTitels = sqlConnection.executeSql("" +
                         "SELECT DISTINCT Content.Titel\n" +
                         "FROM Content\n" +
@@ -52,12 +60,13 @@ public class ComboBoxEditor {
                 break;
 
 
-            case "AccountNRs" :
+            case "AccountNRs":
                 ResultSet accountNRs = sqlConnection.executeSql("" +
                         "SELECT DISTINCT Account.AccountNR\n" +
                         "FROM Account");
 
                 ArrayList<String> accountsNRsArray = new ArrayList<>();
+
 
                 while (accountNRs.next()) {
                     accountsNRsArray.add(accountNRs.getString(1));
@@ -69,3 +78,4 @@ public class ComboBoxEditor {
         return jComboBox;
     }
 }
+
