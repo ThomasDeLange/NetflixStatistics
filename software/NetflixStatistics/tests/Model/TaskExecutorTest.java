@@ -85,4 +85,14 @@ class TaskExecutorTest {
         ResultSet rs =  taskExecutor.runTask("Opdracht6");
         Assertions.assertNotNull(rs);
     }
+
+    @Test
+    void testTask7ResultSetNotNull() throws SQLException{
+        JComboBox serieDropdown = null;
+        serieDropdown = comboBoxEditor.fillCombobox(serieDropdown, "SerieTitels");
+
+        TaskExecutor taskExecutor = new TaskExecutor(sqlConnection, serieDropdown);
+        ResultSet rs =  taskExecutor.runTask("Opdracht7");
+        Assertions.assertNotNull(rs);
+    }
 }
