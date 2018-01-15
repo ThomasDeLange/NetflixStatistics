@@ -12,14 +12,8 @@ import java.sql.SQLException;
 /*
 UI
 
-run():
-Maakt het eerste frame aan
+Maakt het frame voor alle tabs
 Regelt het afsluiten van het programma
-
-createComponents():
-1. Maakt de hoofdlayout aan
-2. Maakt een tab bar aan en vult die met de opdrachten 1 - 7
-3. Maakt een panel aan met gegevens over de groepsleden, met de achtergrondkleur van netflix
 */
 public class UserInterface implements Runnable {
     private JFrame frame;
@@ -85,7 +79,7 @@ public class UserInterface implements Runnable {
         tabbedPane.add(new Opdracht5Tab(sqlConnection).createComponents(), "Overzicht 5");
         tabbedPane.add(new Opdracht6Tab(sqlConnection).createComponents(), "Overzicht 6");
         tabbedPane.add(new Opdracht7Tab(sqlConnection).createComponents(), "overzicht 7");
-        //tabbedPane.add(new Opdracht8Tab(sqlConnection).createComponents(), "overzicht 8");
+        
 
         //Labels
         JLabel projectNaam = new JLabel("Netflix Statistix   ");

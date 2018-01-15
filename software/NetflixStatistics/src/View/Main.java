@@ -6,8 +6,7 @@ import javax.swing.*;
 
 /*
 Main
-1. Maakt een nieuwe connectie aan met de database zodat die maar een keer gelegd hoeft te worden
-2. Roept de UserInterface aan om een UserInterface te tonen op het scherm
+1. Roept de UserInterface aan om een UserInterface te tonen op het scherm
 
 */
 public class Main {
@@ -18,5 +17,7 @@ public class Main {
 
         UserInterface ui = new UserInterface(sqlConnection);
         SwingUtilities.invokeLater(ui);
+
+
     }
 }

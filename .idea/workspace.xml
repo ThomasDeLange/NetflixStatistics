@@ -34,8 +34,8 @@
       <file leaf-file-name="Opdracht3Tab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht3Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="249">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -44,8 +44,8 @@
       <file leaf-file-name="Opdracht4Tab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht4Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -54,9 +54,11 @@
       <file leaf-file-name="Opdracht2Tab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht2Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="54" column="126" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="126" />
+              <folding>
+                <marker date="1516034925081" expanded="true" signature="2340:2644" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,18 +66,20 @@
       <file leaf-file-name="Opdracht1Tab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht1Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="44" column="90" lean-forward="false" selection-start-line="44" selection-start-column="90" selection-end-line="44" selection-end-column="90" />
+              <folding>
+                <marker date="1516033998942" expanded="true" signature="1942:2207" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Opdracht5Tab.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht5Tab.java">
+      <file leaf-file-name="TableEditor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/Controller/TableEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,11 +87,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Opdracht6Tab.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Opdracht5Tab.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht5Tab.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Opdracht6Tab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht6Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="56" column="47" lean-forward="false" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+            <state relative-caret-position="323">
+              <caret line="56" column="47" lean-forward="true" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -96,27 +112,30 @@
       <file leaf-file-name="Opdracht7Tab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht7Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-              <folding>
-                <marker date="1516045697473" expanded="true" signature="620:3282" ph="{...}" />
-                <marker date="1516045697473" expanded="true" signature="856:912" ph="//..." />
-                <marker date="1516045697473" expanded="true" signature="1291:1705" ph="//..." />
-              </folding>
+            <state relative-caret-position="421">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="352">
+              <caret line="74" column="75" lean-forward="true" selection-start-line="74" selection-start-column="75" selection-end-line="74" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Opdracht8Tab.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht8Tab.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
               <folding>
-                <element signature="e#755#1214#0" expanded="true" />
-                <element signature="e#1213#1214#0" expanded="true" />
-                <marker date="1516045697477" expanded="true" signature="3661:4709" ph="//..." />
-                <marker date="1516045697477" expanded="false" signature="4746:4757" ph=" { " />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,10 +226,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="112" />
-    <option name="y" value="135" />
+    <option name="x" value="1055" />
+    <option name="y" value="554" />
     <option name="width" value="1736" />
-    <option name="height" value="923" />
+    <option name="height" value="926" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -228,6 +247,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,13 +261,30 @@
             <path>
               <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
               <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
               <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NetflixStatistics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NetflixStatistics" type="b2602c69:ProjectViewProjectNode" />
@@ -263,10 +303,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -447,15 +483,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49076000" />
+    <option name="totallyTimeSpent" value="49074000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="112" y="135" width="1736" height="923" extended-state="0" />
+    <frame x="1055" y="554" width="1736" height="926" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39517152" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3248731" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -463,11 +499,11 @@
       <window_info id="TMC Test Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32395834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32405064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47613364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31443915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TMC Project List" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="UML design tool window" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
@@ -478,35 +514,11 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="TMC Test Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3248731" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32405064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31443915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TMC Project List" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UML design tool window" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -662,6 +674,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -693,6 +706,8 @@
           <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -722,18 +737,6 @@
               <point x="322.80685483870957" y="478.0" />
               <point x="-77.25" y="103.5" />
             </edge>
-            <edge source="View.UserInterface" target="View.Tabs.Opdracht6Tab">
-              <point x="21.33333333333337" y="-81.5" />
-              <point x="881.3611559139786" y="984.0" />
-              <point x="1043.5625" y="984.0" />
-              <point x="0.0" y="48.5" />
-            </edge>
-            <edge source="Controller.ClickListener" target="Controller.TableEditor">
-              <point x="-98.0" y="-114.5" />
-              <point x="273.43185483870957" y="468.0" />
-              <point x="169.0625" y="468.0" />
-              <point x="0.0" y="70.5" />
-            </edge>
             <edge source="View.Tabs.Opdracht1Tab" target="Controller.ClickListener">
               <point x="-87.75000000000006" y="-37.0" />
               <point x="376.6875" y="827.0" />
@@ -759,32 +762,6 @@
               <point x="400.05685483870957" y="191.0" />
               <point x="624.3125" y="191.0" />
               <point x="-96.75" y="70.0" />
-            </edge>
-            <edge source="View.Tabs.Opdracht3Tab" target="Controller.ClickListener">
-              <point x="-29.25" y="-37.0" />
-              <point x="760.3125" y="797.0" />
-              <point x="463.30685483870957" y="797.0" />
-              <point x="91.875" y="114.5" />
-            </edge>
-            <edge source="View.Tabs.Tab" target="Model.SqlConnection">
-              <point x="63.25" y="-59.5" />
-              <point x="853.4668010752688" y="478.0" />
-              <point x="754.3693548387096" y="478.0" />
-              <point x="754.3693548387096" y="211.0" />
-              <point x="731.8125" y="211.0" />
-              <point x="10.75" y="70.0" />
-            </edge>
-            <edge source="View.Tabs.Opdracht1Tab" target="View.Tabs.Tab">
-              <point x="87.74999999999994" y="-37.0" />
-              <point x="552.1875" y="847.0" />
-              <point x="758.5918010752688" y="847.0" />
-              <point x="-31.625" y="59.5" />
-            </edge>
-            <edge source="View.Tabs.Opdracht2Tab" target="View.Tabs.Tab">
-              <point x="87.75" y="-37.0" />
-              <point x="204.75" y="837.0" />
-              <point x="695.3418010752688" y="837.0" />
-              <point x="-94.875" y="59.5" />
             </edge>
             <edge source="View.UserInterface" target="Model.SqlConnection">
               <point x="64.0" y="-81.5" />
@@ -814,16 +791,68 @@
               <point x="585.8068548387096" y="777.0" />
               <point x="214.375" y="114.5" />
             </edge>
-            <edge source="View.UserInterface" target="View.Tabs.Opdracht1Tab">
-              <point x="-64.0" y="-81.5" />
-              <point x="796.0278225806452" y="994.0" />
-              <point x="464.43750000000006" y="994.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
             <edge source="View.UserInterface" target="View.Tabs.Opdracht2Tab">
               <point x="-106.66666666666663" y="-81.5" />
               <point x="753.3611559139786" y="1004.0" />
               <point x="117.0" y="1004.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="View.Tabs.Opdracht3Tab" target="Model.SqlConnection">
+              <point x="87.75" y="-37.0" />
+              <point x="877.3125" y="847.0" />
+              <point x="943.6193548387096" y="847.0" />
+              <point x="943.6193548387096" y="201.0" />
+              <point x="753.3125" y="201.0" />
+              <point x="32.25" y="70.0" />
+            </edge>
+            <edge source="View.Tabs.Opdracht2Tab" target="Controller.ClickListener">
+              <point x="-29.25" y="-37.0" />
+              <point x="87.75" y="817.0" />
+              <point x="157.05685483870957" y="817.0" />
+              <point x="-214.375" y="114.5" />
+            </edge>
+            <edge source="View.UserInterface" target="View.Tabs.Opdracht6Tab">
+              <point x="21.33333333333337" y="-81.5" />
+              <point x="881.3611559139786" y="984.0" />
+              <point x="1043.5625" y="984.0" />
+              <point x="0.0" y="48.5" />
+            </edge>
+            <edge source="Controller.ClickListener" target="Controller.TableEditor">
+              <point x="-98.0" y="-114.5" />
+              <point x="273.43185483870957" y="468.0" />
+              <point x="169.0625" y="468.0" />
+              <point x="0.0" y="70.5" />
+            </edge>
+            <edge source="View.Tabs.Opdracht3Tab" target="Controller.ClickListener">
+              <point x="-29.25" y="-37.0" />
+              <point x="760.3125" y="797.0" />
+              <point x="463.30685483870957" y="797.0" />
+              <point x="91.875" y="114.5" />
+            </edge>
+            <edge source="View.Tabs.Tab" target="Model.SqlConnection">
+              <point x="63.25" y="-59.5" />
+              <point x="853.4668010752688" y="478.0" />
+              <point x="754.3693548387096" y="478.0" />
+              <point x="754.3693548387096" y="211.0" />
+              <point x="731.8125" y="211.0" />
+              <point x="10.75" y="70.0" />
+            </edge>
+            <edge source="View.Tabs.Opdracht1Tab" target="View.Tabs.Tab">
+              <point x="87.74999999999994" y="-37.0" />
+              <point x="552.1875" y="847.0" />
+              <point x="758.5918010752688" y="847.0" />
+              <point x="-31.625" y="59.5" />
+            </edge>
+            <edge source="View.Tabs.Opdracht2Tab" target="View.Tabs.Tab">
+              <point x="87.75" y="-37.0" />
+              <point x="204.75" y="837.0" />
+              <point x="695.3418010752688" y="837.0" />
+              <point x="-94.875" y="59.5" />
+            </edge>
+            <edge source="View.UserInterface" target="View.Tabs.Opdracht1Tab">
+              <point x="-64.0" y="-81.5" />
+              <point x="796.0278225806452" y="994.0" />
+              <point x="464.43750000000006" y="994.0" />
               <point x="0.0" y="37.0" />
             </edge>
             <edge source="View.Tabs.Opdracht6Tab" target="View.Tabs.Tab">
@@ -854,22 +883,8 @@
               <point x="789.5625" y="984.0" />
               <point x="0.0" y="37.0" />
             </edge>
-            <edge source="View.Tabs.Opdracht3Tab" target="Model.SqlConnection">
-              <point x="87.75" y="-37.0" />
-              <point x="877.3125" y="847.0" />
-              <point x="943.6193548387096" y="847.0" />
-              <point x="943.6193548387096" y="201.0" />
-              <point x="753.3125" y="201.0" />
-              <point x="32.25" y="70.0" />
-            </edge>
-            <edge source="View.Tabs.Opdracht2Tab" target="Controller.ClickListener">
-              <point x="-29.25" y="-37.0" />
-              <point x="87.75" y="817.0" />
-              <point x="157.05685483870957" y="817.0" />
-              <point x="-214.375" y="114.5" />
-            </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.7522783761391881" x="-411.0" y="189.0" />
+          <settings layout="Hierarchic Group" zoom="0.7522783761391881" x="-410.96916299559473" y="189.03083700440527" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
@@ -885,6 +900,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="166" column="4" lean-forward="false" selection-start-line="166" selection-start-column="4" selection-end-line="166" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -893,6 +911,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -910,6 +929,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -927,6 +949,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -934,45 +957,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht2Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="54" column="126" lean-forward="false" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="126" />
+          <folding>
+            <marker date="1516034925081" expanded="true" signature="2340:2644" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht1Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="272">
+          <caret line="44" column="90" lean-forward="false" selection-start-line="44" selection-start-column="90" selection-end-line="44" selection-end-column="90" />
+          <folding>
+            <marker date="1516033998942" expanded="true" signature="1942:2207" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht3Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="249">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht4Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht5Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -981,21 +1011,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht6Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="56" column="47" lean-forward="false" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+        <state relative-caret-position="323">
+          <caret line="56" column="47" lean-forward="true" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/Tabs/Opdracht7Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding>
-            <marker date="1516045697473" expanded="true" signature="620:3282" ph="{...}" />
-            <marker date="1516045697473" expanded="true" signature="856:912" ph="//..." />
-            <marker date="1516045697473" expanded="true" signature="1291:1705" ph="//..." />
-          </folding>
+        <state relative-caret-position="421">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1003,19 +1029,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/software/NetflixStatistics/src/View/UserInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="e#755#1214#0" expanded="true" />
-            <element signature="e#1213#1214#0" expanded="true" />
-            <marker date="1516045697477" expanded="true" signature="3661:4709" ph="//..." />
-            <marker date="1516045697477" expanded="false" signature="4746:4757" ph=" { " />
-          </folding>
+        <state relative-caret-position="352">
+          <caret line="74" column="75" lean-forward="true" selection-start-line="74" selection-start-column="75" selection-end-line="74" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
