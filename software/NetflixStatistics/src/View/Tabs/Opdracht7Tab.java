@@ -64,8 +64,12 @@ public class Opdracht7Tab extends Tab {
         JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
         noDataLabel.setVisible(false);
 
+<<<<<<< HEAD
+        JLabel opdrachtLabel = new JLabel("Geeft het gemiddeld bekeken percentage van een aflevering van de geselecteerde serie.");
+=======
         infoLabelPanelBox.add(noDataLabel);
         infoLabelPanelBox.add(opdrachtLabel);
+>>>>>>> 75d0db83f20579265aa93e553005d467a4eae36f
 
         infoLabelPanelFlow.add(infoLabelPanelBox);
         hoofdPanel.add(infoLabelPanelFlow);
@@ -77,7 +81,11 @@ public class Opdracht7Tab extends Tab {
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
+<<<<<<< HEAD
         String[] tableColumnsName = {"Serie", "Seizoen", "Totaal gemiddeld gezien in %"};
+=======
+        String[] tableColumnsName = {"AfleveringID", "Titel", "Percentage gemiddeld bekeken"};
+>>>>>>> e5d69bfcab0dd8ccec5758d08ef5eae02a55ef55
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
