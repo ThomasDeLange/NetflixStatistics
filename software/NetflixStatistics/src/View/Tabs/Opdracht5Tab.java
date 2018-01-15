@@ -43,11 +43,6 @@ public class Opdracht5Tab extends Tab {
         //De boxlayout wordt in een flowlayout gestopt om zo de text mooi te centreren
         //Het panel met de flowlayout wordt vervolgends als eerste aan de hoofdlayout toegevoegd
 
-<<<<<<< HEAD
-        JLabel opdrachtLabel = new JLabel("Geeft de accounts met slechts 1 profiel.");
-        opdrachtLabelPanel.add(opdrachtLabel);
-        hoofdPanel.add(opdrachtLabelPanel);
-=======
 
         JPanel infoLabelPanelFlow = new JPanel();
         infoLabelPanelFlow.setLayout(new FlowLayout());
@@ -63,11 +58,6 @@ public class Opdracht5Tab extends Tab {
 
         infoLabelPanelBox.add(noDataLabel);
         infoLabelPanelBox.add(opdrachtLabel);
-
-        infoLabelPanelFlow.add(infoLabelPanelBox);
-        hoofdPanel.add(infoLabelPanelFlow);
->>>>>>> 75d0db83f20579265aa93e553005d467a4eae36f
-
         //Table
         JPanel tablePanel = new JPanel();
         tablePanel.setLayout(new FlowLayout());

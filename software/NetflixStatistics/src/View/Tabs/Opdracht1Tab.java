@@ -43,12 +43,6 @@ public class Opdracht1Tab extends Tab {
         dropdownPanel.add(serieDropdown);
         hoofdPanel.add(dropdownPanel);
 
-<<<<<<< HEAD
-        //OpdrachtLabel
-        JPanel opdrachtLabelPanel = new JPanel();
-        opdrachtLabelPanel.setLayout(new FlowLayout());
-        JLabel opdrachtLabel = new JLabel("Geeft per aflevering het gemiddeld bekeken percentage van de tijdsduur.");
-=======
         //Info Panel
         //Het info panel beval een boxlayout waar aan twee labels worden toegevoegd:
         //De omschrijving van de opdracht en daarboven eventueel een foutmelding label die zichtbaar wordt als er geen gegevens zijn
@@ -64,16 +58,12 @@ public class Opdracht1Tab extends Tab {
 
 
         JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde account en serie, geef per aflevering het gemiddeld bekeken % van de tijdsduur.");
->>>>>>> 75d0db83f20579265aa93e553005d467a4eae36f
 
         JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
         noDataLabel.setVisible(false);
 
         infoLabelPanelBox.add(noDataLabel);
         infoLabelPanelBox.add(opdrachtLabel);
-
-        infoLabelPanelFlow.add(infoLabelPanelBox);
-        hoofdPanel.add(infoLabelPanelFlow);
 
         //Table
         JPanel tablePanel = new JPanel();
