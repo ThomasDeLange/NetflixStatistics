@@ -25,8 +25,7 @@ public class UserInterface implements Runnable {
 
     @Override
     public void run() {
-        frame = new JFrame("NetflixStatistics");
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame = new JFrame("Netflix Statistix");
         frame.setMinimumSize(new Dimension(750, 400));
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frame.addWindowListener(new WindowAdapter() {
