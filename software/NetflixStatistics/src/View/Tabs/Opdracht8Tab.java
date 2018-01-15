@@ -72,7 +72,7 @@ public class Opdracht8Tab extends Tab {
         infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
 
 
-        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas voor de opgegeven zoektermen zijn er geen resultaten");
         noDataLabel.setVisible(false);
 
         infoLabelPanelBox.add(noDataLabel);

@@ -72,7 +72,7 @@ public class Opdracht2Tab extends Tab {
 
         JLabel opdrachtLabel = new JLabel("Dit overzicht toont het gemiddeld bekeken percentage van een gekoze serie, voor een gekozen account.");
 
-        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas voor de opgegeven zoektermen zijn er geen resultaten");
         noDataLabel.setVisible(false);
 
         infoLabelPanelBox.add(noDataLabel);

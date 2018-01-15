@@ -65,7 +65,7 @@ public class Opdracht3Tab extends Tab{
 
         JLabel opdrachtLabel = new JLabel("Dit overzicht toont alle films die door een geselecteerde gebruiker is bekeken.");
 
-        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas voor de opgegeven zoektermen zijn er geen resultaten");
         noDataLabel.setVisible(false);
 
         infoLabelPanelBox.add(noDataLabel);
