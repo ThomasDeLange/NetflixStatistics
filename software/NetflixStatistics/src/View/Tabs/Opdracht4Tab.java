@@ -26,8 +26,6 @@ public class Opdracht4Tab extends Tab{
         buttonPanel.setLayout(new FlowLayout());
         hoofdPanel.add(buttonPanel, BorderLayout.NORTH);
 
-
-
         //Button
         JButton runButton = new JButton("Voer uit!");
         buttonPanel.add(runButton);
