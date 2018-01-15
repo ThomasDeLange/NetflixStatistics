@@ -69,7 +69,7 @@ public class Opdracht3Tab extends Tab{
 
         //Table
         JPanel tablePanel = new JPanel();
-        tablePanel.setLayout(new FlowLayout());
+        tablePanel.setLayout(new GridLayout(1,1));
 
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
@@ -81,6 +81,9 @@ public class Opdracht3Tab extends Tab{
         tablePanel.add(resultTable);
         tablePanel.add(new JScrollPane(resultTable));
         hoofdPanel.add(tablePanel);
+
+        resultTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS); 
+
 
         //Clicklistener
         ClickListener clickListener = new ClickListener(accountDropdown,resultTable, super.getSqlConnection(), resultTableModel, "Opdracht3", noDataLabel);

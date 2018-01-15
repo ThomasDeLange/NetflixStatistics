@@ -58,7 +58,6 @@ public class Opdracht8Tab extends Tab {
         hoofdPanel.add(dropdownPanel);
 
         //Info Panel
-
         JLabel opdrachtLabel = new JLabel("Geeft het gemiddeld percentage kijkers en absoluut aantal kijkers die de geselecteerde film afkeken en geeft het totaal aantal kijkers die de film keken.");
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.add(opdrachtLabel);
@@ -72,7 +71,7 @@ public class Opdracht8Tab extends Tab {
 
         //Table
         JPanel tablePanel = new JPanel();
-        tablePanel.setLayout(new FlowLayout());
+        tablePanel.setLayout(new GridLayout(1,1));
 
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
@@ -84,6 +83,8 @@ public class Opdracht8Tab extends Tab {
         tablePanel.add(resultTable);
         tablePanel.add(new JScrollPane(resultTable));
         hoofdPanel.add(tablePanel);
+
+        resultTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 
         //Clicklistener
         ClickListener clickListener = new ClickListener(filmTitelDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht8", noDataLabel);

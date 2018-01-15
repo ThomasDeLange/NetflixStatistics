@@ -57,7 +57,8 @@ public class Opdracht1Tab extends Tab {
         dropdownPanel.add(serieDropdown);
         hoofdPanel.add(dropdownPanel);
 
-        //Info PaneJLabel opdrachtLabel = new JLabel("Dit overzicht toont het gemiddeld bekeken percentage van een gekoze serie.");
+        //Info Panel
+        JLabel opdrachtLabel = new JLabel("Dit overzicht toont het gemiddeld bekeken percentage van een gekoze serie.");
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
@@ -70,7 +71,7 @@ public class Opdracht1Tab extends Tab {
 
         //Table
         JPanel tablePanel = new JPanel();
-        tablePanel.setLayout(new FlowLayout());
+        tablePanel.setLayout(new GridLayout(1,1));
 
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
@@ -82,6 +83,9 @@ public class Opdracht1Tab extends Tab {
         tablePanel.add(resultTable);
         tablePanel.add(new JScrollPane(resultTable));
         hoofdPanel.add(tablePanel);
+
+        resultTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+
 
         //Clicklistener
         ClickListener clickListener = new ClickListener(serieDropdown, resultTable, super.getSqlConnection(), resultTableModel, "Opdracht1",noDataLabel );

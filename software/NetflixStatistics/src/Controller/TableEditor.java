@@ -2,6 +2,9 @@ package Controller;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumnModel;
+import java.awt.*;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -59,6 +62,9 @@ public class TableEditor {
         tableModel.getDataVector().removeAllElements();
         tableModel.fireTableDataChanged();
     }
+
+
+
 }
 
 
