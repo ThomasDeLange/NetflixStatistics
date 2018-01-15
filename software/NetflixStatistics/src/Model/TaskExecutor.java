@@ -191,7 +191,7 @@ public class TaskExecutor {
                         "ON Serie.ContentID = Content.ContentID\n" +
                         "GROUP BY Serie.ContentID) as TotaalBekeken\n" +
                         "ON TotaalBekeken.ContentIDTotaal = Content.ContentID\n" +
-                        "HAVING Content.Titel =" + "'" + inputSerieTitel3 + "'");
+                        "WHERE Content.Titel =" + "'" + inputSerieTitel3 + "'");
 
 
                 break;
