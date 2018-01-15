@@ -22,17 +22,14 @@ public class Opdracht4Tab extends Tab {
         //Buttonpanel
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new FlowLayout());
-<<<<<<< HEAD
 
 
         hoofdPanel.add(buttonPanel, BorderLayout.NORTH);
 
         //Button
 
-=======
         hoofdPanel.add(buttonPanel);
 
->>>>>>> Opdrachten-1-7
         hoofdPanel.add(buttonPanel);
 
 
