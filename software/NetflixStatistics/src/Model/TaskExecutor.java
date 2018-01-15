@@ -5,11 +5,16 @@ import java.sql.ResultSet;
 
 /*
 TaskExecutor
-1. Ontvangt van ClickListener een taskId
+
+Constructor:
+1. Drie verschillende constructors voor respectievelijk geen, 1 of 2 inputvelden
+
+runTask():
+1. Ontvangt  een taskId
 2. Zoekt de bijbehorende sql querry bij de taskId
 3. Stuurt de sql querry naar DatabaseController
 4. Krijgt het resultaat van de sql querry terug van de DatabaseController in een ResultSet
-5. Geeft de ResultSet terug aan de ClickListener
+5. Returned het resultaat
 
  */
 public class TaskExecutor {

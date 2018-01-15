@@ -8,8 +8,16 @@ import java.sql.Statement;
 /*
 SQL connection
 
-Zet de connectie op
-Disconnect met de database
+connectDatabase():
+1. Probeert een verbinding te maken met de database aan de hand van een connection string die meegegeven wordt
+
+disconnectDatabase()
+1. Kan de verbinding weer sluiten met de database
+
+executeSql():
+1. Ontvangt een sql querry
+2. Voert de querry uit op de database
+3. Returned een resultset
 
 Voert sql uit met en zonder restultaat
 
@@ -55,14 +63,5 @@ public class SqlConnection {
         return resultSet;
     }
 
-    //voert sql uit die toevoegd of detete
-    public boolean executeSqlNoResult(String sqlQuery) {
-        try {
-            Statement statement = this.connection.createStatement();
-            return statement.execute(sqlQuery);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        return false;
-    }
+
 }

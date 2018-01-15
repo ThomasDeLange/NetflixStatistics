@@ -5,6 +5,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/*
+ComboBoxEditor
+
+Consturctor:
+1. Ontvangt een JComboBox en een string met informatie wat in de combo box gestopt moet worden
+
+fillCombobox():
+1. Switched met welke gegevens de combobox gevuld moet worden
+2. Als de fillWith overeenkomt met een case wordt de resultset opgehaald met de gegevens die in de combobox moeten
+3. De resultSet waarde voor waarde omgezet naar een array
+4. De methode returned dezefde combobox maar dan gevuld met de goede data
+ */
+
+
 public class ComboBoxEditor {
 
     private JComboBox jComboBox;
@@ -31,13 +45,6 @@ public class ComboBoxEditor {
                 while (filmTitels.next()) {
                     filmTitelsArray.add(filmTitels.getString(1));
                 }
-
-//                for (int i = 0; i < filmTitelsArray.size(); i++) {
-//                    if (filmTitelsArray.get(i).contains("'")) {
-//                        filmTitelsArray.set(i, filmTitelsArray.get(i).replace("'", "''"));
-//                    }
-//                }
-
 
                 jComboBox = new JComboBox<>(filmTitelsArray.toArray());
 
