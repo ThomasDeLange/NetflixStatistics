@@ -4,22 +4,20 @@ import Controller.ClickListener;
 import Model.SqlConnection;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-public class Opdracht4Tab extends Tab{
+public class Opdracht4Tab extends Tab {
 
     public Opdracht4Tab(SqlConnection sqlConnection) {
         super(sqlConnection);
-
     }
 
     public JPanel createComponents() {
 
         //Hoofdpanel
         JPanel hoofdPanel = new JPanel();
-        hoofdPanel.setLayout(new BorderLayout());
+        hoofdPanel.setLayout(new BoxLayout(hoofdPanel, BoxLayout.Y_AXIS));
 
         //Buttonpanel
         JPanel buttonPanel = new JPanel();
@@ -29,13 +27,23 @@ public class Opdracht4Tab extends Tab{
 
         //Button
 =======
+        hoofdPanel.add(buttonPanel);
+
 >>>>>>> Opdracht-1.7
         JButton runButton = new JButton("Voer uit!");
         buttonPanel.add(runButton);
 
+        //Opdracht
+        JPanel opdrachtLabelPanel = new JPanel();
+        opdrachtLabelPanel.setLayout(new FlowLayout());
+
+        JLabel opdrachtLabel = new JLabel("Geef de film met de langste tijdsduur voor kijkers onder 16 jaar");
+        opdrachtLabelPanel.add(opdrachtLabel);
+        hoofdPanel.add(opdrachtLabelPanel);
+
         //Table
         JPanel tablePanel = new JPanel();
-        tablePanel.setLayout(new BorderLayout());
+        tablePanel.setLayout(new FlowLayout());
 
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
@@ -44,13 +52,10 @@ public class Opdracht4Tab extends Tab{
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
-        tablePanel.add(resultTable, BorderLayout.CENTER);
+        tablePanel.add(resultTable);
         tablePanel.add(new JScrollPane(resultTable));
-
-        //Opdracht
-        tablePanel.setBorder(BorderFactory.createTitledBorder("Geef de film met de langste tijdsduur voor kijkers onder 16 jaar"));
-
         hoofdPanel.add(tablePanel);
+
 
         //Clicklistener
         ClickListener clickListener = new ClickListener(resultTable, super.getSqlConnection(), resultTableModel, "Opdracht4");
