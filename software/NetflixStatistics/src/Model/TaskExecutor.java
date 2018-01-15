@@ -197,7 +197,7 @@ public class TaskExecutor {
                 JComboBox cbSerie3 = ((JComboBox) input1);
                 String inputSerieTitel3 = (String) cbSerie3.getSelectedItem();
 
-                 inputSerieTitel3 = makeStringSqlReady(inputSerieTitel3);
+                inputSerieTitel3 = makeStringSqlReady(inputSerieTitel3);
 
                 resultSet = sqlConnection.executeSql("" +
                         "SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +

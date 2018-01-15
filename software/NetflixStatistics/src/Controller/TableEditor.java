@@ -39,6 +39,7 @@ public class TableEditor {
         tableModel.getDataVector().removeAllElements();
         tableModel.fireTableDataChanged();
     }
+
 }
 
 
