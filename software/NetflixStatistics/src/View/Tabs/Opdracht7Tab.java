@@ -46,8 +46,7 @@ public class Opdracht7Tab extends Tab {
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde serie, geef het gemiddeld bekeken % van de tijdsduur van die serie als geheel \n" +
-                "(d.w.z. alle afleveringen van die serie)");
+        JLabel opdrachtLabel = new JLabel("Geeft het gemiddeld bekeken percentage van een aflevering van de geselecteerde serie.");
 
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
@@ -59,7 +58,7 @@ public class Opdracht7Tab extends Tab {
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
-        String[] tableColumnsName = {"FilmID", "Titel", "Aantal gebruikers"};
+        String[] tableColumnsName = {"AfleveringID", "Titel", "Percentage gemiddeld bekeken"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 

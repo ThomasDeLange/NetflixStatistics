@@ -47,7 +47,7 @@ public class Opdracht8Tab extends Tab {
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde film, hoeveel procent van de kijkers hebben deze in z’n geheel bekeken? Geeft hierbij ook het absolute aantal kijkers dat deze film helemaal afkeek en het totaal aantal kijkers.");
+        JLabel opdrachtLabel = new JLabel("Geeft het gemiddeld percentage kijkers en absoluut aantal kijkers die de geselecteerde film afkeken en geeft het totaal aantal kijkers die de film keken.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 
@@ -58,7 +58,7 @@ public class Opdracht8Tab extends Tab {
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
-        String[] tableColumnsName = {"FilmID", "Titel", "Aantal gebruikers"};
+        String[] tableColumnsName = {"FilmID", "Titel", "Percentage gebruikers die de film afkeken", "Aantal gebruikers die de film afkeken", "Totaal aantal kijkers"};
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 

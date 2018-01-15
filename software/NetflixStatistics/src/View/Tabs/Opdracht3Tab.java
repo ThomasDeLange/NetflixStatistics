@@ -47,7 +47,7 @@ public class Opdracht3Tab extends Tab{
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Welke films zijn er door een door de gebruiker geselecteerd account bekeken?");
+        JLabel opdrachtLabel = new JLabel("Geeft de films die door het geselecteerde account zijn bekeken.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 

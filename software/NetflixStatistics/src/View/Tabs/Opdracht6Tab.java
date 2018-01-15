@@ -48,7 +48,7 @@ public class Opdracht6Tab extends Tab {
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in zín geheel bekeken?");
+        JLabel opdrachtLabel = new JLabel("Geeft de hoeveelheid gebruikers die de geselecteerde film hebben bekeken.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 

@@ -41,7 +41,7 @@ public class Opdracht5Tab extends Tab {
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Geef de accounts met slechts 1 profiel.");
+        JLabel opdrachtLabel = new JLabel("Geeft de accounts met slechts 1 profiel.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 

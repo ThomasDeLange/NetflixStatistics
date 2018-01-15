@@ -45,7 +45,7 @@ public class Opdracht4Tab extends Tab {
         JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.setLayout(new FlowLayout());
 
-        JLabel opdrachtLabel = new JLabel("Geef de film met de langste tijdsduur voor kijkers onder 16 jaar");
+        JLabel opdrachtLabel = new JLabel("Geeft de film met de langste tijdsduur voor kijkers onder 16 jaar.");
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 
