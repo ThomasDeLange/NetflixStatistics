@@ -18,6 +18,12 @@ Er is geen lokale database nodig omdat deze online wordt gehost.
 3. Afhankelijk van het overzicht drukt u op de "Voer uit!" knop of kiest u een serie/film uit het dropdown menu of beide.
 4. Na stap 3 zal de opgevraagde informatie in de tabel komen te staan. De tabel is te bewerken en versleepbaar.
 
+# Tests uitvoeren
+1. Open Project Structure
+2. Klik op Libraries
+3. Voeg de library "org.junit.jupiter:junit-jupiter-api:5.0.2" toe met Maven
+4. Druk op OK en Apply.
+
 # UML Class Diagram
 
 ![img](https://raw.githubusercontent.com/ThomasDeLange/NetflixStatistics/master/documentatie/UML_Class_Diagram.png?token=AgYaICetDmwCxpEATbPuoF80X0JcvBNRks5aZkNiwA%3D%3D)
