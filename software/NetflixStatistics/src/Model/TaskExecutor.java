@@ -140,12 +140,14 @@ public class TaskExecutor {
                 5 Geef de accounts met slechts 1 profiel.
                 */
 
-                resultSet = sqlConnection.executeSql("SELECT Account.AccountNR, Account.Naam, Profiel.ProfielNaam\n" +
+                resultSet = sqlConnection.executeSql("SELECT Profiel.AccountNR, Account.Naam, Profiel.ProfielNaam\n" +
+                        "FROM Account, Profiel\n" +
+                        "WHERE Account.AccountNR = ( SELECT Profiel.AccountNR \n" +
                         "FROM Account\n" +
                         "INNER JOIN Profiel\n" +
                         "ON Profiel.AccountNR = Account.AccountNR\n" +
-                        "GROUP BY Profiel.AccountNR, Account.AccountNR, Account.Naam, Profiel.ProfielNaam\n" +
-                        "HAVING COUNT(Profiel.AccountNR) = 1");
+                        "GROUP BY Profiel.AccountNR\n" +
+                        "HAVING COUNT(Profiel.ProfielNaam) = 1)");
                 break;
 
             case "Opdracht6":
@@ -157,6 +159,7 @@ public class TaskExecutor {
                 6 Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in zín geheel be-
                 keken?
                 */
+
                 System.out.println(inputFilm);
                 resultSet = sqlConnection.executeSql("SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien\n" +
                         "FROM Film\n" +
