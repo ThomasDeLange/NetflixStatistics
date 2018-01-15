@@ -62,30 +62,16 @@ public class Opdracht7Tab extends Tab {
         hoofdPanel.add(dropdownPanel);
 
         //Info Panel
-        //Het info panel beval een boxlayout waar aan twee labels worden toegevoegd:
-        //De omschrijving van de opdracht en daarboven eventueel een foutmelding label die zichtbaar wordt als er geen gegevens zijn
-        //De boxlayout wordt in een flowlayout gestopt om zo de text mooi te centreren
-        //Het panel met de flowlayout wordt vervolgends als eerste aan de hoofdlayout toegevoegd
-
-
-        JPanel infoLabelPanelFlow = new JPanel();
-        infoLabelPanelFlow.setLayout(new FlowLayout());
-
-        JPanel infoLabelPanelBox = new JPanel();
-        infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
-
-
         JLabel opdrachtLabel = new JLabel("Dit overzicht toont voor een geselecteerde serie het totaal en gemiddeld bekeken persentage van alle afleveringen van die serie.");
+        JPanel opdrachtLabelPanel = new JPanel();
+        opdrachtLabelPanel.add(opdrachtLabel);
+        hoofdPanel.add(opdrachtLabelPanel);
 
-        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas met de opgegeven zoektermen zijn er geen resultaaten");
+        JPanel noDataLabelPanel = new JPanel();
+        noDataLabelPanel.add(noDataLabel);
         noDataLabel.setVisible(false);
-
-        infoLabelPanelBox.add(noDataLabel);
-        infoLabelPanelBox.add(opdrachtLabel);
-
-        infoLabelPanelFlow.add(infoLabelPanelBox);
-        hoofdPanel.add(infoLabelPanelFlow);
-
+        hoofdPanel.add(noDataLabelPanel);
 
         //Table
         JPanel tablePanel = new JPanel();

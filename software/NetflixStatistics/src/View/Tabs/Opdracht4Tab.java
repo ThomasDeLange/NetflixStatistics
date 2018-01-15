@@ -36,23 +36,16 @@ public class Opdracht4Tab extends Tab {
         JButton runButton = new JButton("Voer uit!");
 
         //Info Panel
-        JPanel infoLabelPanelFlow = new JPanel();
-        infoLabelPanelFlow.setLayout(new FlowLayout());
-
-        JPanel infoLabelPanelBox = new JPanel();
-        infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
-
-
         JLabel opdrachtLabel = new JLabel("Dit overzicht toont de langste film met een minimum leeftijd onder de 16 jaar");
+        JPanel opdrachtLabelPanel = new JPanel();
+        opdrachtLabelPanel.add(opdrachtLabel);
+        hoofdPanel.add(opdrachtLabelPanel);
 
-        JLabel noDataLabel = new JLabel("Helaas er is geen data beschikbaar om te laten zien");
+        JLabel noDataLabel = new JLabel("Helaas met de opgegeven zoektermen zijn er geen resultaaten");
+        JPanel noDataLabelPanel = new JPanel();
+        noDataLabelPanel.add(noDataLabel);
         noDataLabel.setVisible(false);
-
-        infoLabelPanelBox.add(noDataLabel);
-        infoLabelPanelBox.add(opdrachtLabel);
-
-        infoLabelPanelFlow.add(infoLabelPanelBox);
-        hoofdPanel.add(infoLabelPanelFlow);
+        hoofdPanel.add(noDataLabelPanel);
 
         //Table
         JPanel tablePanel = new JPanel();

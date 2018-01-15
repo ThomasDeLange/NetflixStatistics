@@ -57,24 +57,16 @@ public class Opdracht1Tab extends Tab {
         dropdownPanel.add(serieDropdown);
         hoofdPanel.add(dropdownPanel);
 
-        //Info Panel
-        JPanel infoLabelPanelFlow = new JPanel();
-        infoLabelPanelFlow.setLayout(new FlowLayout());
+        //Info PaneJLabel opdrachtLabel = new JLabel("Dit overzicht toont het gemiddeld bekeken percentage van een gekoze serie.");
+        JPanel opdrachtLabelPanel = new JPanel();
+        opdrachtLabelPanel.add(opdrachtLabel);
+        hoofdPanel.add(opdrachtLabelPanel);
 
-        JPanel infoLabelPanelBox = new JPanel();
-        infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
-
-
-        JLabel opdrachtLabel = new JLabel("Dit overzicht toont het gemiddeld bekeken percentage van een gekoze serie.");
-
-        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas met de opgegeven zoektermen zijn er geen resultaaten");
+        JPanel noDataLabelPanel = new JPanel();
+        noDataLabelPanel.add(noDataLabel);
         noDataLabel.setVisible(false);
-
-        infoLabelPanelBox.add(noDataLabel);
-        infoLabelPanelBox.add(opdrachtLabel);
-
-        infoLabelPanelFlow.add(infoLabelPanelBox);
-        hoofdPanel.add(infoLabelPanelFlow);
+        hoofdPanel.add(noDataLabelPanel);
 
         //Table
         JPanel tablePanel = new JPanel();

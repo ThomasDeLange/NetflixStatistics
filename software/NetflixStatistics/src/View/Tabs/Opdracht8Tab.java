@@ -52,34 +52,23 @@ public class Opdracht8Tab extends Tab {
         JComboBox filmTitelDropdown = null;
         filmTitelDropdown = comboBoxEditor.fillCombobox(filmTitelDropdown, "FilmTitels");
 
-
         dropdownPanel.add(new JLabel("Kies een film"));
         dropdownPanel.add(filmTitelDropdown);
 
         hoofdPanel.add(dropdownPanel);
 
         //Info Panel
-        JLabel opdrachtLabelPanel = new JLabel();
 
         JLabel opdrachtLabel = new JLabel("Geeft het gemiddeld percentage kijkers en absoluut aantal kijkers die de geselecteerde film afkeken en geeft het totaal aantal kijkers die de film keken.");
+        JPanel opdrachtLabelPanel = new JPanel();
         opdrachtLabelPanel.add(opdrachtLabel);
         hoofdPanel.add(opdrachtLabelPanel);
 
-        JPanel infoLabelPanelFlow = new JPanel();
-        infoLabelPanelFlow.setLayout(new FlowLayout());
-
-        JPanel infoLabelPanelBox = new JPanel();
-        infoLabelPanelBox.setLayout(new BoxLayout(infoLabelPanelBox, BoxLayout.Y_AXIS));
-
-
-        JLabel noDataLabel = new JLabel("Helaas de opgegeven zoektermen zijn er geen resultaaten");
+        JLabel noDataLabel = new JLabel("Helaas met de opgegeven zoektermen zijn er geen resultaaten");
+        JPanel noDataLabelPanel = new JPanel();
+        noDataLabelPanel.add(noDataLabel);
         noDataLabel.setVisible(false);
-
-        infoLabelPanelBox.add(noDataLabel);
-        infoLabelPanelBox.add(opdrachtLabel);
-
-        infoLabelPanelFlow.add(infoLabelPanelBox);
-        hoofdPanel.add(infoLabelPanelFlow);
+        hoofdPanel.add(noDataLabelPanel);
 
         //Table
         JPanel tablePanel = new JPanel();
