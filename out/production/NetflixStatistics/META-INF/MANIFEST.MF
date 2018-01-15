@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: View.Main
+Class-Path: mssql-jdbc-6.2.2.jre8.jar
+
