@@ -55,7 +55,7 @@ WHERE Account.AccountNR = '1215426'
 /*
 o Geef de film met de langste tijdsduur voor kijkers onder 16 jaar.
 */
-SELECT TOP 1 Film.AfleveringID, Content.Titel, Film.Tijdsduur
+SELECT Top 1 Film.AfleveringID, Content.Titel, Film.Tijdsduur
 FROM Film
 INNER JOIN Content
 ON Content.ContentID = Film.ContentID
@@ -65,19 +65,20 @@ ORDER BY Film.Tijdsduur DESC
 /*
 o Geef de accounts met slechts 1 profiel.
 */
-SELECT Account.AccountNR, Account.Naam, Profiel.ProfielNaam
-FROM Account
-INNER JOIN Profiel
-ON Profiel.AccountNR = Account.AccountNR
-GROUP BY Profiel.AccountNR, Account.AccountNR, Account.Naam
-HAVING COUNT(Profiel.AccountNR) = 1
-
+SELECT Profiel.AccountNR, Account.Naam, Profiel.ProfielNaam
+FROM Account, Profiel
+WHERE Account.AccountNR = ( SELECT Profiel.AccountNR 
+							FROM Account
+							INNER JOIN Profiel
+							ON Profiel.AccountNR = Account.AccountNR
+							GROUP BY Profiel.AccountNR
+							HAVING COUNT(Profiel.ProfielNaam) = 1)
 /*
 o Voor een door de gebruiker geselecteerde film, hoeveel kijkers hebben deze in zín geheel be-
 keken?
 */
 
-SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien, Bekeken.ProcentGezien
+SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien
 FROM Film
 INNER JOIN Content
 ON Content.ContentID = Film.ContentID
@@ -91,7 +92,21 @@ Voor een door de gebruiker geselecteerde serie, geef het gemiddeld bekeken % van
 (d.w.z. alle afleveringen van die serie).
 */
 
-
+SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien
+FROM Serie
+INNER JOIN Content
+ON Content.ContentID = Serie.ContentID
+INNER JOIN (SELECT Serie.ContentID as ContentIDTotaal, AVG(Bekeken.ProcentGezien) as ProcentGezien
+								FROM Bekeken
+								INNER JOIN Profiel
+								ON Profiel.AccountNR = Bekeken.AccountNR 
+								INNER JOIN Content
+								ON Bekeken.ContentID = Content.ContentID
+								INNER JOIN Serie
+								ON Serie.ContentID = Content.ContentID
+								GROUP BY Serie.ContentID) as TotaalBekeken
+ON TotaalBekeken.ContentIDTotaal = Content.ContentID
+HAVING Content.Titel = ‘’
 
 /*  
 Voor een door de gebruiker geselecteerde film, hoeveel procent van de kijkers hebben deze in zín geheel bekeken? 

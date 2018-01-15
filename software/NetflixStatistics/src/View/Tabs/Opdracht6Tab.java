@@ -7,12 +7,12 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-public class Opdracht6Tab {
+public class Opdracht6Tab extends Tab {
 
     private SqlConnection sqlConnection;
 
     public Opdracht6Tab(SqlConnection sqlConnection) {
-        this.sqlConnection = sqlConnection;
+        super(sqlConnection);
     }
 
     public JPanel createComponents() {
@@ -34,7 +34,7 @@ public class Opdracht6Tab {
 
 
         String[] accountDropdownItems = new String[]{"The Abominable Bride", "The Life of Brian", "Pulp Fiction", "Pruimebloesem", "Reservoir Dogs", "The Good, the Bad and the Ugly", "Andy Warhol's Dracula", "Ober", "Der Untergang", "De helaasheid der dingen", "A Clockwork Orange"};
-        JComboBox accountDropdown = new JComboBox(accountDropdownItems);
+        JComboBox<String> accountDropdown = new JComboBox<>(accountDropdownItems);
 
         dropdownPanel.add(new JLabel("Kies een film"));
         dropdownPanel.add(accountDropdown);
@@ -53,6 +53,9 @@ public class Opdracht6Tab {
         hoofdPanel.add(opdrachtLabelPanel);
 
         //Table
+        JPanel tablePanel = new JPanel();
+        tablePanel.setLayout(new FlowLayout());
+
         JTable resultTable = new JTable();
         resultTable.setDragEnabled(true);
 
@@ -60,9 +63,9 @@ public class Opdracht6Tab {
         DefaultTableModel resultTableModel = (DefaultTableModel) resultTable.getModel();
         resultTableModel.setColumnIdentifiers(tableColumnsName);
 
-        hoofdPanel.add(resultTable);
-        hoofdPanel.add(new JScrollPane(resultTable));
-
+        tablePanel.add(resultTable);
+        tablePanel.add(new JScrollPane(resultTable));
+        hoofdPanel.add(tablePanel);
 
         //Clicklistener
         ClickListener clickListener = new ClickListener(accountDropdown,resultTable, sqlConnection, resultTableModel, "Opdracht6");

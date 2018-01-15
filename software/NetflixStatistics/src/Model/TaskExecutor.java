@@ -160,7 +160,6 @@ public class TaskExecutor {
                 keken?
                 */
 
-                System.out.println(inputFilm);
                 resultSet = sqlConnection.executeSql("SELECT Film.AfleveringID, Content.Titel, COUNT(Bekeken.ProcentGezien) AantalGebruikers100ProcentGezien\n" +
                         "FROM Film\n" +
                         "INNER JOIN Content\n" +
@@ -170,6 +169,31 @@ public class TaskExecutor {
                         "WHERE Content.Titel = '" + inputFilm + "'\n" +
                         "GROUP BY Film.AfleveringID, Bekeken.ProcentGezien, Content.Titel\n" +
                         "HAVING Bekeken.ProcentGezien = 100");
+                break;
+
+            case "Opdracht7":
+                //Er komt een dropdown binnen - serie
+                JComboBox cbSerie2 = ((JComboBox) input1);
+                String inputSerieTitel3 = (String) cbSerie2.getSelectedItem();
+
+
+                resultSet = sqlConnection.executeSql("SELECT Content.Titel, Serie.Seizoen, TotaalBekeken.ProcentGezien\n" +
+                        "FROM Serie\n" +
+                        "INNER JOIN Content\n" +
+                        "ON Content.ContentID = Serie.ContentID\n" +
+                        "INNER JOIN (SELECT Serie.ContentID as ContentIDTotaal, AVG(Bekeken.ProcentGezien) as ProcentGezien\n" +
+                        "FROM Bekeken\n" +
+                        "INNER JOIN Profiel\n" +
+                        "ON Profiel.AccountNR = Bekeken.AccountNR \n" +
+                        "INNER JOIN Content\n" +
+                        "ON Bekeken.ContentID = Content.ContentID\n" +
+                        "INNER JOIN Serie\n" +
+                        "ON Serie.ContentID = Content.ContentID\n" +
+                        "GROUP BY Serie.ContentID) as TotaalBekeken\n" +
+                        "ON TotaalBekeken.ContentIDTotaal = Content.ContentID\n" +
+                        "WHERE Content.Titel =" + "'" + inputSerieTitel3 + "'");
+
+
                 break;
 
         }
