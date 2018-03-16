@@ -3,6 +3,8 @@ School project, Avans informatica, Jaar 1 periode 2
 
 Thomas de Lange (2125564), Tim Welter (2125099), Jan-Paul Mosterdijk (2131602)
 
+Code: https://github.com/ThomasDeLange/NetflixStatistics/tree/master/software/NetflixStatistics/src
+
 # Installatie/Gebruiksaanwijzingen
 Er is geen lokale database nodig omdat deze online wordt gehost.
 1. Open het bijgeleverde "NetflixStatistix.jar" bestand met Java Platform SE Binary.
